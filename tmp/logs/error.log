@@ -1,0 +1,361 @@
+2017-11-23 04:42:20 Error: Fatal Error (1): Call to undefined method Router::scope() in [C:\xampp\htdocs\hakko\app\Config\routes.php, line 28]
+2017-11-23 04:42:20 Error: [FatalErrorException] Call to undefined method Router::scope()
+Request URL: /cts-adm/menu
+Stack Trace:
+#0 C:\xampp\htdocs\hakko\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 28)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 28, Array)
+#2 C:\xampp\htdocs\hakko\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 28, Array)
+#3 C:\xampp\htdocs\hakko\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-11-23 04:44:54 Error: Fatal Error (1): Call to undefined method Router::scope() in [C:\xampp\htdocs\hakko\app\Config\routes.php, line 35]
+2017-11-23 04:44:54 Error: [FatalErrorException] Call to undefined method Router::scope()
+Request URL: /cts-adm/menu
+Stack Trace:
+#0 C:\xampp\htdocs\hakko\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 35)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 35, Array)
+#2 C:\xampp\htdocs\hakko\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 35, Array)
+#3 C:\xampp\htdocs\hakko\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-11-23 04:54:23 Error: [MissingControllerException] Controller class Cts-admController could not be found.
+Exception Attributes: array (
+  'class' => 'Cts-admController',
+  'plugin' => NULL,
+)
+Request URL: /cts-adm/style.css
+Stack Trace:
+#0 C:\xampp\htdocs\hakko\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-23 05:12:36 Error: [MissingControllerException] Controller class Cts-admController could not be found.
+Exception Attributes: array (
+  'class' => 'Cts-admController',
+  'plugin' => NULL,
+)
+Request URL: /cts-adm/info_list.html
+Stack Trace:
+#0 C:\xampp\htdocs\hakko\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-23 05:12:36 Error: [MissingControllerException] Controller class Cts-admController could not be found.
+Exception Attributes: array (
+  'class' => 'Cts-admController',
+  'plugin' => NULL,
+)
+Request URL: /cts-adm/info_list.html
+Stack Trace:
+#0 C:\xampp\htdocs\hakko\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-23 05:33:46 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\xampp\htdocs\hakko\app\View\users\logout.ctp, line 34]
+2017-11-23 05:33:46 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /cts-adm/users/logout
+Stack Trace:
+#0 C:\xampp\htdocs\hakko\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 34)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 34, Array)
+#2 C:\xampp\htdocs\hakko\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 34, Array)
+#3 C:\xampp\htdocs\hakko\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-11-23 05:46:14 Error: Fatal Error (1): Class 'Security' not found in [C:\xampp\htdocs\hakko\app\Controller\AppController.php, line 35]
+2017-11-23 05:46:14 Error: [FatalErrorException] Class 'Security' not found
+Request URL: /cts-adm/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\hakko\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Class 'Security...', 'C:\\xampp\\htdocs...', 35)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Security...', 'C:\\xampp\\htdocs...', 35, Array)
+#2 C:\xampp\htdocs\hakko\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 1, 'Class 'Security...', 'C:\\xampp\\htdocs...', 35, Array)
+#3 C:\xampp\htdocs\hakko\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-11-23 05:46:33 Error: Fatal Error (1): Call to a member function allow() on null in [C:\xampp\htdocs\hakko\app\Controller\AppController.php, line 35]
+2017-11-23 05:46:33 Error: [FatalErrorException] Call to a member function allow() on null
+Request URL: /cts-adm/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\hakko\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 35)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 35, Array)
+#2 C:\xampp\htdocs\hakko\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'C:\\xampp\\htdocs...', 35, Array)
+#3 C:\xampp\htdocs\hakko\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-11-23 07:14:39 Error: [MissingPluginException] Plugin DebugKit could not be found.
+Exception Attributes: array (
+  'plugin' => 'DebugKit',
+)
+Request URL: /cts-adm/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\hakko\lib\Cake\Core\App.php(227): CakePlugin::path('DebugKit')
+#1 C:\xampp\htdocs\hakko\lib\Cake\Core\App.php(549): App::path('Controller/Comp...', 'DebugKit')
+#2 [internal function]: App::load('ToolbarComponen...')
+#3 [internal function]: spl_autoload_call('ToolbarComponen...')
+#4 C:\xampp\htdocs\hakko\lib\Cake\Controller\ComponentCollection.php(110): class_exists('ToolbarComponen...')
+#5 C:\xampp\htdocs\hakko\lib\Cake\Controller\ComponentCollection.php(53): ComponentCollection->load('DebugKit.Toolba...', Array)
+#6 C:\xampp\htdocs\hakko\lib\Cake\Controller\Controller.php(644): ComponentCollection->init(Object(UsersController))
+#7 C:\xampp\htdocs\hakko\lib\Cake\Routing\Dispatcher.php(188): Controller->constructClasses()
+#8 C:\xampp\htdocs\hakko\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 C:\xampp\htdocs\hakko\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2017-11-23 07:14:42 Error: [MissingPluginException] Plugin DebugKit could not be found.
+Exception Attributes: array (
+  'plugin' => 'DebugKit',
+)
+Request URL: /cts-adm/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\hakko\lib\Cake\Core\App.php(227): CakePlugin::path('DebugKit')
+#1 C:\xampp\htdocs\hakko\lib\Cake\Core\App.php(549): App::path('Controller/Comp...', 'DebugKit')
+#2 [internal function]: App::load('ToolbarComponen...')
+#3 [internal function]: spl_autoload_call('ToolbarComponen...')
+#4 C:\xampp\htdocs\hakko\lib\Cake\Controller\ComponentCollection.php(110): class_exists('ToolbarComponen...')
+#5 C:\xampp\htdocs\hakko\lib\Cake\Controller\ComponentCollection.php(53): ComponentCollection->load('DebugKit.Toolba...', Array)
+#6 C:\xampp\htdocs\hakko\lib\Cake\Controller\Controller.php(644): ComponentCollection->init(Object(UsersController))
+#7 C:\xampp\htdocs\hakko\lib\Cake\Routing\Dispatcher.php(188): Controller->constructClasses()
+#8 C:\xampp\htdocs\hakko\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 C:\xampp\htdocs\hakko\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2017-11-23 07:28:53 Error: Fatal Error (64): Cannot use [] for reading in [C:\xampp\htdocs\hakko\app\Controller\UsersController.php, line 25]
+2017-11-23 07:28:53 Error: [FatalErrorException] Cannot use [] for reading
+Request URL: /cts-adm/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\hakko\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(64, 'Cannot use [] f...', 'C:\\xampp\\htdocs...', 25)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot use [] f...', 'C:\\xampp\\htdocs...', 25, Array)
+#2 C:\xampp\htdocs\hakko\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 64, 'Cannot use [] f...', 'C:\\xampp\\htdocs...', 25, Array)
+#3 C:\xampp\htdocs\hakko\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-11-23 07:29:02 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\xampp\htdocs\hakko\app\Controller\UsersController.php, line 25]
+2017-11-23 07:29:02 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /cts-adm/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\hakko\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 25)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 25, Array)
+#2 C:\xampp\htdocs\hakko\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 25, Array)
+#3 C:\xampp\htdocs\hakko\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-11-23 07:30:01 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\xampp\htdocs\hakko\app\Controller\UsersController.php, line 25]
+2017-11-23 07:30:01 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /cts-adm/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\hakko\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 25)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 25, Array)
+#2 C:\xampp\htdocs\hakko\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 25, Array)
+#3 C:\xampp\htdocs\hakko\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-11-23 07:30:03 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\xampp\htdocs\hakko\app\Controller\UsersController.php, line 25]
+2017-11-23 07:30:03 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /cts-adm/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\hakko\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 25)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 25, Array)
+#2 C:\xampp\htdocs\hakko\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 25, Array)
+#3 C:\xampp\htdocs\hakko\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-11-23 07:30:18 Error: Fatal Error (4): syntax error, unexpected ';' in [C:\xampp\htdocs\hakko\app\Controller\UsersController.php, line 25]
+2017-11-23 07:30:18 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /cts-adm/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\hakko\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 25)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 25, Array)
+#2 C:\xampp\htdocs\hakko\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 25, Array)
+#3 C:\xampp\htdocs\hakko\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-11-23 07:39:45 Error: [MissingControllerException] Controller class LoginsController could not be found.
+Exception Attributes: array (
+  'class' => 'LoginsController',
+  'plugin' => NULL,
+)
+Request URL: /logins/login
+Stack Trace:
+#0 C:\xampp\htdocs\hakko\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-23 07:39:51 Error: [MissingControllerException] Controller class LoginsController could not be found.
+Exception Attributes: array (
+  'class' => 'LoginsController',
+  'plugin' => NULL,
+)
+Request URL: /logins/login
+Stack Trace:
+#0 C:\xampp\htdocs\hakko\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-23 07:45:01 Error: [MissingViewException] View file "User\login.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'User\\login.ctp',
+)
+Request URL: /cts-adm/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\hakko\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\hakko\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\hakko\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\hakko\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\htdocs\hakko\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2017-11-23 07:45:41 Error: [MissingViewException] View file "User\login.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'User\\login.ctp',
+)
+Request URL: /cts-adm/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\hakko\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 C:\xampp\htdocs\hakko\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\htdocs\hakko\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\htdocs\hakko\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\htdocs\hakko\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2017-11-23 08:15:38 Error: Fatal Error (1): Call to undefined method UsersController::validator() in [C:\xampp\htdocs\hakko\app\Controller\UsersController.php, line 27]
+2017-11-23 08:15:38 Error: [FatalErrorException] Call to undefined method UsersController::validator()
+Request URL: /cts-adm/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\hakko\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 27)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 27, Array)
+#2 C:\xampp\htdocs\hakko\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 27, Array)
+#3 C:\xampp\htdocs\hakko\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-11-23 08:18:34 Error: Fatal Error (1): Call to undefined method UsersController::validator() in [C:\xampp\htdocs\hakko\app\Controller\UsersController.php, line 27]
+2017-11-23 08:18:34 Error: [FatalErrorException] Call to undefined method UsersController::validator()
+Request URL: /cts-adm/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\hakko\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 27)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 27, Array)
+#2 C:\xampp\htdocs\hakko\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 27, Array)
+#3 C:\xampp\htdocs\hakko\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-11-23 08:19:01 Error: [MissingTableException] Table users for model User was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'users',
+  'class' => 'User',
+  'ds' => 'default',
+)
+Request URL: /cts-adm/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\hakko\lib\Cake\Model\Model.php(3667): Model->setSource('users')
+#1 C:\xampp\htdocs\hakko\lib\Cake\Model\Model.php(1394): Model->getDataSource()
+#2 C:\xampp\htdocs\hakko\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#3 C:\xampp\htdocs\hakko\lib\Cake\View\Helper\FormHelper.php(480): FormHelper->_introspectModel('User', 'fields')
+#4 C:\xampp\htdocs\hakko\app\View\users\login.ctp(26): FormHelper->create('User', Array)
+#5 C:\xampp\htdocs\hakko\lib\Cake\View\View.php(971): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\hakko\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\htdocs...', Array)
+#7 C:\xampp\htdocs\hakko\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\hakko\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#9 C:\xampp\htdocs\hakko\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#10 C:\xampp\htdocs\hakko\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\xampp\htdocs\hakko\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2017-11-23 08:25:41 Error: [MissingTableException] Table users for model User was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'users',
+  'class' => 'User',
+  'ds' => 'default',
+)
+Request URL: /cts-adm/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\hakko\lib\Cake\Model\Model.php(3667): Model->setSource('users')
+#1 C:\xampp\htdocs\hakko\lib\Cake\Model\Model.php(1394): Model->getDataSource()
+#2 C:\xampp\htdocs\hakko\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#3 C:\xampp\htdocs\hakko\lib\Cake\View\Helper\FormHelper.php(480): FormHelper->_introspectModel('User', 'fields')
+#4 C:\xampp\htdocs\hakko\app\View\users\login.ctp(26): FormHelper->create('User', Array)
+#5 C:\xampp\htdocs\hakko\lib\Cake\View\View.php(971): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\hakko\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\htdocs...', Array)
+#7 C:\xampp\htdocs\hakko\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\hakko\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#9 C:\xampp\htdocs\hakko\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#10 C:\xampp\htdocs\hakko\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\xampp\htdocs\hakko\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2017-11-23 08:27:19 Error: [MissingTableException] Table users for model User was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'users',
+  'class' => 'User',
+  'ds' => 'default',
+)
+Request URL: /cts-adm/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\hakko\lib\Cake\Model\Model.php(3667): Model->setSource('users')
+#1 C:\xampp\htdocs\hakko\lib\Cake\Model\Model.php(1394): Model->getDataSource()
+#2 C:\xampp\htdocs\hakko\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#3 C:\xampp\htdocs\hakko\lib\Cake\View\Helper\FormHelper.php(480): FormHelper->_introspectModel('User', 'fields')
+#4 C:\xampp\htdocs\hakko\app\View\users\login.ctp(26): FormHelper->create('User', Array)
+#5 C:\xampp\htdocs\hakko\lib\Cake\View\View.php(971): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\hakko\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\htdocs...', Array)
+#7 C:\xampp\htdocs\hakko\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\hakko\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#9 C:\xampp\htdocs\hakko\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#10 C:\xampp\htdocs\hakko\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\xampp\htdocs\hakko\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2017-11-23 08:48:08 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO), expecting ')' in [C:\xampp\htdocs\hakko\app\View\users\login.ctp, line 39]
+2017-11-23 08:48:08 Error: [FatalErrorException] syntax error, unexpected 'echo' (T_ECHO), expecting ')'
+Request URL: /cts-adm/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\hakko\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 39)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 39, Array)
+#2 C:\xampp\htdocs\hakko\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 39, Array)
+#3 C:\xampp\htdocs\hakko\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-11-23 08:48:19 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO), expecting ')' in [C:\xampp\htdocs\hakko\app\View\users\login.ctp, line 39]
+2017-11-23 08:48:19 Error: [FatalErrorException] syntax error, unexpected 'echo' (T_ECHO), expecting ')'
+Request URL: /cts-adm/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\hakko\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 39)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 39, Array)
+#2 C:\xampp\htdocs\hakko\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'C:\\xampp\\htdocs...', 39, Array)
+#3 C:\xampp\htdocs\hakko\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-11-23 09:17:54 Error: [MissingHelperException] Helper class UrlHelper could not be found.
+Exception Attributes: array (
+  'class' => 'UrlHelper',
+  'plugin' => false,
+)
+Request URL: /cts-adm/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\hakko\lib\Cake\View\View.php(907): HelperCollection->load('Url', Array)
+#1 C:\xampp\htdocs\hakko\lib\Cake\View\View.php(354): View->loadHelpers()
+#2 C:\xampp\htdocs\hakko\lib\Cake\Controller\Controller.php(1250): View->__construct(Object(UsersController))
+#3 C:\xampp\htdocs\hakko\lib\Cake\Controller\Controller.php(949): Controller->_getViewObject()
+#4 C:\xampp\htdocs\hakko\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#5 C:\xampp\htdocs\hakko\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#6 C:\xampp\htdocs\hakko\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2017-11-23 09:25:41 Error: Fatal Error (64): Cannot redeclare class Users in [C:\xampp\htdocs\hakko\app\Model\User.php, line 36]
+2017-11-23 09:25:41 Error: [FatalErrorException] Cannot redeclare class Users
+Request URL: /cts-adm/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\hakko\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(64, 'Cannot redeclar...', 'C:\\xampp\\htdocs...', 36)
+#1 [internal function]: ErrorHandler::handleError(64, 'Cannot redeclar...', 'C:\\xampp\\htdocs...', 36, Array)
+#2 C:\xampp\htdocs\hakko\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 64, 'Cannot redeclar...', 'C:\\xampp\\htdocs...', 36, Array)
+#3 C:\xampp\htdocs\hakko\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-11-23 09:31:09 Error: [MissingTableException] Table users for model User was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'users',
+  'class' => 'User',
+  'ds' => 'default',
+)
+Request URL: /cts-adm/users/login
+Stack Trace:
+#0 C:\xampp\htdocs\hakko\lib\Cake\Model\Model.php(3667): Model->setSource('users')
+#1 C:\xampp\htdocs\hakko\lib\Cake\Model\Model.php(1394): Model->getDataSource()
+#2 C:\xampp\htdocs\hakko\lib\Cake\View\Helper\FormHelper.php(215): Model->schema()
+#3 C:\xampp\htdocs\hakko\lib\Cake\View\Helper\FormHelper.php(480): FormHelper->_introspectModel('User', 'fields')
+#4 C:\xampp\htdocs\hakko\app\View\users\login.ctp(43): FormHelper->create('User', Array)
+#5 C:\xampp\htdocs\hakko\lib\Cake\View\View.php(971): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\hakko\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\htdocs...', Array)
+#7 C:\xampp\htdocs\hakko\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\hakko\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#9 C:\xampp\htdocs\hakko\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#10 C:\xampp\htdocs\hakko\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#11 C:\xampp\htdocs\hakko\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2017-11-23 09:57:00 Error: [MissingControllerException] Controller class Cts-admController could not be found.
+Exception Attributes: array (
+  'class' => 'Cts-admController',
+  'plugin' => NULL,
+)
+Request URL: /cts-adm
+Stack Trace:
+#0 C:\xampp\htdocs\hakko\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

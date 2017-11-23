@@ -72,7 +72,7 @@ class DATABASE_CONFIG {
 		'host' => 'localhost',
 		'login' => 'root',
 		'password' => '',
-		'database' => 'hakko',
+		'database' => 'hakkodb',
 		'prefix' => '',
 		'encoding' => 'utf8',
 	);

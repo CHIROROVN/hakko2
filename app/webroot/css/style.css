@@ -1,0 +1,88 @@
+/* CSS Document */
+@charset "utf-8";
+
+td {
+	font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+}
+.col_1 {
+	font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: bold;
+	color: #FFF;
+	background-color: #889B2D;
+}
+.col_2 {
+	font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: bold;
+	background-color: #E7EBD5;
+}
+
+.col_3 {
+	font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
+	font-size: 14px;
+	line-height: 18px;
+	background-color: #eeeeee;
+}
+.f_red {
+	color: #F00;
+}
+.f_blue {
+	color: #00F;
+}
+.f_caution {
+	color: #C00;
+}
+.f_caution_b {
+	font-weight: bold;
+	color: #C00;
+}
+.f_gray {
+	color: #999;
+}
+.bg_caution {
+	background-color: #FFC;
+}
+.f_eng {
+	font-family: "Courier New", Courier, "monospace"
+}
+a {
+    color: #0000FF
+}
+a:link {
+    color: #0000FF
+}
+a:visited {
+    color: #0000FF
+}
+a:hover {
+    color: #0000FF
+}
+a:active {
+    color: #0000FF
+}
+
+input[type="button"] {
+margin: 0 5px;
+}
+
+input[type="submit"] {
+margin: 0 5px;
+}
+
+input[type="reset"] {
+margin: 0 5px;
+}
+
+textarea {
+width: 500px;
+}
+
+.caution {
+display:block;
+color: #FF0000;
+}

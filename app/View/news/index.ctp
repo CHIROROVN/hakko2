@@ -17,7 +17,7 @@
 <div id="second" class="wn">
   <ul class="wnList">
    <?php foreach ($arrInfo as $info): ?>
-    <li><a href="detail.html"><span><?php echo date("Y年m月d日",strtotime($info['Info']['info_date']))?></span><?php echo $info['Info']['info_title']; ?></a></li>
+    <li><a href="<?php echo $this->Html->url(array("controller" => "news", "action" => "view",$info['Info']['info_id']));?>"><span> <?php echo date("Y年m月d日",strtotime($info['Info']['info_date']))?> </span><?php echo $info['Info']['info_title']; ?></a></li>
     <?php endforeach; ?>
   </ul>
   <div class="pager_wrap">

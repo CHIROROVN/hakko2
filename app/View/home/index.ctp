@@ -32,7 +32,7 @@
         <dd>〒710-0841 倉敷市堀南852-1<br>
           TEL／FAX 086-427-7677</dd>
       </dl>
-      <div class="btn"><a href="https://goo.gl/maps/xjaQ51nEcjS2" target="_blank">Googleマップを見る</a></div>
+      <div class="btn"><a href="#" target="_blank">Googleマップを見る</a></div>
     </div>
     <div class="nishi">
       <p><img src="common/image/horinan.png" width="400" height="240"></p>
@@ -49,8 +49,9 @@
   <h2><span class="jpn">新着情報</span><span class="en">What's new?</span></h2>
   <ul class="wnList">
     <?php foreach ($arrInfo as $info): ?>
-    <li><a href="wn/detail.html"><span><?php echo date("Y年m月d日",strtotime($info['Info']['info_date']))?></span><?php echo $info['Info']['info_title']; ?></a></li>
+    <li><a href="<?php echo $this->Html->url(array("controller" => "news", "action" => "view",$info['Info']['info_id']));?>"><span> <?php echo date("Y年m月d日",strtotime($info['Info']['info_date']))?> </span><?php echo $info['Info']['info_title']; ?></a></li>
     <?php endforeach; ?>   
+
   </ul>
-  <div class="btn"><a href="wn/">新着情報一覧を見る</a></div>
+  <div class="btn"><?php echo $this->Html->link('新着情報一覧を見る','/news');?></div>
 </div>

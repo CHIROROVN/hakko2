@@ -14,5 +14,10 @@ class NewsController extends AppController {
 	   $this->layout = 'frontend';		
 	}
 
+	public function view($id = null) {
+	   $this->loadModel('Info');	
+       $this->layout = 'frontend';		
+	}
+
 
 }

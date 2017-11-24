@@ -29,6 +29,7 @@
 	Router::connect('/', array('controller' => 'home', 'action' => 'index'));
 
 	Router::connect('/news', array('controller' => 'news', 'action' => 'index'));
+	Router::connect('/news/view/:id', array('controller' => 'news', 'action' => 'view'));
 
 	Router::connect('/cts-adm/menu', array('controller' => 'menus', 'action' => 'index'));
 	Router::connect('/cts-adm/users/login', array('controller' => 'users', 'action' => 'login'));
@@ -46,4 +47,4 @@
  * Load the CakePHP default routes. Only remove this if you do not want to use
  * the built-in default routes.
  */
-	require CAKE . 'Config' . DS . 'routes.php';
+	//require CAKE . 'Config' . DS . 'routes.php';

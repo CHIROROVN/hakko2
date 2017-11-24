@@ -34,7 +34,6 @@
 <div class="pagetop"><a href="#header"><img class="pc" src="common/image/pagetop.png" width="280" height="46" alt="このページのトップへ"><img class="sp" src="common/image/pagetop_sp.png" width="280" height="46" alt="このページのトップへ"></a></div>
 <div class="tel"><a href="tel:"><img class="sp" src="common/image/tel.png" alt="電話:086-427-7677"></a></div>
 <div id="footer">
-
 <footer>
   <div class="clear">
     <div class="logo"><p><img class="pc" src="common/image/footer_logo.png" width="192" height="80" alt="有限会社八幸"></p>

@@ -69,6 +69,7 @@ if (!defined('CONFIG')) {
  * Path to the public CSS directory.
  */
 if (!defined('CSS')) {
+	//define('CSS', WWW_ROOT . 'css' . DS);
 	define('CSS', WWW_ROOT . 'css' . DS);
 }
 

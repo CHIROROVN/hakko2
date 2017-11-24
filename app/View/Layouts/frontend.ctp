@@ -7,13 +7,13 @@
 <title>有限会社八幸 ～ 8 of happiness ～</title>
 <meta name="viewport" content="width=device-width">
 <meta name="format-detection" content="telephone=no">
-<link href="common/css/import.css" rel="stylesheet" type="text/css" media="all" />
-<link rel="stylesheet" href="common/css/slider-pro.min.css" />
+<!--<link href="common/css/import.css" rel="stylesheet" type="text/css" media="all" />-->
+<!--<link rel="stylesheet" href="common/css/slider-pro.min.css" />-->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript" src="common/js/function.js"></script>
 <script type="text/javascript" src="common/js/jquery.sliderPro.min.js"></script>
 <script type="text/javascript" src="common/js/top.js"></script>
-
+<?php echo $this->Html->css(array('/common/css/slider-pro.min.css', '/common/css/import.css'));?>
 </head>
 <body>
 <div id="header">

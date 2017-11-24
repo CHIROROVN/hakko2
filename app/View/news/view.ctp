@@ -16,7 +16,7 @@
 </div>
 <div id="second">
   <h3 class="wnTitle"><?php echo $info['Info']['info_title']?></h3>
-  <p>2017年07月07日<?php echo date("Y年m月d日",strtotime($info['Info']['info_date']));?></p>
+  <p><?php echo date("Y年m月d日",strtotime($info['Info']['info_date']));?></p>
   <div class="clear wnCont">
     <p><?php if(!empty($info['Info']['info3_img'])){?><img src="/<?php echo $info['Info']['info3_img'];?>" width="300" height="205" class="alignright"><?php }?><?php  echo $info['Info']['info3_contents'];?></p>
   </div>

@@ -17,7 +17,9 @@
 <div id="second" class="wn">
   <ul class="wnList">
    <?php foreach ($arrInfo as $info): ?>
-    <li><a href="<?php echo $this->Html->url(array("controller" => "news", "action" => "view",$info['Info']['info_id']));?>"><span> <?php echo date("Y年m月d日",strtotime($info['Info']['info_date']))?> </span><?php echo $info['Info']['info_title']; ?></a></li>
+    <li><?php if($info['Info']['info_type'] ==3){?>
+         <a href="<?php echo $this->Html->url(array("controller" => "news", "action" => "view","id"=>$info['Info']['info_id']));?>">
+         <?php }else{?> <a href="<?php echo ($info['Info']['info_type'] ==1)?$info['Info']['info1_url']:$info['Info']['info2_file']?>" target="_blank"><?php }?><span> <?php echo date("Y年m月d日",strtotime($info['Info']['info_date']))?> </span><?php echo $info['Info']['info_title']; ?></a></li>
     <?php endforeach; ?>
   </ul>
   <div class="pager_wrap">

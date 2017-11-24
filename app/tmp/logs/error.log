@@ -1280,3 +1280,1396 @@ Request URL: /hakko2/wn/image/wn_title_back.png
 Stack Trace:
 #0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2017-11-24 07:31:47 Error: Fatal Error (4): syntax error, unexpected ';' in [D:\xampp\htdocs\dev\hakko2\app\Controller\HomeController.php, line 12]
+2017-11-24 07:31:47 Error: [FatalErrorException] syntax error, unexpected ';'
+Request URL: /hakko2/
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'D:\\xampp\\htdocs...', 12)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'D:\\xampp\\htdocs...', 12, Array)
+#2 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'D:\\xampp\\htdocs...', 12, Array)
+#3 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-11-24 07:47:51 Error: [MissingActionException] Action PagesController::home() could not be found.
+Exception Attributes: array (
+  'controller' => 'PagesController',
+  'action' => 'home',
+)
+Request URL: /hakko2/pages/home
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#2 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-11-24 07:48:18 Error: [MissingViewException] View file "News\view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'News\\view.ctp',
+)
+Request URL: /hakko2/news/detail
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest))
+#4 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2017-11-24 07:50:19 Error: [MissingViewException] View file "News\view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'News\\view.ctp',
+)
+Request URL: /hakko2/news/detail
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest))
+#4 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2017-11-24 07:50:20 Error: [MissingViewException] View file "News\view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'News\\view.ctp',
+)
+Request URL: /hakko2/news/detail
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest))
+#4 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2017-11-24 07:50:20 Error: [MissingViewException] View file "News\view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'News\\view.ctp',
+)
+Request URL: /hakko2/news/detail
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest))
+#4 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2017-11-24 07:50:21 Error: [MissingViewException] View file "News\view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'News\\view.ctp',
+)
+Request URL: /hakko2/news/detail
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest))
+#4 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2017-11-24 07:50:21 Error: [MissingViewException] View file "News\view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'News\\view.ctp',
+)
+Request URL: /hakko2/news/detail
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest))
+#4 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2017-11-24 07:50:55 Error: [MissingActionException] Action NewsController::detail1() could not be found.
+Exception Attributes: array (
+  'controller' => 'NewsController',
+  'action' => 'detail1',
+)
+Request URL: /hakko2/news/detail1
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest))
+#2 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-11-24 07:51:08 Error: [MissingActionException] Action NewsController::detail() could not be found.
+Exception Attributes: array (
+  'controller' => 'NewsController',
+  'action' => 'detail',
+)
+Request URL: /hakko2/news/detail/1
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest))
+#2 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-11-24 07:52:04 Error: [MissingActionException] Action NewsController::detail() could not be found.
+Exception Attributes: array (
+  'controller' => 'NewsController',
+  'action' => 'detail',
+)
+Request URL: /hakko2/news/detail/1
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest))
+#2 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-11-24 07:52:05 Error: [MissingActionException] Action NewsController::detail() could not be found.
+Exception Attributes: array (
+  'controller' => 'NewsController',
+  'action' => 'detail',
+)
+Request URL: /hakko2/news/detail/1
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest))
+#2 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-11-24 07:52:05 Error: [MissingActionException] Action NewsController::detail() could not be found.
+Exception Attributes: array (
+  'controller' => 'NewsController',
+  'action' => 'detail',
+)
+Request URL: /hakko2/news/detail/1
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest))
+#2 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-11-24 07:52:38 Error: [MissingActionException] Action NewsController::detail() could not be found.
+Exception Attributes: array (
+  'controller' => 'NewsController',
+  'action' => 'detail',
+)
+Request URL: /hakko2/news/detail/1
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest))
+#2 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-11-24 07:52:39 Error: [MissingActionException] Action NewsController::detail() could not be found.
+Exception Attributes: array (
+  'controller' => 'NewsController',
+  'action' => 'detail',
+)
+Request URL: /hakko2/news/detail/1
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest))
+#2 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-11-24 07:52:39 Error: [MissingActionException] Action NewsController::detail() could not be found.
+Exception Attributes: array (
+  'controller' => 'NewsController',
+  'action' => 'detail',
+)
+Request URL: /hakko2/news/detail/1
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest))
+#2 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-11-24 07:52:40 Error: [MissingActionException] Action NewsController::detail() could not be found.
+Exception Attributes: array (
+  'controller' => 'NewsController',
+  'action' => 'detail',
+)
+Request URL: /hakko2/news/detail/1
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest))
+#2 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-11-24 07:52:42 Error: [MissingActionException] Action NewsController::detail() could not be found.
+Exception Attributes: array (
+  'controller' => 'NewsController',
+  'action' => 'detail',
+)
+Request URL: /hakko2/news/detail/1
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest))
+#2 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-11-24 07:53:08 Error: [MissingActionException] Action NewsController::detail() could not be found.
+Exception Attributes: array (
+  'controller' => 'NewsController',
+  'action' => 'detail',
+)
+Request URL: /hakko2/news/detail/1
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest))
+#2 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-11-24 07:53:13 Error: [MissingViewException] View file "News\view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'News\\view.ctp',
+)
+Request URL: /hakko2/news/view/1
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\View\View.php(470): View->_getViewFileName(NULL)
+#1 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest))
+#4 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2017-11-24 07:54:55 Error: [MissingActionException] Action NewsController::common() could not be found.
+Exception Attributes: array (
+  'controller' => 'NewsController',
+  'action' => 'common',
+)
+Request URL: /hakko2/news/common/image/dummy-01.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest))
+#2 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-11-24 07:55:23 Error: [MissingActionException] Action NewsController::common() could not be found.
+Exception Attributes: array (
+  'controller' => 'NewsController',
+  'action' => 'common',
+)
+Request URL: /hakko2/news/common/image/dummy-01.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest))
+#2 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-11-24 07:56:31 Error: [MissingActionException] Action NewsController::common() could not be found.
+Exception Attributes: array (
+  'controller' => 'NewsController',
+  'action' => 'common',
+)
+Request URL: /hakko2/news/common/image/dummy-01.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest))
+#2 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-11-24 07:57:22 Error: [MissingActionException] Action NewsController::common() could not be found.
+Exception Attributes: array (
+  'controller' => 'NewsController',
+  'action' => 'common',
+)
+Request URL: /hakko2/news/common/image/dummy-01.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest))
+#2 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-11-24 07:58:43 Error: [MissingActionException] Action NewsController::common() could not be found.
+Exception Attributes: array (
+  'controller' => 'NewsController',
+  'action' => 'common',
+)
+Request URL: /hakko2/news/common/image/dummy-01.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest))
+#2 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2017-11-24 08:01:59 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/css/import.css
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:01:59 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/jquery.sliderPro.min.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:01:59 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/function.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:01:59 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/top.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:01:59 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/dummy-01.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:01:59 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/function.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:01:59 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/jquery.sliderPro.min.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:01:59 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/pagetop.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:01:59 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/pagetop_sp.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:01:59 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/top.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:01:59 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/tel.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:01:59 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/footer_logo.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:02:00 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/jquery.sliderPro.min.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:02:00 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/css/import.css
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:02:00 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/function.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:02:00 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/css/slider-pro.min.css
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:02:00 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/top.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:02:00 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/dummy-01.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:02:00 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/function.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:02:00 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/pagetop.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:02:00 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/jquery.sliderPro.min.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:02:00 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/top.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:02:00 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/pagetop_sp.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:02:00 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/tel.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:02:00 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/footer_logo.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:02:09 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/function.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:02:09 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/css/slider-pro.min.css
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:02:09 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/css/import.css
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:02:09 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/top.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:02:09 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/jquery.sliderPro.min.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:02:09 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/dummy-01.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:02:09 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/function.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:02:09 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/pagetop.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:02:09 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/jquery.sliderPro.min.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:02:09 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/pagetop_sp.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:02:09 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/top.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:02:09 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/tel.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:02:09 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/footer_logo.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:02:13 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/wn/
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:03:03 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/wn/
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:03:06 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/wn/
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:06:46 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/css/import.css
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:06:46 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/css/slider-pro.min.css
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:06:46 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/top.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:06:46 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/jquery.sliderPro.min.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:06:46 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/function.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:06:46 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/dummy-01.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:06:46 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/function.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:06:47 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/jquery.sliderPro.min.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:06:47 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/pagetop.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:06:47 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/top.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:06:47 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/pagetop_sp.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:06:47 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/tel.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:06:47 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/footer_logo.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:09:15 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/css/slider-pro.min.css
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:09:15 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/top.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:09:15 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/jquery.sliderPro.min.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:09:15 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/function.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:09:15 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/css/import.css
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:09:15 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/dummy-01.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:09:15 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/function.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:09:15 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/pagetop.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:09:15 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/jquery.sliderPro.min.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:09:15 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/top.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:09:15 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/pagetop_sp.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:09:15 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/footer_logo.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:09:15 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/tel.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:09:16 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/css/slider-pro.min.css
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:09:16 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/jquery.sliderPro.min.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:09:16 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/css/import.css
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:09:16 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/top.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:09:16 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/function.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:09:16 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/dummy-01.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:09:16 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/jquery.sliderPro.min.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:09:16 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/pagetop.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:09:16 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/top.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:09:16 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/pagetop_sp.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:09:16 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/footer_logo.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:09:16 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/tel.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:11:55 Error: Fatal Error (4): syntax error, unexpected 'Y年m月d日' (T_STRING) in [D:\xampp\htdocs\dev\hakko2\app\View\home\index.ctp, line 52]
+2017-11-24 08:11:55 Error: [FatalErrorException] syntax error, unexpected 'Y年m月d日' (T_STRING)
+Request URL: /hakko2/
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'D:\\xampp\\htdocs...', 52)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'D:\\xampp\\htdocs...', 52, Array)
+#2 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'D:\\xampp\\htdocs...', 52, Array)
+#3 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-11-24 08:12:13 Error: Fatal Error (4): syntax error, unexpected 'Y年m月d日' (T_STRING) in [D:\xampp\htdocs\dev\hakko2\app\View\home\index.ctp, line 52]
+2017-11-24 08:12:13 Error: [FatalErrorException] syntax error, unexpected 'Y年m月d日' (T_STRING)
+Request URL: /hakko2/
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'D:\\xampp\\htdocs...', 52)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'D:\\xampp\\htdocs...', 52, Array)
+#2 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'D:\\xampp\\htdocs...', 52, Array)
+#3 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-11-24 08:12:43 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/css/import.css
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:12:43 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/jquery.sliderPro.min.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:12:43 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/top.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:12:43 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/function.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:12:43 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/css/slider-pro.min.css
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:12:43 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/dummy-01.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:12:43 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/function.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:12:43 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/pagetop.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:12:43 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/jquery.sliderPro.min.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:12:43 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/pagetop_sp.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:12:43 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/top.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:12:43 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/tel.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:12:43 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/footer_logo.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:17:19 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 't_info.info_id' in 'where clause'
+Request URL: /hakko2/news/view/1
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Model\Datasource\DboSource.php(472): PDOStatement->execute(Array)
+#1 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Model\Datasource\DboSource.php(438): DboSource->_execute('SELECT `Info`.`...', Array)
+#2 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Model\Datasource\DboSource.php(675): DboSource->execute('SELECT `Info`.`...', Array, Array)
+#3 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Model\Datasource\DboSource.php(1186): DboSource->fetchAll('SELECT `Info`.`...', false)
+#4 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Model\Model.php(3038): DboSource->read(Object(Info), Array)
+#5 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Model\Model.php(3010): Model->_readDataSource('first', Array)
+#6 D:\xampp\htdocs\dev\hakko2\app\Controller\NewsController.php(19): Model->find('first', Array)
+#7 [internal function]: NewsController->view()
+#8 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(NewsController), Array)
+#9 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest))
+#11 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2017-11-24 08:17:38 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/css/slider-pro.min.css
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:17:38 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/top.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:17:38 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/jquery.sliderPro.min.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:17:38 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/css/import.css
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:17:38 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/function.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:17:38 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/dummy-01.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:17:38 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/jquery.sliderPro.min.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:17:38 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/js/top.js
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:17:38 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/pagetop.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:17:38 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/tel.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:17:38 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/pagetop_sp.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:17:38 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/common/image/footer_logo.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:22:01 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/news/view/1
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 08:29:41 Error: Fatal Error (4): syntax error, unexpected 'echo' (T_ECHO) in [D:\xampp\htdocs\dev\hakko2\app\View\news\view.ctp, line 22]
+2017-11-24 08:29:41 Error: [FatalErrorException] syntax error, unexpected 'echo' (T_ECHO)
+Request URL: /hakko2/news/view/1
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'D:\\xampp\\htdocs...', 22)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'D:\\xampp\\htdocs...', 22, Array)
+#2 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'D:\\xampp\\htdocs...', 22, Array)
+#3 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-11-24 08:30:01 Error: Fatal Error (4): syntax error, unexpected end of file in [D:\xampp\htdocs\dev\hakko2\app\View\news\view.ctp, line 30]
+2017-11-24 08:30:01 Error: [FatalErrorException] syntax error, unexpected end of file
+Request URL: /hakko2/news/view/1
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'D:\\xampp\\htdocs...', 30)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'D:\\xampp\\htdocs...', 30, Array)
+#2 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'D:\\xampp\\htdocs...', 30, Array)
+#3 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-11-24 08:53:21 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/wn/image/wn_title_back.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 09:25:37 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/wn/image/wn_title_back.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 09:26:02 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/wn/image/wn_title_back.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 09:57:17 Error: Fatal Error (1): Call to a member function paginate() on null in [D:\xampp\htdocs\dev\hakko2\app\Controller\NewsController.php, line 17]
+2017-11-24 09:57:17 Error: [FatalErrorException] Call to a member function paginate() on null
+Request URL: /hakko2/news
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\\xampp\\htdocs...', 17)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\\xampp\\htdocs...', 17, Array)
+#2 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\\xampp\\htdocs...', 17, Array)
+#3 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-11-24 09:57:42 Error: Fatal Error (1): Call to a member function paginate() on null in [D:\xampp\htdocs\dev\hakko2\app\Controller\NewsController.php, line 17]
+2017-11-24 09:57:42 Error: [FatalErrorException] Call to a member function paginate() on null
+Request URL: /hakko2/news
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\\xampp\\htdocs...', 17)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\\xampp\\htdocs...', 17, Array)
+#2 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\\xampp\\htdocs...', 17, Array)
+#3 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-11-24 09:59:38 Error: Fatal Error (1): Call to a member function paginate() on null in [D:\xampp\htdocs\dev\hakko2\app\Controller\NewsController.php, line 17]
+2017-11-24 09:59:38 Error: [FatalErrorException] Call to a member function paginate() on null
+Request URL: /hakko2/news
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\\xampp\\htdocs...', 17)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\\xampp\\htdocs...', 17, Array)
+#2 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\\xampp\\htdocs...', 17, Array)
+#3 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-11-24 10:00:41 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as info WHERE  last_kind <> 9 and info_dspl_flag IS NULL and ((info_start IS NUL' at line 1
+Request URL: /hakko2/news
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Model\Datasource\DboSource.php(472): PDOStatement->execute(Array)
+#1 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Model\Datasource\DboSource.php(438): DboSource->_execute('SELECT * FROM  ...', Array)
+#2 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Model\Datasource\DboSource.php(675): DboSource->execute('SELECT * FROM  ...', Array, Array)
+#3 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Model\Datasource\DboSource.php(611): DboSource->fetchAll('SELECT * FROM  ...', false)
+#4 [internal function]: DboSource->query('SELECT * FROM  ...', false)
+#5 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Model\Model.php(3470): call_user_func_array(Array, Array)
+#6 D:\xampp\htdocs\dev\hakko2\app\Model\Info.php(25): Model->query('SELECT * FROM  ...')
+#7 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Controller\Component\PaginatorComponent.php(206): Info->paginate(Array, NULL, NULL, 25, 1, 1, Array)
+#8 D:\xampp\htdocs\dev\hakko2\app\Controller\NewsController.php(19): PaginatorComponent->paginate('Info')
+#9 [internal function]: NewsController->index()
+#10 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(NewsController), Array)
+#11 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest))
+#13 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2017-11-24 10:01:59 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/wn/image/wn_title_back.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 10:03:30 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as info WHERE  last_kind <> 9 and info_dspl_flag IS NULL and ((info_start IS NUL' at line 1
+Request URL: /hakko2/news
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Model\Datasource\DboSource.php(472): PDOStatement->execute(Array)
+#1 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Model\Datasource\DboSource.php(438): DboSource->_execute('SELECT * FROM  ...', Array)
+#2 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Model\Datasource\DboSource.php(675): DboSource->execute('SELECT * FROM  ...', Array, Array)
+#3 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Model\Datasource\DboSource.php(611): DboSource->fetchAll('SELECT * FROM  ...', false)
+#4 [internal function]: DboSource->query('SELECT * FROM  ...', false)
+#5 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Model\Model.php(3470): call_user_func_array(Array, Array)
+#6 D:\xampp\htdocs\dev\hakko2\app\Model\Info.php(25): Model->query('SELECT * FROM  ...')
+#7 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Controller\Component\PaginatorComponent.php(206): Info->paginate(Array, NULL, NULL, 25, 1, 1, Array)
+#8 D:\xampp\htdocs\dev\hakko2\app\Controller\NewsController.php(19): PaginatorComponent->paginate('Info')
+#9 [internal function]: NewsController->index()
+#10 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(NewsController), Array)
+#11 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#12 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(NewsController), Object(CakeRequest))
+#13 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#14 {main}
+2017-11-24 10:24:19 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/wn/image/wn_title_back.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

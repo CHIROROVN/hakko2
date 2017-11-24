@@ -29,13 +29,13 @@
 	Router::connect('/', array('controller' => 'home', 'action' => 'index'));
 
 	Router::connect('/news', array('controller' => 'news', 'action' => 'index'));
-	Router::connect('/news/view/:id', array('controller' => 'news', 'action' => 'view'));
+	Router::connect('/news/view/*', array('controller' => 'news', 'action' => 'view'),array('id' => '[0-9]+'));
 
 	Router::connect('/cts-adm/menu', array('controller' => 'menus', 'action' => 'index'));
 	Router::connect('/cts-adm/users/login', array('controller' => 'users', 'action' => 'login'));
 	Router::connect('/cts-adm/users/logout', array('controller' => 'users', 'action' => 'logout'));
 
-
+    
 
 /**
  * Load all plugin routes. See the CakePlugin documentation on

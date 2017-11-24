@@ -10,9 +10,9 @@
 <!--<link href="common/css/import.css" rel="stylesheet" type="text/css" media="all" />-->
 <!--<link rel="stylesheet" href="common/css/slider-pro.min.css" />-->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script type="text/javascript" src="common/js/function.js"></script>
-<script type="text/javascript" src="common/js/jquery.sliderPro.min.js"></script>
-<script type="text/javascript" src="common/js/top.js"></script>
+<?php echo $this->Html->script('common/js/function.js');?>
+<?php echo $this->Html->script('common/js/jquery.sliderPro.min.js');?>
+<?php echo $this->Html->script('common/js/top.js');?>
 <?php echo $this->Html->css(array('/common/css/slider-pro.min.css', '/common/css/import.css'));?>
 </head>
 <body>
@@ -31,12 +31,12 @@
     </ul>
   </nav>
 <?php echo $this->fetch('content'); ?>
-<div class="pagetop"><a href="#header"><img class="pc" src="common/image/pagetop.png" width="280" height="46" alt="このページのトップへ"><img class="sp" src="common/image/pagetop_sp.png" width="280" height="46" alt="このページのトップへ"></a></div>
-<div class="tel"><a href="tel:"><img class="sp" src="common/image/tel.png" alt="電話:086-427-7677"></a></div>
+<div class="pagetop"><a href="#header"><?php echo $this->Html->image('common/image/pagetop.png', array('class' => 'pc','width'=>'280','height'=>'46', 'alt'=>'このページのトップへ'));?><!--<img class="pc" src="common/image/pagetop.png" width="280" height="46" alt="このページのトップへ"><img class="sp" src="common/image/pagetop_sp.png" width="280" height="46" alt="このページのトップへ">--><?php echo $this->Html->image('common/image/pagetop_sp.png', array('class' => 'pc','width'=>'280','height'=>'46', 'alt'=>'このページのトップへ'));?></a></div>
+<div class="tel"><a href="tel:"><?php echo $this->Html->image('common/image/tel.png', array('class' => 'sp', 'alt'=>'電話:086-427-7677'));?><!--<img class="sp" src="common/image/tel.png" alt="電話:086-427-7677">--></a></div>
 <div id="footer">
 <footer>
   <div class="clear">
-    <div class="logo"><p><img class="pc" src="common/image/footer_logo.png" width="192" height="80" alt="有限会社八幸"></p>
+    <div class="logo"><p><?php echo $this->Html->image('common/image/footer_logo.png', array('class' => 'pc','width'=>'192','height'=>'80', 'alt'=>'有限会社八幸'));?></p>
     </div>
     <div class="nav pc"><p><a href="index.html">ホーム</a>｜<a href="business/">事業案内</a>｜<a href="company/">会社概要</a>｜<a href="recruit/">採用情報</a>｜<a href="contact/">お問い合わせ</a>｜<a href="wn/">新着情報</a>｜<a href="sitemap/">サイトマップ</a></p>
       <p>〒710-0841 岡山県倉敷市堀南852-1　TEL／FAX 086-427-7677</p>

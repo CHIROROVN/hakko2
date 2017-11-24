@@ -119,19 +119,19 @@
  * useful when generating links from the CLI (e.g. sending emails).
  * If the application runs in a subfolder, you should also set App.base.
  */
-	//Configure::write('App.fullBaseUrl', 'http://example.com');
+	//Configure::write('App.fullBaseUrl', 'http://dev.com/hakko2/');
 
 /**
  * The base directory the app resides in. Should be used if the
  * application runs in a subfolder and App.fullBaseUrl is set.
  */
-	//Configure::write('App.base', '/my_app');
+	//Configure::write('App.base', '/hakko2');
 
 /**
  * Web path to the public images directory under webroot.
  * If not set defaults to 'img/'
  */
-	//Configure::write('App.imageBaseUrl', 'img/');
+	Configure::write('App.imageBaseUrl', '');
 
 /**
  * Web path to the CSS files directory under webroot.
@@ -143,7 +143,7 @@
  * Web path to the js files directory under webroot.
  * If not set defaults to 'js/'
  */
-	//Configure::write('App.jsBaseUrl', 'js/');
+	Configure::write('App.jsBaseUrl', '');
 
 /**
  * Uncomment the define below to use CakePHP prefix routes.

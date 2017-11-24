@@ -7708,3 +7708,30 @@ Request URL: /hakko2/wn/image/wn_title_back.png
 Stack Trace:
 #0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2017-11-24 11:42:39 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/business/
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 11:42:39 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/cake.power.gif
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 11:42:39 Error: [MissingControllerException] Controller class Controller could not be found.
+Exception Attributes: array (
+  'class' => 'Controller',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/cake.generic.css
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

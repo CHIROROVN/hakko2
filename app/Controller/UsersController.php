@@ -13,25 +13,34 @@ class UsersController extends AppController {
 	public function beforeFilter() {
         parent::beforeFilter();
         $this->Auth->allow('login','logout'); 
-
+        $this->loadModel('User');
     }
 
 	public function login() {
+
 		$this->layout = false;
 
 		if($this->Session->check('Auth.User')){
             $this->redirect(array('controller'=>'menus','action' => 'index'));      
         }
 
-        if ($this->request->is(array('post', 'put'))) {
-        	//$this->User->create();
+        if ($this->request->is(array('post'))) {
+        	$this->User->set($this->request->data);
 
-            if ($this->Auth->login()) {
-                $this->Session->setFlash(__('Welcome, '. $this->Auth->user('u_login')));
-                $this->redirect($this->Auth->redirectUrl());
-            } else {
-                $this->Session->setFlash(__('Invalid login id or password'));
-            }
+
+        	if ($this->User->validates()) {
+
+	        	$this->User->create();
+	            if ($this->Auth->login()) {
+	                $this->redirect($this->Auth->redirectUrl());
+	            } else {
+	                $this->Session->setFlash(__('Invalid login id or password'));
+	            }
+	        }else{
+	        	//$this->set('validationErrorsArray', $this->User->invalidFields());
+	        	//$errors = $this->User->validationErrors;
+
+	        }
         } 
 
 

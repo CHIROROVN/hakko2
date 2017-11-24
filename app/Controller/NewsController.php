@@ -2,13 +2,14 @@
 
 App::uses('AppController', 'Controller');
 
-class PagesController extends AppController {
+class NewsController extends AppController {
 
 
 	public $uses = array();
 
 	public function index() {
-		
+		$this->layout = 'frontend';
+		//$this -> render('/home/index');
 	}
 
 

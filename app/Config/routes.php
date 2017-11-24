@@ -26,12 +26,9 @@
  * to use (in this case, /app/View/Pages/home.ctp)...
  */
 
-	Router::connect('/', array('controller' => 'pages', 'action' => 'display', 'home'));
+	Router::connect('/', array('controller' => 'home', 'action' => 'index'));
 
-	Router::connect('/pages/*', array('controller' => 'pages', 'action' => 'display'));
-
-
-
+	Router::connect('/news', array('controller' => 'news', 'action' => 'index'));
 
 	Router::connect('/cts-adm/menu', array('controller' => 'menus', 'action' => 'index'));
 	Router::connect('/cts-adm/users/login', array('controller' => 'users', 'action' => 'login'));

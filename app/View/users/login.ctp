@@ -18,30 +18,29 @@
     <tr>
       <td>&nbsp;</td>
     </tr>
-    <?php 
-    if($this->Session->flash()){
-    ?>
-    <tr>
+
+   <!--  <tr>
       <td>
         <div id="error" class="message">
             <a id="close" title="Message"  href="#" onClick="document.getElementById('error').setAttribute('style','display: none;');">&times;</a>
-            <span><?php echo $this->Session->flash(); ?></span>
+            <span></span>
         </div>
         </td>
-    </tr>
-    <?php } ?>
+    </tr> -->
+  
 
     <?php 
       echo $this->Form->create('User', array(          
           'url' => Router::url(array(
               'controller' => 'users', 'action' => 'login',
           )),
-          'novalidate' => true,
-          'inputDefaults' => array('error' => array(
-              'attributes' => array('class' => 'error-text')
-          ))
+          'novalidate' => true
+            
       ));
+
   ?>
+
+
 
     <tr>
       <td align="center"><table width="60%" border="1" cellspacing="0" cellpadding="5">
@@ -49,13 +48,17 @@
           <tr>
             <td width="40%" class="col_3">ログインID</td>
             <td>
-              <?php echo $this->Form->input('u_login', array('label'=>false, 'error' => true)); ?>
+              <?php echo $this->Form->input('u_login', array('label'=>false, 'type'=>'text')); 
+              //echo $this->Form->error('User.u_login', null, array('class' => 'error-message'));
+              ?>
             </td>
           </tr>
           <tr>
             <td width="40%" class="col_3">パスワード</td>
             <td>
-              <?php echo $this->Form->input('u_passwd', array('label'=>false, 'type'=>'password', 'error' => true)); ?>
+              <?php echo $this->Form->input('u_passwd', array('label'=>false, 'type'=>'password')); 
+              //echo $this->Form->error('User.u_passwd', null, array('class' => 'error-message'));
+              ?>
             </td>
           </tr>
         </tbody>

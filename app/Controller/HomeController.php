@@ -1,5 +1,5 @@
 <?php
-
+App::uses('Info', 'Model');
 App::uses('AppController', 'Controller');
 
 class HomeController extends AppController {
@@ -7,10 +7,11 @@ class HomeController extends AppController {
 
 	public $uses = array();
 
-	public function index() {
-		
-		$this->layout = 'frontend';
-		//$this -> render('/home/index');
+	public function index() {		
+       $this->loadModel('Info');
+       $arrData = $this->Info->find('all');
+       $this->set('arrInfo', $arrData); 
+	   $this->layout = 'frontend';		
 	}
 
 

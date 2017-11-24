@@ -16,26 +16,9 @@
 </div>
 <div id="second" class="wn">
   <ul class="wnList">
-    <li><a href="detail.html"><span>2017年07月07日</span>新店舗 ○○店を△月□日にオープンします。</a></li>
-    <li><a href="detail.html"><span>2017年07月07日</span>新着情報のタイトルが入ります。新着情報のタイトルが入ります。新着情報のタイトルが入ります。新着情報のタイトルが入ります。新着情報のタイトルが入ります。新着情報のタイトルが入ります。</a></li>
-    <li><a href="detail.html"><span>2017年07月07日</span>採用情報の更新を行いました。</a></li>
-    <li><a href="detail.html"><span>2017年07月07日</span>セブンミールのお得な情報をお届けします。</a></li>
-    <li><a href="detail.html"><span>2017年07月07日</span>ホームページを公開しました。</a></li>
-    <li><a href="detail.html"><span>2017年07月01日</span>新着情報のタイトルが入ります。</a></li>
-    <li><a href="detail.html"><span>2017年07月01日</span>新着情報のタイトルが入ります。</a></li>
-    <li><a href="detail.html"><span>2017年07月01日</span>新着情報のタイトルが入ります。</a></li>
-    <li><a href="detail.html"><span>2017年07月01日</span>新着情報のタイトルが入ります。</a></li>
-    <li><a href="detail.html"><span>2017年07月01日</span>新着情報のタイトルが入ります。</a></li>
-    <li><a href="detail.html"><span>2017年06月30日</span>新着情報のタイトルが入ります。</a></li>
-    <li><a href="detail.html"><span>2016年12月31日</span>新着情報のタイトルが入ります。</a></li>
-    <li><a href="detail.html"><span>2016年12月31日</span>新着情報のタイトルが入ります。</a></li>
-    <li><a href="detail.html"><span>2016年12月31日</span>新着情報のタイトルが入ります。</a></li>
-    <li><a href="detail.html"><span>2016年12月31日</span>新着情報のタイトルが入ります。</a></li>
-    <li><a href="detail.html"><span>2016年12月31日</span>新着情報のタイトルが入ります。</a></li>
-    <li><a href="detail.html"><span>2016年12月31日</span>新着情報のタイトルが入ります。</a></li>
-    <li><a href="detail.html"><span>2016年12月31日</span>新着情報のタイトルが入ります。</a></li>
-    <li><a href="detail.html"><span>2016年12月31日</span>新着情報のタイトルが入ります。</a></li>
-    <li><a href="detail.html"><span>2016年12月31日</span>新着情報のタイトルが入ります。20件</a></li>
+   <?php foreach ($arrInfo as $info): ?>
+    <li><a href="detail.html"><span><?php echo date("Y年m月d日",strtotime($info['Info']['info_date']))?></span><?php echo $info['Info']['info_title']; ?></a></li>
+    <?php endforeach; ?>
   </ul>
   <div class="pager_wrap">
     <ul class="pager">

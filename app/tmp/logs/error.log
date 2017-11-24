@@ -1185,3 +1185,98 @@ Request URL: /wn/image/wn_title_back.png
 Stack Trace:
 #0 C:\xampp\htdocs\hakko\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2017-11-24 04:21:00 Error: [MissingControllerException] Controller class BusinessController could not be found.
+Exception Attributes: array (
+  'class' => 'BusinessController',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/business/
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 04:21:07 Error: [MissingControllerException] Controller class WnController could not be found.
+Exception Attributes: array (
+  'class' => 'WnController',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/wn/
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 05:28:03 Error: Fatal Error (4): syntax error, unexpected '.', expecting ',' or ';' in [D:\xampp\htdocs\dev\hakko2\app\Controller\HomeController.php, line 2]
+2017-11-24 05:28:03 Error: [FatalErrorException] syntax error, unexpected '.', expecting ',' or ';'
+Request URL: /hakko2/
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(4, 'syntax error, u...', 'D:\\xampp\\htdocs...', 2)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', 'D:\\xampp\\htdocs...', 2, Array)
+#2 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', 'D:\\xampp\\htdocs...', 2, Array)
+#3 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-11-24 07:15:18 Error: Fatal Error (1): Call to a member function find() on boolean in [D:\xampp\htdocs\dev\hakko2\app\Controller\HomeController.php, line 12]
+2017-11-24 07:15:18 Error: [FatalErrorException] Call to a member function find() on boolean
+Request URL: /hakko2/
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\\xampp\\htdocs...', 12)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\\xampp\\htdocs...', 12, Array)
+#2 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\\xampp\\htdocs...', 12, Array)
+#3 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-11-24 07:15:21 Error: Fatal Error (1): Call to a member function find() on boolean in [D:\xampp\htdocs\dev\hakko2\app\Controller\HomeController.php, line 12]
+2017-11-24 07:15:21 Error: [FatalErrorException] Call to a member function find() on boolean
+Request URL: /hakko2/
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\\xampp\\htdocs...', 12)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\\xampp\\htdocs...', 12, Array)
+#2 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\\xampp\\htdocs...', 12, Array)
+#3 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-11-24 07:15:40 Error: Fatal Error (1): Call to a member function find() on null in [D:\xampp\htdocs\dev\hakko2\app\Controller\HomeController.php, line 12]
+2017-11-24 07:15:40 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /hakko2/
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\\xampp\\htdocs...', 12)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\\xampp\\htdocs...', 12, Array)
+#2 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\\xampp\\htdocs...', 12, Array)
+#3 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-11-24 07:15:41 Error: Fatal Error (1): Call to a member function find() on null in [D:\xampp\htdocs\dev\hakko2\app\Controller\HomeController.php, line 12]
+2017-11-24 07:15:41 Error: [FatalErrorException] Call to a member function find() on null
+Request URL: /hakko2/
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Call to a membe...', 'D:\\xampp\\htdocs...', 12)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', 'D:\\xampp\\htdocs...', 12, Array)
+#2 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(970): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', 'D:\\xampp\\htdocs...', 12, Array)
+#3 D:\xampp\htdocs\dev\hakko2\app\Vendor\cakephp\cakephp\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2017-11-24 07:24:46 Error: [MissingControllerException] Controller class NewController could not be found.
+Exception Attributes: array (
+  'class' => 'NewController',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/new
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 07:24:59 Error: [MissingControllerException] Controller class WnController could not be found.
+Exception Attributes: array (
+  'class' => 'WnController',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/wn/image/wn_title_back.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2017-11-24 07:26:12 Error: [MissingControllerException] Controller class WnController could not be found.
+Exception Attributes: array (
+  'class' => 'WnController',
+  'plugin' => NULL,
+)
+Request URL: /hakko2/wn/image/wn_title_back.png
+Stack Trace:
+#0 D:\xampp\htdocs\dev\hakko2\app\webroot\index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

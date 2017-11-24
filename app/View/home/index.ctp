@@ -48,11 +48,9 @@
   <div class="btn"><a href="business/">事業内容を見る</a></div>
   <h2><span class="jpn">新着情報</span><span class="en">What's new?</span></h2>
   <ul class="wnList">
-    <li><a href="wn/detail.html"><span>2017年07月07日</span>新店舗 ○○店を△月□日にオープンします。</a></li>
-    <li><a href="wn/detail.html"><span>2017年07月07日</span>新着情報のタイトルが入ります。新着情報のタイトルが入ります。新着情報のタイトルが入ります。新着情報のタイトルが入ります。新着情報のタイトルが入ります。新着情報のタイトルが入ります。</a></li>
-    <li><a href="wn/detail.html"><span>2017年07月07日</span>採用情報の更新を行いました。</a></li>
-    <li><a href="wn/detail.html"><span>2017年07月07日</span>セブンミールのお得な情報をお届けします。</a></li>
-    <li><a href="wn/detail.html"><span>2017年07月07日</span>ホームページを公開しました。</a></li>
+    <?php foreach ($arrInfo as $info): ?>
+    <li><a href="wn/detail.html"><span><?php echo date("Y年m月d日",strtotime($info['Info']['info_date']))?></span><?php echo $info['Info']['info_title']; ?></a></li>
+    <?php endforeach; ?>   
   </ul>
   <div class="btn"><a href="wn/">新着情報一覧を見る</a></div>
 </div>

@@ -7,7 +7,6 @@
 <title>有限会社八幸 ～ 8 of happiness ～</title>
 <meta name="viewport" content="width=device-width">
 <meta name="format-detection" content="telephone=no">
-
 <link href="common/css/import.css" rel="stylesheet" type="text/css" media="all" />
 <link rel="stylesheet" href="common/css/slider-pro.min.css" />
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -31,10 +30,7 @@
       <li><a href="contact/">お問い合わせ</a></li>
     </ul>
   </nav>
-
 <?php echo $this->fetch('content'); ?>
-
-
 <div class="pagetop"><a href="#header"><img class="pc" src="common/image/pagetop.png" width="280" height="46" alt="このページのトップへ"><img class="sp" src="common/image/pagetop_sp.png" width="280" height="46" alt="このページのトップへ"></a></div>
 <div class="tel"><a href="tel:"><img class="sp" src="common/image/tel.png" alt="電話:086-427-7677"></a></div>
 <div id="footer">

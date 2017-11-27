@@ -30,5 +30,13 @@ App::uses('Model', 'Model');
  * @package       app.Model
  */
 class AppModel extends Model {
-	//   public $useTable = 'm_user';
+	public function beforeSave($options = array()) {
+        if (!empty($this->data[$this->alias]['u_passwd'])) {
+            $passwordHasher = new SimplePasswordHasher(array('hashType' => 'sha256'));
+            $this->data[$this->alias]['u_passwd'] = $passwordHasher->hash(
+                $this->data[$this->alias]['u_passwd']
+            );
+        }
+        return true;
+    }
 }

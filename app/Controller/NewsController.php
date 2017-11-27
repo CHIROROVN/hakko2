@@ -3,6 +3,10 @@ App::uses('Info', 'Model');
 App::uses('AppController', 'Controller');
 
 class NewsController extends AppController {
+	public function beforeFilter() {
+        parent::beforeFilter();
+        $this->Auth->allow(array('index', 'view'));
+    }
 
 	public $uses = array();	
 

@@ -76,8 +76,7 @@ class Info extends AppModel {
     );  
 
    public function paginate($conditions, $fields, $order, $limit, $page = 1, $recursive = null, $extra = array()) {
-	    $qryCond = " last_kind <> 9 and info_dspl_flag IS NULL and ((info_start IS NULL) or (info_start <=> NULL and  info_start <= DATE(NOW())) and ((	info_end IS NULL) or (	info_end <=> NULL and  	info_end >= DATE(NOW())))";
-		 
+	    $qryCond = " (last_kind is NULL or last_kind <> 9) and info_dspl_flag IS NULL and ((info_start IS NULL) or DATE(info_start) <= DATE(NOW())) and ((info_end IS NULL) or DATE(info_end) >= DATE(NOW()))" ;
 
 		$orderStr = '';
 		foreach($order as $k => $ord) {

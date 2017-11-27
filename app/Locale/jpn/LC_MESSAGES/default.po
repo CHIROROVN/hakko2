@@ -1,0 +1,6 @@
+msgid "info_title_require"
+msgstr "タイトルを入力してください。"
+msgid "info_date_require"
+msgstr "情報登録日を入力してください。"
+msgid "login_erorr"
+msgstr "Username or password incorrect."

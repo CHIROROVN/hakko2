@@ -31,31 +31,39 @@ App::uses('Controller', 'Controller');
  * @link		https://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
-	// public $components = array(    
- //    'Session',
- //    'Auth' => array(
- //    	'authenticate'=>array('Form' => array('userModel' => 'User')),
- //        'loginRedirect' => array('controller' => 'menus', 'action' => 'index'),
- //        'logoutRedirect' => array('controller' => 'users', 'action' => 'login'),
- //        'authError' => 'You must be logged in to view this page.',
- //        'loginError' => 'Invalid Username or Password entered, please try again.'
- 
- //    ));
- 
-	// // only allow the login controllers only
-	// public function beforeFilter() {
+	// Pass settings in $components array
+        public $components = array(
+            'Flash',
+            'Session',
+            'Auth' => array(
+                'loginAction' => array(
+                    'controller' => 'users',
+                    'action' => 'login',
+                    'plugin' => 'cts-adm'
+                ),
+                'loginRedirect' => array('controller' => 'menus', 'action' => 'index'),
+                'logoutRedirect' => array('controller' => 'users', 'action' => 'logout'),
+                //'authError' => 'Did you really think you are allowed to see that?',
+                'authenticate' => array(
+                    'Form' => array(
+                        'scope' => array('User.last_kind' => 0),
+                        'passwordHasher' => 'Blowfish',                        
+                        'fields' => array(
+                              'username' => 'password',
+                              'password' => 'password'
+                            ),
+                        'userModel' => 'User',
+                        'userFields' => null,
+                    )
+                )
+            )
+        );
 
-	// 	$this->Auth->userModel = 'User';
- //        $this->Auth->fields = array('username' => 'u_login', 'password' => 'u_passwd');
-	//     $this->Auth->loginAction = array('cts-adm' => false, 'controller' => 'users', 'action' => 'login');
- //        $this->Auth->loginRedirect = array('cts-adm' =>true,'controller' => 'menus', 'action' => 'index');
- //        $this->Auth->loginError = 'Username / password combination.  Please try again';
- //        //$this->Auth->authorize = 'controller';
-	// }
-	 
-	// public function isAuthorized($user) {
-	//     // Here is where we should verify the role and give access based on role
-	     
-	//     return true;
-	// }
+
+	public function beforeFilter() {
+      //  $this->Auth->scope = array('User.last_kind' => 0);
+		Security::setHash('sha1');
+		$this->Auth->allow('login');
+	}
+
 }

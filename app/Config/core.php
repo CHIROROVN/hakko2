@@ -18,8 +18,8 @@
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
 
-//setLocale(LC_ALL, 'deu');
-//Configure::write('Config.language', 'deu');
+//setLocale(LC_ALL, 'jpn');
+Configure::write('Config.language', 'jpn');
 
 /**
  * CakePHP Debug Level:
@@ -131,19 +131,19 @@
  * Web path to the public images directory under webroot.
  * If not set defaults to 'img/'
  */
-	Configure::write('App.imageBaseUrl', '');
+	Configure::write('App.imageBaseUrl', 'img/');
 
 /**
  * Web path to the CSS files directory under webroot.
  * If not set defaults to 'css/'
  */
-	Configure::write('App.cssBaseUrl', '');
+	Configure::write('App.cssBaseUrl', 'css/');
 
 /**
  * Web path to the js files directory under webroot.
  * If not set defaults to 'js/'
  */
-	Configure::write('App.jsBaseUrl', '');
+	Configure::write('App.jsBaseUrl', 'js/');
 
 /**
  * Uncomment the define below to use CakePHP prefix routes.
@@ -285,7 +285,7 @@
  * then the value of `Config.timezone` will be used. This feature allows you to set users' timezone just
  * once instead of passing it each time in function calls.
  */
-	//Configure::write('Config.timezone', 'Europe/Paris');
+	Configure::write('Config.timezone', 'Asia/Tokyo');
 
 /**
  * Cache Engine Configuration

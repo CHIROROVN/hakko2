@@ -29,6 +29,7 @@
 	Router::connect('/', array('controller' => 'home', 'action' => 'index'));
 
 	Router::connect('/news', array('controller' => 'news', 'action' => 'index'));
+	Router::connect('/news/index/*', array('controller' => 'news', 'action' => 'index'),array('page' => array('page'),'page' => '[0-9]+'));
 	Router::connect('/news/view/:id', array('controller' => 'news', 'action' => 'view'),array('pass' => array('id'),'id' => '[0-9]+'));
 
 	Router::connect('/cts-adm/menu', array('controller' => 'menus', 'action' => 'index'));

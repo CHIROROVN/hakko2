@@ -19,13 +19,36 @@
             <td width="12%" align="center">日付</td>
             <td width="1%" align="center">詳細・変更</td>
           </tr>
+
+        <?php foreach ($infos as $info): ?>
           <tr>
-            <td><input type="button" onClick="location.href='info_delete.html'" value="削除"></td>
-            <td align="center">－</td>
-            <td>ホームページをリニューアルしました</td>
-            <td>2017/06/30</td>
-            <td><input type="button" onClick="location.href='info_detail.html'" value="詳細・変更"></td>
+            <td>
+              <input type="button" onClick="location.href='<?php echo $this->Html->url(array('controller'=>'infos','action'=>'delete', 'id'=>$info['Info']['info_id'])) ?>'" value="削除"></td>
+            <td align="center">
+            <?php 
+                $now = date('Y-m-d H:i:s');
+                $start = $info['Info']['info_start'];
+                $end = $info['Info']['info_end'];
+              if(empty($info['Info']['info_dspl_flag'])) : 
+                if($start <= $now && ($end >= $now || empty($end)) || empty($start) && ($end >= $now || empty($end))) : ?>
+                  <span class="f_blue">○</span>
+                <?php else : ?>
+                  -
+                <?php endif; ?>              
+              <?php else : ?>
+                <span class="f_red">x</span>
+              <?php endif; ?>              
+            </td>
+            <td><?php echo h($info['Info']['info_title']); ?></td>
+            <td><?php echo h($this->Hakko->format_date($info['Info']['info_date'], '/')); ?></td>
+            <td>
+              <input type="button" onClick="location.href='<?php echo $this->Html->url(array('controller'=>'infos','action'=>'detail', 'id'=>$info['Info']['info_id'])) ?>'" value="詳細・変更">
+            </td>
           </tr>
+
+        <?php endforeach; ?>
+
+<!-- 
           <tr>
             <td><input type="button" onClick="location.href='info_delete.html'" value="削除"></td>
             <td align="center"><span class="f_blue">○</span></td>
@@ -53,7 +76,8 @@
             <td>お得な情報のタイトル</td>
             <td>2017/02/20</td>
             <td><input type="button" onClick="location.href='info_detail.html'" value="詳細・変更"></td>
-          </tr>
+          </tr> -->
+
         </tbody>
       </table></td>
     </tr>

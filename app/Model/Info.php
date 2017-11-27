@@ -75,6 +75,34 @@ class Info extends AppModel {
         ),
     );  
 
+    //get list info for backend 
+   public function getAllInfos(){
+        return $this->find('all', array(
+                //'fields' => array('ifo_id','info_title', 'info_date', 'info_type', 'info1_url'),                
+                'conditions' => array(
+                        'last_kind <>' => DELETE,
+                ),
+                'recursive' => -1
+        ));
+   }
+
+ //get info by id backend 
+   public function getInfoById($id){
+        return $this->find('first', array(
+                //'fields' => array('ifo_id','info_title', 'info_date', 'info_type', 'info1_url'),                
+                'conditions' => array(
+                        'last_kind <>' => DELETE,
+                        'info_id' => $id
+                ),
+                'recursive' => -1
+        ));
+   }
+
+   //update info by id backend 
+    public function update($data, $id){
+        return $this->updateAll($data, array('info_id' => $id));
+    }
+
    public function paginate($conditions, $fields, $order, $limit, $page = 1, $recursive = null, $extra = array()) {
 	    $qryCond = " (last_kind is NULL or last_kind <> 9) and info_dspl_flag IS NULL and ((info_start IS NULL) or DATE(info_start) <= DATE(NOW())) and ((info_end IS NULL) or DATE(info_end) >= DATE(NOW()))" ;
 

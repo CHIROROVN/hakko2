@@ -1,3 +1,4 @@
+
 <?php
 /**
  * This is core configuration file.
@@ -131,19 +132,19 @@ Configure::write('Config.language', 'jpn');
  * Web path to the public images directory under webroot.
  * If not set defaults to 'img/'
  */
-	Configure::write('App.imageBaseUrl', 'img/');
+	Configure::write('App.imageBaseUrl', '');
 
 /**
  * Web path to the CSS files directory under webroot.
  * If not set defaults to 'css/'
  */
-	Configure::write('App.cssBaseUrl', 'css/');
+	Configure::write('App.cssBaseUrl', '');
 
 /**
  * Web path to the js files directory under webroot.
  * If not set defaults to 'js/'
  */
-	Configure::write('App.jsBaseUrl', 'js/');
+	Configure::write('App.jsBaseUrl', '');
 
 /**
  * Uncomment the define below to use CakePHP prefix routes.

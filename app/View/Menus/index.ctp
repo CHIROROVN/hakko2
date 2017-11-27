@@ -16,8 +16,7 @@
              'controller' => 'infos',
              'action'     => 'index',
           ));
-        ?>       
-
+        ?>
       </td>
     </tr>
     <tr>

@@ -4,19 +4,25 @@ App::uses('AppController', 'Controller');
 
 class NewsController extends AppController {
 
-	public $uses = array();
+	public $uses = array();	
 
-	public $components = array('Paginator');
-
-	public $paginate = array(
-        'Info' => array (NULL,array('*'),'limit' => 25)      
-    );  
+	var $helpers = array('Paginator');
+    var $paginator = array('limit' => 2);
 
 	public function index() {
+	   	
 	   $this->loadModel('Info');	   
-       $arrData = $this->Info->find('all');
+       //$arrData = $this->Info->find('all');
        //$this->Paginator->settings = $this->paginate;
-       //$arrData = $this->Paginator->paginate('Info');       
+       //$arrData = $this->Paginator->paginate('Info');  
+       $this->paginate = array(  'limit' => 2,     
+       'order' => array('info_date' => 'desc'),//giảm dần theo id
+      );     
+       $arrData = $this->paginate("Info");
+
+      /* echo '<pre>';
+       print_r($arrData);
+       echo '</pre>';die;*/
        $this->set('arrInfo', $arrData);        
 	   $this->layout = 'frontend';		
 	}

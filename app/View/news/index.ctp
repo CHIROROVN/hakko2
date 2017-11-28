@@ -14,17 +14,20 @@
     </ul>
   </div>
 </div>
-<?php $paginator = $this->Paginator;//echo $this->Paginator->numbers();
-    // echo '<pre>';       print_r($paginator );       echo '</pre>';?>
+<?php $paginator = $this->Paginator;?>
 <div id="second" class="wn">
   <ul class="wnList">
-   <?php  foreach ($arrInfo as $info): ?>
-    
+   <?php if(count($arrInfo) >0){?> 
+   <?php  foreach ($arrInfo as $info): ?>    
     <li><?php if($info['info']['info_type'] ==3){?>
          <a href="<?php echo $this->Html->url(array("controller" => "news", "action" => "view","id"=>$info['info']['info_id']));?>">
          <?php }else{?> <a href="<?php echo ($info['info']['info_type'] ==1)?$info['info']['info1_url']:$info['info']['info2_file']?>" target="_blank"><?php }?><span> <?php echo date("Y年m月d日",strtotime($info['info']['info_date']))?> </span><?php echo $info['info']['info_title']; ?></a></li>
     <?php endforeach; ?>
+    <?php }else{?>
+    <li>該当するデータがありません</li>
+    <?php }?>
   </ul>
+  <?php if($this->Paginator->param('pageCount') >1){?>
   <div class="pager_wrap">
     <ul class="pager">
      <?php if($paginator->hasPrev()){?>
@@ -32,8 +35,9 @@
       <?php }?>       
       <?php echo $this->Paginator->numbers(array('separator' => '', 'tag' => 'li' ,'currentClass' => 'active', 'currentTag' => '' , 'escape' => false));?>     
       <?php if($paginator->hasNext()){?>
-      <li><?php echo $paginator->next("次へ »");?><!--<a href="#">次へ »</a>--></li>
+      <li><?php echo $paginator->next("次へ »");?></li>
       <?php }?>
     </ul>
   </div>
+  <?php }?>
 </div>

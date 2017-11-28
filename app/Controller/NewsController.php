@@ -1,5 +1,5 @@
 <?php
-App::uses('Info', 'Model');
+App::uses('News', 'Model');
 App::uses('AppController', 'Controller');
 
 class NewsController extends AppController {
@@ -15,14 +15,12 @@ class NewsController extends AppController {
 
 	public function index() {
 	   	
-	   $this->loadModel('Info');	   
+	   $this->loadModel('News');	   
        //$arrData = $this->Info->find('all');
        //$this->Paginator->settings = $this->paginate;
        //$arrData = $this->Paginator->paginate('Info');  
-       $this->paginate = array(  'limit' => 2,     
-       'order' => array('info_date' => 'desc'),//giảm dần theo id
-      );     
-       $arrData = $this->paginate("Info");
+       $this->paginate = array(  'limit' => 2  );     
+       $arrData = $this->paginate("News");
 
       /* echo '<pre>';
        print_r($arrData);
@@ -33,16 +31,14 @@ class NewsController extends AppController {
 
 	public function view($id) {	
 			
-	   $this->loadModel('Info');	
-	   $detail = $this->Info->find('first', array('conditions' => array('info_id' => $id)));
-	 /* echo '<pre>';
+	   $this->loadModel('News');	
+	   $detail = $this->News->find('first', array('conditions' => array('info_id' => $id)));
+	   /*echo '<pre>';
 	   print_r($detail);
-	   echo '</pre>';die;
-	   $this->redirect(array(
-		    'controller' => 'it_queries',
-		    'action' => 'view', 
-		    $this->request->data['ItQuery']['id'])
-		);*/
+	   echo '</pre>';die;*/
+	   if(!isset($detail['News']['info_id'])){
+		   $this->redirect(array('controller' => 'news','action' => 'index'));
+		}   
 	   $this->set('info', $detail); 
        $this->layout = 'frontend';		
 	}

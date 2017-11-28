@@ -37,12 +37,14 @@
 	Router::connect('/cts-adm/users/logout', array('controller' => 'users', 'action' => 'logout'));
 
 	//Info
-	Router::connect('/cts-adm/infos', array('controller' => 'infos', 'action' => 'index'));
+	Router::connect('/cts-adm/infos/*', array('controller' => 'infos', 'action' => 'index'),array('page' => array('page'),'page' => '[0-9]+'));
 	Router::connect('/cts-adm/infos/regist', array('controller' => 'infos', 'action' => 'regist'));
 	Router::connect('/cts-adm/infos/regist_confirm', array('controller' => 'infos', 'action' => 'regist_save'));
 	Router::connect('/cts-adm/infos/edit/:id', array('controller' => 'infos', 'action' => 'edit'), array('pass' => array('id'), 'id' => '[0-9]+'));
 	Router::connect('/cts-adm/infos/edit/:id/confirm', array('controller' => 'infos', 'action' => 'edit_save'));
 	Router::connect('/cts-adm/infos/delete/:id', array('controller' => 'infos', 'action' => 'delete'), array('pass' => array('id'), 'id' => '[0-9]+'));
+	Router::connect('/cts-adm/infos/delete_save/:id', array('controller' => 'infos', 'action' => 'delete_save'), array('pass' => array('id'), 'id' => '[0-9]+'));
+	Router::connect('/cts-adm/infos/delete_complete', array('controller' => 'infos', 'action' => 'delete_complete'), array('pass' => array('id'), 'id' => '[0-9]+'));
     Router::connect('/cts-adm/infos/detail/:id', array('controller' => 'infos', 'action' => 'detail'), array('pass' => array('id'), 'id' => '[0-9]+'));
 
 

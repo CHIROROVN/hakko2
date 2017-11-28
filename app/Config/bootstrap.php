@@ -109,3 +109,5 @@ CakeLog::config('error', array(
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));
+
+require __DIR__. DIRECTORY_SEPARATOR. 'constant.php';

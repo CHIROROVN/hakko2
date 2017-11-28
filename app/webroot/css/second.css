@@ -1,0 +1,429 @@
+@charset "utf-8";
+
+.sp {
+  display:none!important;
+}
+
+
+@media all and (max-width: 768px) {
+  .pc {
+    display:none!important;
+  }
+  
+  .sp {
+    display:block!important;
+  }
+  
+/*------------------------------------------------------------------------------------------------
+  header
+--------------------------------------------------------------------------------------------------*/  
+header h1 {
+	width:100%;
+	padding:13px 0 10px;
+}
+
+header h1 a {
+	margin-left:10px;
+	background-size:80%;
+	width:70%;
+	max-width:233px;
+}
+
+#header nav {
+	display:none;
+}
+
+nav ul li {
+	float:none;
+}
+
+.menusp {
+	display:none;
+	z-index:2;
+	position:absolute;
+	right:0;
+	top:103px;
+	top:0;
+	width:160px;
+	height:auto;
+	background:#889B2D;
+	padding:103px 40px 0;
+}
+
+.menubt {
+	z-index:3;
+	width:65px;
+	height:68px;
+	display:block;
+	right:15px;
+	top:19px;
+	position:absolute;
+	background:#889B2D;
+}
+
+.menubt p {
+	margin:42px 0 0 5px;
+	color:#FFF;
+	font-size:14px;
+	cursor:default;
+}
+
+.menubt span {
+	width:49px;
+	height:6px;
+	display:block;
+	background:#FFF;
+	border-radius:10px;
+	position: absolute;
+	right: 8px;
+	top: 23px;
+	transition: all 0.4s;
+	transform: rotate(0deg);  
+}
+
+.menubt .top {
+	-webkit-transform: translateY(-12px);
+	-ms-transform: translateY(-12px);
+	transform: translateY(-12px);
+}
+
+.menubt .bottom {
+	-webkit-transform: translateY(12px);
+	-ms-transform: translateY(12px);
+	transform: translateY(12px);
+}
+
+.menubt .menuclick1	{
+	transform:rotate(-225deg); 
+}
+
+.menubt .menuclick2	{ 
+	background-color:rgba(255,255,255,0);
+}
+
+.menubt .menuclick3	{
+	transform:rotate(225deg);
+}
+
+/*------------------------------------------------------------------------------------------------
+  pagetop
+--------------------------------------------------------------------------------------------------*/
+.pagetop {
+	background:#889B2D;
+	padding:5px 0;
+}
+
+.pagetop img {
+	margin:0 auto;
+}
+
+.tel img{
+	margin:10px auto;
+	width:100%;
+	max-width:313px;
+}
+
+/*------------------------------------------------------------------------------------------------
+  footer
+--------------------------------------------------------------------------------------------------*/
+footer {
+	width:100%;
+	padding-top:20px;
+}
+
+#footer {
+	background:none;
+}
+
+footer .navsp {
+	border-top:solid 1px;
+	border-bottom:solid 1px;
+	overflow:hidden;
+	margin-bottom:8px;
+}
+
+footer .navsp a {
+	float:left;
+	width:50%;
+	box-sizing:border-box;
+	border-bottom:1px solid #CCCCCC;
+	border-right:1px solid #CCCCCC;
+	padding:8px 10px;
+	background:#F3F2F1 url(../image/arrow-06.png) no-repeat 97%;
+	text-decoration:none;
+	color:#000000;
+}
+
+footer .navsp a:nth-child(2n) {
+	border-right:none;
+}
+
+footer .navsp a:nth-child(n+5) {
+	border-bottom:none;
+}
+
+footer .nav-sitemap {
+	color:#000000;
+	margin:10px;
+	background:url(../image/arrow-04.png) no-repeat left;
+	padding-left:12px;
+}
+
+footer .copy, .address{
+	border:none;
+	text-align:left;
+	margin:10px 10px 0;
+	padding:0;
+}
+/*------------------------------------------------------------------------------------------------
+  contents
+--------------------------------------------------------------------------------------------------*/
+.btn a {
+	max-width:280px;
+	width:100%;
+}
+
+
+/*------------------------------------------------------------------------------------------------
+  secondTitle
+--------------------------------------------------------------------------------------------------*/
+#secondTitle div {
+	width:100%;
+}
+
+#secondTitle .business {
+	background-size:100%;
+}
+
+/*------------------------------------------------------------------------------------------------
+  second
+--------------------------------------------------------------------------------------------------*/
+
+#second {
+	width:95%;
+	margin:0 auto;
+}
+
+#second .meal img {
+	width:100%;
+	height:auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------------------------------------------------------------------
+  index
+--------------------------------------------------------------------------------------------------*/
+#slide img {
+	width:100%;
+}
+
+#index {
+	width:100%;
+}
+
+#index .mbbg {
+	background:#E7EBD5 100%;
+}
+
+#index .mainBusiness {
+	position:static;
+	background-position:top;
+	background-size:100%;
+	max-width:438px;
+	height:auto;
+	margin:0 auto 20px;
+}
+
+#index .mainBusiness .text {
+	position:static;
+	padding:165px 0 20px;
+	width:80%;
+	margin:0 auto;
+}
+
+#index .shopBox {
+	width:100%;
+}
+
+#index .shopBox div {
+	float:none!important;
+	margin:0 auto;
+	width:100%!important;
+	max-width:400px;
+}
+
+#index .shopBox p img {
+	width:100%;
+	height:auto;
+}
+
+#index .shopBox div dl dt {
+	max-width:280px;
+	width:100%;
+}
+
+#index .shopBox div dl dd {
+	margin-left:10px;
+}
+
+#index .meal img {
+	width:100%;
+	height:auto;
+}
+/*------------------------------------------------------------------------------------------------
+  wn
+--------------------------------------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------------------------------------
+  business
+--------------------------------------------------------------------------------------------------*/
+.businessImage {
+	margin:0 0 20px;
+}
+
+.businessImage li {
+	float:none;
+	margin-right:0;
+}
+
+.businessImage li img {
+	display:block;
+	margin:0 auto;
+}
+
+
+
+/*------------------------------------------------------------------------------------------------
+  company
+--------------------------------------------------------------------------------------------------*/
+.companyTb th {
+	width:90%;
+	display:block;
+}
+
+.companyTb td {
+	padding:15px;
+	width:90%;
+	display:block;
+}
+
+.companyTb td::before {
+	display:none;
+}
+
+.companyLogo {
+	float:none;
+	margin:0 auto 20px;
+	display:block;
+}
+
+.message {
+	float:none;
+	margin:0 auto 20px;
+	display:block;
+}
+
+/*------------------------------------------------------------------------------------------------
+  contact
+--------------------------------------------------------------------------------------------------*/
+.contactBox {
+	margin:0 0 30px;
+}
+
+.contactBox p {
+	text-align:center;
+}
+
+.contactBox span {
+	font-size:24px;
+}
+
+/*------------------------------------------------------------------------------------------------
+  recruit
+--------------------------------------------------------------------------------------------------*/
+.recMessage img {
+	width:100%;
+	height:auto;
+}
+
+.recruitTb th {
+	width:90%;
+	display:block;
+}
+
+.recruitTb td {
+	width:90%;
+	display:block;
+	border-bottom:none;
+}
+
+.interviewList a {
+	height:auto;
+	width:100%;
+	max-width:465px;
+	margin:0 auto 20px!important;
+	float:none;
+	text-decoration:none;
+}
+
+.interviewList div {
+	position:static;
+	height:auto;
+	width:100%;
+	max-width:465px;
+}
+
+.interviewList div dl {
+	position:static;
+	margin:0 auto;
+	padding-top:20px;
+}
+
+.interviewList div p {
+	position:static;
+}
+
+.interviewList div p img {
+	margin:0 auto;
+	display:block;
+}
+
+.recInterview img {
+	width:100%;
+	height:auto;
+}
+
+.intQa {
+	margin: 0 0 60px;
+}
+
+.intQa .qaR {
+	width:100%;
+	float:none;
+}
+
+/*------------------------------------------------------------------------------------------------
+  page
+--------------------------------------------------------------------------------------------------*/
+.wnList {
+	width:100%;
+}
+
+
+
+
+}

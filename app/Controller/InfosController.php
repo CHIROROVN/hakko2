@@ -13,9 +13,25 @@ class InfosController extends AppController {
 
 	public $uses = array();
 	public $helpers = array('Html', 'Time', 'Hakko');
+	public $components = array('Paginator');
 
 	public function index() {
-		$infos = $this->Info->getAllInfos();
+
+		// $infos = $this->paginate(
+		//     'Info',
+		//     array('last_kind <>' => DELETE),
+		//     array('limit' => LIMIT_PAGE)
+		// );
+
+
+		$this->Paginator->settings = array(
+	        'conditions' => array('last_kind <>' => DELETE),
+	        'limit' => LIMIT_PAGE,
+	    );
+
+	    $infos = $this->Paginator->paginate('Info');
+
+			//$infos = $this->Info->getAllInfos();
 		$this->set(compact('infos'));
 		$this->render('/infos/index');
 	}

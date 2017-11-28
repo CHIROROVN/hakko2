@@ -85,7 +85,23 @@
       <td>&nbsp;</td>
     </tr>
     <tr>
-      <td style="text-align: center;"><input type="button" onclick="#" name="submit" id="submit" value="前の20件を表示" disabled><input type="button" onclick="#" id="submit2" value="次の20件を表示" disabled></td>
+      <td style="text-align: center;">
+      <?php
+        $paginator = $this->Paginator;
+        $paginator->options(array('url' => array('cts-adm' => true)));    
+      ?>
+        <div class="paging">
+        <?php echo $paginator->prev(__('前の20件を表示', true), array('type'=>'button'), null,
+        array('class'=>'disabled'));?>
+
+        <?php echo $paginator->next(__('次の20件を表示', true), array(), null,
+        array('class'=>'disabled'));?>
+        </div>
+
+        <input type="button" onclick="#" name="submit" id="submit" value="前の20件を表示" disabled>
+        
+        <input type="button" onclick="#" id="submit2" value="次の20件を表示" disabled>
+      </td>
     </tr>
     <tr>
       <td>&nbsp;</td>

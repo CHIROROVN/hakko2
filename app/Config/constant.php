@@ -21,4 +21,5 @@
     define('INSERT', 0);
     define('UPDATE', 1);
     define('DELETE', 9);
+    define('LIMIT_PAGE', 2);
 

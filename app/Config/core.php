@@ -1,3 +1,4 @@
+
 <?php
 /**
  * This is core configuration file.
@@ -226,7 +227,8 @@ Configure::write('Config.language', 'jpn');
  * the cake shell command: cake schema create Sessions
  */
 	Configure::write('Session', array(
-		'defaults' => 'php'
+		'defaults' => 'php',
+		'timeout' => 86400
 	));
 
 /**

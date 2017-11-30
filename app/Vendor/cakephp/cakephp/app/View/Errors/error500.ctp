@@ -17,7 +17,7 @@
 <h2><?php echo $message; ?></h2>
 <p class="error">
 	<strong><?php echo __d('cake', 'Error'); ?>: </strong>
-	<?php echo __d('cake', 'An Internal Error Has Occurred.'); ?>
+	<?php echo __d('cake', '500 Internal Server Error.'); ?>
 </p>
 <?php
 if (Configure::read('debug') > 0):

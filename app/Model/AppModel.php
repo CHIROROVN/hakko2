@@ -20,7 +20,7 @@
  */
 
 App::uses('Model', 'Model');
-
+App::uses('AuthComponent', 'Controller/Component');
 /**
  * Application model for Cake.
  *
@@ -30,6 +30,7 @@ App::uses('Model', 'Model');
  * @package       app.Model
  */
 class AppModel extends Model {
+	
 	public function beforeSave($options = array()) {
         if (!empty($this->data[$this->alias]['u_passwd'])) {
             $passwordHasher = new SimplePasswordHasher(array('hashType' => 'sha256'));

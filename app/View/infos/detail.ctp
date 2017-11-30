@@ -21,10 +21,10 @@
             <tr>
               <td colspan="2" class="col_3">タイプ</td>
               <td>
-                <?php if($info['Info']['info_type'] == 1):?>
-                タイプ1：タイトルをクリックすると詳細ページを表示
-                <?php elseif($info['Info']['info_type'] == 2):?>
-                  タイプ2：タイトルをクリックすると詳細ページを表示
+                <?php if($info['Info']['info_type'] == 1) : ?>
+                  タイプ1：タイトルをクリックすると指定URLを表示
+                <?php elseif($info['Info']['info_type'] == 2) : ?>
+                  タイプ2：タイトルをクリックすると指定ファイルを表示
                 <?php else : ?>
                   タイプ3：タイトルをクリックすると詳細ページを表示
                 <?php endif; ?>
@@ -47,13 +47,15 @@
               <td colspan="2" class="col_3">タイプ2</td>
               <td>
                 <?php
+                if(!empty($info['Info']['info2_file'])){
                   echo $this->Html->link('表示', $this->webroot . $info['Info']['info2_file'] , array(
                      'target'=>'_blank',
                       'escape'=>false
                   ));
+                  }else{ echo 'なし';}
                 ?>
               </td>
-              <td>&nbsp;</td>
+              
             </tr>
 
             <?php else : ?>
@@ -66,10 +68,12 @@
               <td width="15%" class="col_3">画像</td>
               <td>
                 <?php
+                if(!empty($info['Info']['info3_img'])){
                   echo $this->Html->link('表示', $this->webroot . $info['Info']['info3_img'] , array(
                      'target'=>'_blank',
                       'escape'=>false
                   ));
+                  }else{ echo 'なし';}
                 ?>                
               </td>
             </tr>
@@ -85,10 +89,12 @@
               <td width="18%" class="col_3">関連ファイル</td>
               <td>
                 <?php
+                if(!empty($info['Info']['info3_file'])){
                   echo $this->Html->link('表示', $this->webroot . $info['Info']['info3_file'] , array(
                      'target'=>'_blank',
                       'escape'=>false
                   ));
+                  }else{ echo 'なし';}
                 ?>
               </td>
             </tr>

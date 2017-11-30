@@ -6,87 +6,116 @@ class Info extends AppModel {
    public $useTable = 't_info';
    public $primaryKey = 'info_id';
    
-   public $validate = array(
-        'info_title' => array(
-            'notBlank' => array(
-                'rule' => array('notBlank'),
-                'message' => 'タイトルを入力してください。',
-                //'message' => __('info_title_require'),
-                //'allowEmpty' => false,
-                //'required' => false,
-                //'last' => false, // Stop validation after this rule
-                //'on' => 'create', // Limit validation to 'create' or 'update' operations
+    function __construct() {
+
+        parent::__construct();
+        $this->validate = array(
+            'info_title' => array(
+                'notBlank' => array(
+                    'rule' => array('notBlank'),
+                    'message' => __('info_title_require')
+                ),
             ),
-        ),
-        'info_year' => array(
-            'notBlank' => array(
-                'rule' => array('notBlank'),
-                'message' => '年を選択してください。',
-                //'message' => __('info_date_require'),
-                //'allowEmpty' => false,
-                //'required' => false,
-                //'last' => false, // Stop validation after this rule
-                //'on' => 'create', // Limit validation to 'create' or 'update' operations
+            'info2_file' => array(
+                'extension' => array(
+                    'rule' => array('extension', array('pdf', 'doc', 'docx', 'xls', 'xlsx', 'csv', 'txt')),
+                    'message' => __('info2_file_ext'),
+                    'allowEmpty' => true,
+                ),
+                'fileSize' => array(
+                    'rule' => array('fileSize', '<=', '10MB'),
+                    'message' => __('info2_file_size'),
+                    'allowEmpty' => true,
+                ),
             ),
-        ),
-        'month' => array(
-            'notBlank' => array(
-                'rule' => array('notBlank'),
-                'message' => '月を選択してください。',
-                //'message' => __('info_date_require'),
-                //'allowEmpty' => false,
-                //'required' => false,
-                //'last' => false, // Stop validation after this rule
-                //'on' => 'create', // Limit validation to 'create' or 'update' operations
+            'info3_contents' => array(
+                'notBlank' => array(
+                    'rule' => array('notBlank'),
+                    'message' => __('info3_contents_require'),
+                ),
             ),
-        ),
-        'day' => array(
-            'notBlank' => array(
-                'rule' => array('notBlank'),
-                'message' => '日を選択してください。',
-                //'message' => __('info_date_require'),
-                //'allowEmpty' => false,
-                //'required' => false,
-                //'last' => false, // Stop validation after this rule
-                //'on' => 'create', // Limit validation to 'create' or 'update' operations
+            'info3_img' => array(
+                'extension' => array(
+                    'rule' => array('extension', array('gif', 'jpeg', 'png', 'jpg')),
+                    'message' => __('info3_img_ext'),
+                    'allowEmpty' => true,
+                ),
+                'fileSize' => array(
+                    'rule' => array('fileSize', '<=', '10MB'),
+                    'message' => __('info3_img_size'),
+                    'allowEmpty' => true,
+                ),
             ),
-        ),
-        'info_hour' => array(
-            'notBlank' => array(
-                'rule' => array('notBlank'),
-                'message' => '時を選択してください。',
-                //'message' => __('info_date_require'),
-                //'allowEmpty' => false,
-                //'required' => false,
-                //'last' => false, // Stop validation after this rule
-                //'on' => 'create', // Limit validation to 'create' or 'update' operations
+            'info3_file' => array(
+                'extension' => array(
+                    'rule' => array('extension', array('pdf', 'doc', 'docx', 'xls', 'xlsx', 'csv', 'txt')),
+                    'message' => __('info3_file_ext'),
+                    'allowEmpty' => true,
+                ),
+                'fileSize' => array(
+                    'rule' => array('fileSize', '<=', '10MB'),
+                    'message' => __('info3_file_size'),
+                    'allowEmpty' => true,
+                ),
             ),
-        ),
-        'info_minute' => array(
-            'notBlank' => array(
-                'rule' => array('notBlank'),
-                'message' => '分を選択してください。',
-                //'message' => __('info_date_require'),
-                //'allowEmpty' => false,
-                //'required' => false,
-                //'last' => false, // Stop validation after this rule
-                //'on' => 'create', // Limit validation to 'create' or 'update' operations
+            'info_year' => array(
+                'notBlank' => array(
+                    'rule' => array('notBlank'),
+                    'message' => __('info_year_require')
+                ),
             ),
-        ),
-    );  
+            'info_month' => array(
+                'notBlank' => array(
+                    'rule' => array('notBlank'),
+                    'message' => __('info_month_require')
+                ),
+            ),
+            'info_day' => array(
+                'notBlank' => array(
+                    'rule' => array('notBlank'),
+                    'message' => __('info_day_require')
+                ),
+            ),
+            'info_hour' => array(
+                'notBlank' => array(
+                    'rule' => array('notBlank'),
+                    'message' => __('info_hour_require')
+                ),
+            ),
+            'info_minute' => array(
+                'notBlank' => array(
+                    'rule' => array('notBlank'),
+                    'message' => __('info_minute_require')
+                ),
+            ),
+            'info_type' => array(
+                'notBlank' => array(
+                    'rule' => array('notBlank'),
+                    'message' => __('info_type_require')
+                ),
+            ),
+            'info3_mail' => array(
+                'email' => array(
+                    'rule' => array('email'),
+                    'message' => __('info3_mail_mail'),
+                    'allowEmpty' => true,
+                ),
+            ),
+
+        );  
+    }
 
     //get list info for backend 
    public function getAllInfos(){
         return $this->Paginator->paginates('all', array(
                 //'fields' => array('ifo_id','info_title', 'info_date', 'info_type', 'info1_url'),                
-                'conditions' => array(
-                        'last_kind <>' => DELETE,
-                ),
+                'conditions' => array('last_kind <>' => DELETE),
+                'order' => 'info_date DESC',
                 'recursive' => -1
         ));
    }
 
- //get info by id backend 
+    //get info by id backend 
    public function getInfoById($id){
         return $this->find('first', array(
                 //'fields' => array('ifo_id','info_title', 'info_date', 'info_type', 'info1_url'),                
@@ -103,35 +132,4 @@ class Info extends AppModel {
         return $this->updateAll($data, array('info_id' => $id));
     }
 
- //   public function paginate($conditions, $fields, $order, $limit, $page = 1, $recursive = null, $extra = array()) {
-	//     $qryCond = " (last_kind is NULL or last_kind <> 9) and info_dspl_flag IS NULL and ((info_start IS NULL) or DATE(info_start) <= DATE(NOW())) and ((info_end IS NULL) or DATE(info_end) >= DATE(NOW()))" ;
-
-	// 	$orderStr = '';
-	// 	foreach($order as $k => $ord) {
-	// 	   $orderStr[] = $k . ' ' . $ord;
-	// 	}
-	// 	$orderStr = 'ORDER BY '. implode(', ', $orderStr);
-				 
-	// 	$qryFlds = '*';
-	// 	if ($fields) {
-	// 		$qryFlds = implode(', ', $fields);
-	// 	}
-		
-	// 	$sql = 'SELECT '.$qryFlds.' FROM '.$this->useTable.' as info WHERE '.$qryCond.' '.$orderStr . ' LIMIT ' . (($page-1) * $limit) . ', ' . $limit;
-	// 	//echo $sql;
-	// 	$results = $this->query($sql);
-	// 	return $results;
- //   }
-
- //   public function paginateCount($conditions = null, $recursive = 0, $extra = array()) {
-	// 	$qryCond = " (last_kind is NULL or last_kind <> 9) and info_dspl_flag IS NULL and ((info_start IS NULL) or DATE(info_start) <= DATE(NOW())) and ((info_end IS NULL) or DATE(info_end) >= DATE(NOW()))" ;
-		 
-	// 	$sql = 'SELECT COUNT(*) as count FROM '.$this->useTable.' as info WHERE '.$qryCond;
-		 
-	// 	$this->recursive = -1;
-		 
-	// 	$results = $this->query($sql);
-	// 	return $results[0][0]['count'];
-	// }
- 
 }

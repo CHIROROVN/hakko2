@@ -13,7 +13,7 @@
 <table width="100%" border="0" cellspacing="0" cellpadding="5">
   <tbody>
     <tr>
-      <td width="50%" align="left"><input type="button" onClick="<?php echo $this->Html->url(array('controller'=>'menus','action'=>'index')) ?>'" value="管理者メニューへ"></td>
+      <td width="50%" align="left"><input type="button" onClick="location.href='<?php echo $this->Html->url(array('controller'=>'menus','action'=>'index')) ?>'" value="管理者メニューへ"></td>
       <td width="50%" align="right"><input type="button" onClick="location.href='<?php echo $this->Html->url(array('controller'=>'users','action'=>'logout')) ?>'" value="ログアウト"></td>
     </tr>
   </tbody>

@@ -1,5 +1,9 @@
 <?php
 
+    // $uri_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+    // $uri_segments = explode('/', $uri_path);
+    define('ADMIN_PREFIX', 'cts-adm');
+
     //get IP address from user
     if (isset($_SERVER['HTTP_CLIENT_IP']))
         $ipaddress = $_SERVER['HTTP_CLIENT_IP'];
@@ -22,4 +26,8 @@
     define('UPDATE', 1);
     define('DELETE', 9);
     define('LIMIT_PAGE', 2);
+    define('UPLOAD_PATH', WWW_ROOT.'uploads'.DS.'infos'.DS);
+
+
+
 

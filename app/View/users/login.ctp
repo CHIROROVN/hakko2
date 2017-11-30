@@ -17,28 +17,19 @@
     </tr>
     <tr>
       <td>&nbsp;</td>
-    </tr>
-<?php  echo $this->Session->flash(); ?>
-   <!--  <tr>
-      <td>
-        <div id="error" class="message">
-            <a id="close" title="Message"  href="#" onClick="document.getElementById('error').setAttribute('style','display: none;');">&times;</a>
-            <span></span>
-        </div>
-        </td>
-    </tr> -->
-  
+    </tr> 
+    <tr>
+      <td><?php echo $this->Flash->render('flash') ?></td>
+    </tr>  
 
     <?php 
       echo $this->Form->create('User', array(          
           'url' => Router::url(array(
               'controller' => 'users', 'action' => 'login',
           )),
-          'novalidate' => true
-            
+          'novalidate' => true            
       ));
-
-  ?>
+    ?>
 
     <tr>
       <td align="center"><table width="60%" border="1" cellspacing="0" cellpadding="5">

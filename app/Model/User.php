@@ -10,28 +10,31 @@ class User extends AppModel {
    public $useTable = 'users';
    public $primaryKey = 'u_id';
 
-   public $validate = array(
-        'username' => array(
-            'notBlank' => array(
-                'rule' => array('notBlank'),
-                'message' => 'Please enter login id',
-                //'allowEmpty' => false,
-                //'required' => false,
-                //'last' => false, // Stop validation after this rule
-                //'on' => 'create', // Limit validation to 'create' or 'update' operations
+    function __construct() {
+        parent::__construct();
+        $this->validate = array(
+            'username' => array(
+                'notBlank' => array(
+                    'rule' => array('notBlank'),
+                    'message' => __('Please enter login id'),
+                    //'allowEmpty' => false,
+                    //'required' => false,
+                    //'last' => false, // Stop validation after this rule
+                    //'on' => 'create', // Limit validation to 'create' or 'update' operations
+                ),
             ),
-        ),
-        'password' => array(
-            'notBlank' => array(
-                'rule' => array('notBlank'),
-                'message' => 'Please enter password',
-                //'allowEmpty' => false,
-                //'required' => false,
-                //'last' => false, // Stop validation after this rule
-                //'on' => 'create', // Limit validation to 'create' or 'update' operations
+            'password' => array(
+                'notBlank' => array(
+                    'rule' => array('notBlank'),
+                    'message' => __('Please enter password'),
+                    //'allowEmpty' => false,
+                    //'required' => false,
+                    //'last' => false, // Stop validation after this rule
+                    //'on' => 'create', // Limit validation to 'create' or 'update' operations
+                ),
             ),
-        ),
-    );
+        );  
+    }
     
      
 

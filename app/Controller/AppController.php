@@ -20,7 +20,7 @@
  */
 
 App::uses('Controller', 'Controller');
-
+use Cake\Network\Exception\NotFoundException;
 /**
  * Application Controller
  *
@@ -43,10 +43,9 @@ class AppController extends Controller {
                 ),
                 'loginRedirect' => array('controller' => 'menus', 'action' => 'index'),
                 'logoutRedirect' => array('controller' => 'users', 'action' => 'logout'),
-                //'authError' => 'Did you really think you are allowed to see that?',
                 'authenticate' => array(
                     'Form' => array(
-                        'scope' => array('User.last_kind' => 0),
+                        'scope' => array('last_kind <>' => DELETE),
                         'passwordHasher' => 'Blowfish',                        
                         'fields' => array(
                               'username' => 'password',
@@ -59,11 +58,11 @@ class AppController extends Controller {
             )
         );
 
-
 	public function beforeFilter() {
-      //  $this->Auth->scope = array('User.last_kind' => 0);
+      //  $this->Auth->scope = array('last_kind' => 0);
 		Security::setHash('sha1');
-		$this->Auth->allow('login');
+		$this->Auth->allow(array('login', 'error404', 'error500'));
+        if($this->request->here == '/cts-adm' || $this->request->here == '/cts-adm/') $this->redirect(array('controller' => 'menus', 'action' => 'index'));
 	}
 
 }

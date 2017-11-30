@@ -16,7 +16,6 @@ class UsersController extends AppController {
     }
 
 	public function login() {
-
 		$this->layout = false;
 
 		if($this->Session->check('Auth.User')){
@@ -29,10 +28,11 @@ class UsersController extends AppController {
 	            if ($this->Auth->login()) {
 	                return $this->redirect(array('controller' => 'menus', 'action' => 'index'));
 	            } else {
-	                $this->Session->setFlash(__('login_erorr'));
+	                $this->Flash->error(__('login_erorr', array('key'=>'flash')));
 	            }
 	        }
-        } 
+        }
+        return $this->render('/users/login');
 
 	 }
 

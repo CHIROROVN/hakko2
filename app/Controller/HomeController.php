@@ -14,7 +14,8 @@ class HomeController extends AppController {
        $this->loadModel('Info');
        $arrData = $this->Info->find('all', array('limit' => 5,'order' => array('info_date' => 'desc')));
        $this->set('arrInfo', $arrData); 
-	   $this->layout = 'frontend';		
+	   $this->layout = 'frontend';
+     $this -> render('/home/index');	
 	}
 
 

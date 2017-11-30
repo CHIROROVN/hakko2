@@ -1,0 +1,60 @@
+2017-11-30 04:42:01 Debug: Notice (8): Undefined variable: message in [C:\xampp\htdocs\hakko\app\View\Errors\error404.ctp, line 17]
+Trace:
+ErrorHandler::handleError() - APP\Vendor\cakephp\cakephp\lib\Cake\Error\ErrorHandler.php, line 230
+include - APP\View\Errors\error404.ctp, line 17
+View::_evaluate() - APP\Vendor\cakephp\cakephp\lib\Cake\View\View.php, line 971
+View::_render() - APP\Vendor\cakephp\cakephp\lib\Cake\View\View.php, line 933
+View::render() - APP\Vendor\cakephp\cakephp\lib\Cake\View\View.php, line 473
+Controller::render() - APP\Vendor\cakephp\cakephp\lib\Cake\Controller\Controller.php, line 963
+ErrorsController::notfound() - APP\Controller\ErrorsController.php, line 18
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - APP\Vendor\cakephp\cakephp\lib\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - APP\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - APP\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2017-11-30 04:42:01 Debug: Notice (8): Undefined variable: url in [C:\xampp\htdocs\hakko\app\View\Errors\error404.ctp, line 22]
+Trace:
+ErrorHandler::handleError() - APP\Vendor\cakephp\cakephp\lib\Cake\Error\ErrorHandler.php, line 230
+include - APP\View\Errors\error404.ctp, line 22
+View::_evaluate() - APP\Vendor\cakephp\cakephp\lib\Cake\View\View.php, line 971
+View::_render() - APP\Vendor\cakephp\cakephp\lib\Cake\View\View.php, line 933
+View::render() - APP\Vendor\cakephp\cakephp\lib\Cake\View\View.php, line 473
+Controller::render() - APP\Vendor\cakephp\cakephp\lib\Cake\Controller\Controller.php, line 963
+ErrorsController::notfound() - APP\Controller\ErrorsController.php, line 18
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - APP\Vendor\cakephp\cakephp\lib\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - APP\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - APP\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2017-11-30 04:47:08 Debug: Notice (8): Undefined variable: message in [C:\xampp\htdocs\hakko\app\View\Errors\error404.ctp, line 17]
+Trace:
+ErrorHandler::handleError() - APP\Vendor\cakephp\cakephp\lib\Cake\Error\ErrorHandler.php, line 230
+include - APP\View\Errors\error404.ctp, line 17
+View::_evaluate() - APP\Vendor\cakephp\cakephp\lib\Cake\View\View.php, line 971
+View::_render() - APP\Vendor\cakephp\cakephp\lib\Cake\View\View.php, line 933
+View::render() - APP\Vendor\cakephp\cakephp\lib\Cake\View\View.php, line 473
+Controller::render() - APP\Vendor\cakephp\cakephp\lib\Cake\Controller\Controller.php, line 963
+ErrorsController::notfound() - APP\Controller\ErrorsController.php, line 18
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - APP\Vendor\cakephp\cakephp\lib\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - APP\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - APP\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+
+2017-11-30 04:47:08 Debug: Notice (8): Undefined variable: url in [C:\xampp\htdocs\hakko\app\View\Errors\error404.ctp, line 22]
+Trace:
+ErrorHandler::handleError() - APP\Vendor\cakephp\cakephp\lib\Cake\Error\ErrorHandler.php, line 230
+include - APP\View\Errors\error404.ctp, line 22
+View::_evaluate() - APP\Vendor\cakephp\cakephp\lib\Cake\View\View.php, line 971
+View::_render() - APP\Vendor\cakephp\cakephp\lib\Cake\View\View.php, line 933
+View::render() - APP\Vendor\cakephp\cakephp\lib\Cake\View\View.php, line 473
+Controller::render() - APP\Vendor\cakephp\cakephp\lib\Cake\Controller\Controller.php, line 963
+ErrorsController::notfound() - APP\Controller\ErrorsController.php, line 18
+ReflectionMethod::invokeArgs() - [internal], line ??
+Controller::invokeAction() - APP\Vendor\cakephp\cakephp\lib\Cake\Controller\Controller.php, line 491
+Dispatcher::_invoke() - APP\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php, line 193
+Dispatcher::dispatch() - APP\Vendor\cakephp\cakephp\lib\Cake\Routing\Dispatcher.php, line 167
+[main] - APP\webroot\index.php, line 118
+

@@ -512,8 +512,10 @@ $(document).ready(function(){
     height: 320,
     menubar: false,
     forced_root_block : "", 
-    force_br_newlines : false,
+    force_br_newlines : true,
     force_p_newlines : false,
+    apply_source_formatting : false,
+    statusbar: false,
     fontsize_formats: "8pt 9pt 10pt 11pt 12pt 13pt 14pt 15pt 16pt 17pt 18pt 19pt 20pt 21pt 22pt 23pt 24pt 25pt 26pt 27pt 28pt 29pt 30pt 31pt 32pt",
 
     plugins: 'print preview fullpage searchreplace autolink directionality visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists textcolor wordcount imagetools contextmenu colorpicker textpattern',

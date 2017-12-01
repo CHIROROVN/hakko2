@@ -110,8 +110,8 @@ class Info extends AppModel {
         return $this->Paginator->paginates('all', array(
                 //'fields' => array('ifo_id','info_title', 'info_date', 'info_type', 'info1_url'),                
                 'conditions' => array('last_kind <>' => DELETE),
-                'order' => 'info_date DESC',
-                'recursive' => -1
+                'order' => array('info_date'=>'asc'),
+                'recursive' => 0
         ));
    }
 

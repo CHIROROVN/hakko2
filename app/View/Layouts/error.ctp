@@ -1,59 +1,191 @@
-<?php
-/**
- * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
- * @link          https://cakephp.org CakePHP(tm) Project
- * @package       app.View.Layouts
- * @since         CakePHP(tm) v 0.10.0.1076
- * @license       https://opensource.org/licenses/mit-license.php MIT License
- */
-
-$cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
-?>
-<!DOCTYPE html>
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
 <html>
 <head>
-	<?php echo $this->Html->charset(); ?>
-	<title>
-		<?php echo $cakeDescription ?>:
-		<?php echo $this->fetch('title'); ?>
-	</title>
-	<?php
-		echo $this->Html->meta('icon');
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Free 404 White for Iphone, Android & Smartphone Mobile Website Template | Home :: w3layouts</title>
+<style type="text/css">
+body{
+	font-family:Arial, Helvetica, sans-serif;
+}
+.wrap{
+	width:1000px;
+	margin:0 auto;
+	background:#fff;
+}
+.logo {
+    width:430px;
+    margin:0 auto;
+    padding-top:14em;
+}
+p a{
+	color:#eee;
+	font-size:13px;
+	margin-left:30px;
+	padding:5px;
+	background:#FF3366;
+	text-decoration:none;
+	-webkit-border-radius:.3em;
+	   -moz-border-radius:.3em;
+	        border-radius:.3em;
+}
+p a:hover{
+	color:#fff;
+}
+.footer{
+	position:absolute;
+	bottom:10px;
+	right:10px;
+	font-size:12px;
+	color:#aaa;
+}
+.footer a{
+	color:#666;
+	text-decoration:none;
+}
+/*--responsive--*/
 
-		echo $this->Html->css('cake.generic');
+@media(max-width:991px){
 
-		echo $this->fetch('meta');
-		echo $this->fetch('css');
-		echo $this->fetch('script');
-	?>
+	.wrap {
+		margin: 0px auto;
+		width: 897px;
+	}
+
+}
+@media(max-width:900px){
+	.wrap {
+		margin: 0px auto;
+		width: 820px;
+	}
+
+}	
+@media(max-width:800px){
+	.wrap {
+		margin: 0px auto;
+		width: 700px;
+	}
+}
+@media (max-width:736px){
+	.wrap {
+		margin: 0px auto;
+		width: 627px;
+	}
+
+}
+@media(max-width:667px){
+	.wrap {
+		margin: 0px auto;
+		width: 600px;
+	}
+
+}
+@media(max-width:640px){
+	.wrap {
+		margin: 0px auto;
+		width: 570px;
+	}
+
+}
+@media(max-width:600px){
+	.wrap {
+		margin: 0px auto;
+		width:458px;
+	}
+	.logo {
+		width: 322px;
+		margin: 0 auto;
+		padding-top: 9em;
+	}
+	.logo img {
+		width: 100%;
+	}
+	.footer {
+		position: absolute;
+		bottom: 147px;
+		left: 69px;
+		font-size: 12px;
+	}
+}
+
+@media(max-width:480px){
+	.wrap {
+		margin: 0px auto;
+		width:375px;
+	}
+
+}
+@media(max-width:440px){
+	.footer {
+		position: absolute;
+		bottom: 105px;
+		left: 48px;
+		font-size: 12px;
+	}
+}
+@media(max-width:414px){
+
+	.wrap {
+		margin: 0px auto;
+		width: 357px;
+	}
+
+
+}
+@media(max-width:384px){
+	.wrap {
+		margin: 0px auto;
+		width: 363px;
+	}
+	.footer {
+		position: absolute;
+		bottom: 105px;
+		left: 9px;
+		font-size: 12px;
+		text-align: center;
+		line-height: 1.8em;
+	}
+}
+@media(max-width:375px){
+	.wrap {
+		margin: 0px auto;
+		width: 337px;
+	}
+	.logo {
+		width:250px;
+		margin: 0 auto;
+		padding-top:8em;
+	}
+}
+@media(max-width:320px){
+	.wrap {
+		margin: 0px auto;
+		width: 285px;
+	}
+	.logo {
+		width:181px;
+		margin: 0 auto;
+		padding-top:5em;
+	}
+
+}
+</style>
 </head>
 <body>
-	<div id="container">
-		<div id="header">
-			<h1><?php echo $this->Html->link($cakeDescription, 'https://cakephp.org'); ?></h1>
-		</div>
-		<div id="content">
+<div class="wrap">
+    <div class="logo">
+    	<?php echo $this->Html->image('404.png', array('class' => 'pc','width'=>'192','height'=>'80', 'alt'=>'404'));?>        
+        <p><a href="#">Go back to Home</a></p>
+    </div>
+</div>
+<div class="footer">
+	
+</div>
 
-			<?php echo $this->Session->flash(); ?>
-
-			<?php echo $this->fetch('content'); ?>
-		</div>
-		<div id="footer">
-			<?php echo $this->Html->link(
-					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-					'https://cakephp.org/',
-					array('target' => '_blank', 'escape' => false)
-				);
-			?>
-		</div>
-	</div>
-	<?php echo $this->element('sql_dump'); ?>
 </body>
 </html>

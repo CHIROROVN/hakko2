@@ -29,7 +29,7 @@
     </ul>
   </nav>
 <?php echo $this->fetch('content'); ?>
-<div class="pagetop"><a href="#header"><?php echo $this->Html->image('pagetop.png', array('class' => 'pc','width'=>'280','height'=>'46', 'alt'=>'このページのトップへ'));?><?php echo $this->Html->image('pagetop_sp.png', array('class' => 'pc','width'=>'280','height'=>'46', 'alt'=>'このページのトップへ'));?></a></div>
+<div class="pagetop"><a href="#header"><?php echo $this->Html->image('pagetop.png', array('class' => 'pc','width'=>'280','height'=>'46', 'alt'=>'このページのトップへ'));?><?php echo $this->Html->image('pagetop_sp.png', array('class' => 'sp','width'=>'280','height'=>'46', 'alt'=>'このページのトップへ'));?></a></div>
 <div class="tel"><a href="tel:"><?php echo $this->Html->image('tel.png', array('class' => 'sp', 'alt'=>'電話:086-427-7677'));?></a></div>
 <div id="footer">
 <footer>

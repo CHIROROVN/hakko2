@@ -25,7 +25,7 @@
     define('INSERT', 0);
     define('UPDATE', 1);
     define('DELETE', 9);
-    define('LIMIT_PAGE', 2);
+    define('LIMIT_PAGE', 20);
     define('UPLOAD_PATH', WWW_ROOT.'uploads'.DS.'infos'.DS);
 
 

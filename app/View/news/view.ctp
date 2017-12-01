@@ -18,7 +18,7 @@
   <h3 class="wnTitle"><?php echo $info['News']['info_title']?></h3>
   <p><?php echo date("Y年m月d日",strtotime($info['News']['info_date']));?></p>
   <div class="clear wnCont">
-    <p><?php if(!empty($info['News']['info3_img'])){?><?php echo $this->Html->image('../'.$info['News']['info3_img'], array('class' => 'alignright','width'=>'300','height'=>'205', 'alt'=>$info['News']['info_title']));?><?php }?><?php  echo $info['News']['info3_contents'];?></p>
+    <p><?php if(!empty($info['News']['info3_img'])){?><?php echo $this->Html->image('../'.$info['News']['info3_img'], array('class' => 'alignright','width'=>'300','height'=>'205', 'alt'=>$info['News']['info_title']));?><?php }?><?php  echo nl2br($info['News']['info3_contents']);?></p>
   </div>
   <ul class="wnDetail">
     <li><a href="<?php  echo $info['News']['info3_url'];?>" target="_blank"><?php  echo $info['News']['info3_url'];?></a></li>

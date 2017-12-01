@@ -476,3 +476,51 @@ $(document).ready(function(){
     return (num < 10? '0' : '') + num;
   }
 </script>
+
+<script>
+  tinymce.init({
+    selector: '#InfoInfo3Contents',
+    language: 'ja',
+    height: 320,
+    menubar: false,
+    forced_root_block : "", 
+    force_br_newlines : false,
+    force_p_newlines : false,
+    fontsize_formats: "8pt 9pt 10pt 11pt 12pt 13pt 14pt 15pt 16pt 17pt 18pt 19pt 20pt 21pt 22pt 23pt 24pt 25pt 26pt 27pt 28pt 29pt 30pt 31pt 32pt",
+
+    plugins: 'print preview fullpage searchreplace autolink directionality visualblocks visualchars fullscreen image link media template codesample table charmap hr pagebreak nonbreaking anchor toc insertdatetime advlist lists textcolor wordcount imagetools contextmenu colorpicker textpattern',
+
+    toolbar: 'bold italic | strikethrough forecolor backcolor | fontsizeselect | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | imageupload',
+    content_css: [
+    '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
+    '//www.tinymce.com/css/codepen.min.css'
+    ],
+    setup: function(editor) {
+            var inp = $('<input id="tinymce-uploader" type="file" name="pic" accept="image/*" style="display:none">');
+            $(editor.getElement()).parent().append(inp);
+
+            inp.on("change",function(){
+                var input = inp.get(0);
+                var file = input.files[0];
+                var fr = new FileReader();
+                fr.onload = function() {
+                    var img = new Image();
+                    img.src = fr.result;
+                    editor.insertContent('<img src="'+img.src+'"/>');
+                    inp.val('');
+                }
+                fr.readAsDataURL(file);
+            });
+
+            editor.addButton( 'imageupload', {
+                text:"画像",
+                icon: false,
+                title:"画像を挿入する",
+                onclick: function(e) {
+                    inp.trigger('click');
+                }
+            });
+        },
+
+  });
+</script>

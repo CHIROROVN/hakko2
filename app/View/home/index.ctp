@@ -26,7 +26,7 @@
   </div>
   <div class="shopBox clear">
     <div class="horinan">
-      <p><?php echo $this->Html->image('horinan.png', array('class' => 'alignright','width'=>'400','height'=>'240'));?></p>
+      <p><?php echo $this->Html->image('horinan.png', array('width'=>'400','height'=>'240'));?></p>
       <dl>
         <dt>倉敷堀南店</dt>
         <dd>〒710-0841 倉敷市堀南852-1<br>
@@ -35,7 +35,7 @@
       <div class="btn"><a href="#" target="_blank">Googleマップを見る</a></div>
     </div>
     <div class="nishi">
-      <p><?php echo $this->Html->image('horinan.png', array('class' => 'alignright','width'=>'400','height'=>'240'));?></p>
+      <p><?php echo $this->Html->image('horinan.png', array('width'=>'400','height'=>'240'));?></p>
       <dl>
         <dt>倉敷西中新田店</dt>
         <dd>〒710-0833 倉敷市西中新田86-1<br>
@@ -44,7 +44,7 @@
       <div class="btn"><a href="https://goo.gl/maps/v8c9FiTw9gA2" target="_blank">Googleマップを見る</a></div>
     </div>
   </div>
-  <p class="meal"><a href="business/meal.html" title="セブンイレブンのお届けサービス「セブンミール」"><?php echo $this->Html->image('meal.png', array('class' => 'alignright','width'=>'902','height'=>'142', 'alt'=>'セブンイレブンのお届けサービス「セブンミール」'));?></a></p>
+  <p class="meal"><a href="business/meal.html" title="セブンイレブンのお届けサービス「セブンミール」"><?php echo $this->Html->image('meal.png', array('width'=>'902','height'=>'142', 'alt'=>'セブンイレブンのお届けサービス「セブンミール」'));?></a></p>
   <div class="btn"><a href="business/">事業内容を見る</a></div>
   <h2><span class="jpn">新着情報</span><span class="en">What's new?</span></h2>
   <ul class="wnList">

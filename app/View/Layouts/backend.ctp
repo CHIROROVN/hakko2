@@ -6,6 +6,7 @@
 <?php 
   echo $this->Html->css('style');
   echo $this->Html->script('jquery-1.11.3.min');
+  echo $this->Html->script('tinymce/tinymce.min');
 ?>
 </head>
 

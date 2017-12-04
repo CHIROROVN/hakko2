@@ -1,25 +1,8 @@
 <?php
 /**
- * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
- * @link          https://cakephp.org CakePHP(tm) Project
- * @package       Cake.View.Helper
- * @since         CakePHP(tm) v 1.3
- * @license       https://opensource.org/licenses/mit-license.php MIT License
- */
-
-App::uses('JsBaseEngineHelper', 'View/Helper');
-
-/**
  * MooTools Engine Helper for JsHelper
  *
- * Provides MooTools specific JavaScript for JsHelper.
+ * Provides MooTools specific Javascript for JsHelper.
  * Assumes that you have the following MooTools packages
  *
  * - Remote, Remote.HTML, Remote.JSON
@@ -27,10 +10,24 @@ App::uses('JsBaseEngineHelper', 'View/Helper');
  * - Selectors, DomReady,
  * - Drag, Drag.Move
  *
+ * PHP 5
+ *
+ * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+ * Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ *
+ * Licensed under The MIT License
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link          http://cakephp.org CakePHP(tm) Project
  * @package       Cake.View.Helper
+ * @since         CakePHP(tm) v 1.3
+ * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
-class MootoolsEngineHelper extends JsBaseEngineHelper {
 
+App::uses('JsBaseEngineHelper', 'View/Helper');
+
+class MootoolsEngineHelper extends JsBaseEngineHelper {
 /**
  * Option mappings for MooTools
  *
@@ -118,12 +115,12 @@ class MootoolsEngineHelper extends JsBaseEngineHelper {
  * Create javascript selector for a CSS rule
  *
  * @param string $selector The selector that is targeted
- * @return self
+ * @return MootoolsEngineHelper instance of $this. Allows chained methods.
  */
 	public function get($selector) {
 		$this->_multipleSelection = false;
-		if ($selector === 'window' || $selector === 'document') {
-			$this->selection = "$(" . $selector . ")";
+		if ($selector == 'window' || $selector == 'document') {
+			$this->selection = "$(" . $selector .")";
 			return $this;
 		}
 		if (preg_match('/^#[^\s.]+$/', $selector)) {
@@ -144,13 +141,13 @@ class MootoolsEngineHelper extends JsBaseEngineHelper {
  * - 'stop' - Whether you want the event to stopped. (defaults true)
  *
  * @param string $type Type of event to bind to the current dom id
- * @param string $callback The JavaScript function you wish to trigger or the function literal
+ * @param string $callback The Javascript function you wish to trigger or the function literal
  * @param array $options Options for the event.
  * @return string completed event handler
  */
 	public function event($type, $callback, $options = array()) {
 		$defaults = array('wrap' => true, 'stop' => true);
-		$options += $defaults;
+		$options = array_merge($defaults, $options);
 
 		$function = 'function (event) {%s}';
 		if ($options['wrap'] && $options['stop']) {
@@ -195,9 +192,9 @@ class MootoolsEngineHelper extends JsBaseEngineHelper {
 	public function effect($name, $options = array()) {
 		$speed = null;
 		if (isset($options['speed']) && in_array($options['speed'], array('fast', 'slow'))) {
-			if ($options['speed'] === 'fast') {
+			if ($options['speed'] == 'fast') {
 				$speed = '"short"';
-			} elseif ($options['speed'] === 'slow') {
+			} elseif ($options['speed'] == 'slow') {
 				$speed = '"long"';
 			}
 		}
@@ -205,10 +202,10 @@ class MootoolsEngineHelper extends JsBaseEngineHelper {
 		switch ($name) {
 			case 'hide':
 				$effect = 'setStyle("display", "none")';
-				break;
+			break;
 			case 'show':
 				$effect = 'setStyle("display", "")';
-				break;
+			break;
 			case 'fadeIn':
 			case 'fadeOut':
 			case 'slideIn':
@@ -219,27 +216,27 @@ class MootoolsEngineHelper extends JsBaseEngineHelper {
 					$effect .= "set(\"$effectName\", {duration:$speed}).";
 				}
 				$effect .= "$effectName(\"$direction\")";
-				break;
+			break;
 		}
 		return $this->selection . '.' . $effect . ';';
 	}
 
 /**
- * Create a new Request.
+ * Create an new Request.
  *
- * Requires `Request`. If you wish to use 'update' key you must have ```Request.HTML```
+ * Requires `Request`.  If you wish to use 'update' key you must have ```Request.HTML```
  * if you wish to do Json requests you will need ```JSON``` and ```Request.JSON```.
  *
- * @param string|array $url URL
- * @param array $options Options list.
+ * @param mixed $url
+ * @param array $options
  * @return string The completed ajax call.
  */
 	public function request($url, $options = array()) {
-		$url = html_entity_decode($this->url($url), ENT_COMPAT, Configure::read('App.encoding'));
+		$url = $this->url($url);
 		$options = $this->_mapOptions('request', $options);
 		$type = $data = null;
 		if (isset($options['type']) || isset($options['update'])) {
-			if (isset($options['type']) && strtolower($options['type']) === 'json') {
+			if (isset($options['type']) && strtolower($options['type']) == 'json') {
 				$type = '.JSON';
 			}
 			if (isset($options['update'])) {
@@ -255,6 +252,7 @@ class MootoolsEngineHelper extends JsBaseEngineHelper {
 		$options['url'] = $url;
 		$options = $this->_prepareCallbacks('request', $options);
 		if (!empty($options['dataExpression'])) {
+			$callbacks[] = 'data';
 			unset($options['dataExpression']);
 		} elseif (!empty($data)) {
 			$data = $this->object($data);
@@ -296,8 +294,8 @@ class MootoolsEngineHelper extends JsBaseEngineHelper {
  *
  * Requires the `Drag` and `Drag.Move` plugins from MootoolsMore
  *
- * Droppables in Mootools function differently from other libraries. Droppables
- * are implemented as an extension of Drag. So in addition to making a get() selection for
+ * Droppables in Mootools function differently from other libraries.  Droppables
+ * are implemented as an extension of Drag.  So in addtion to making a get() selection for
  * the droppable element. You must also provide a selector rule to the draggable element. Furthermore,
  * Mootools droppables inherit all options from Drag.
  *
@@ -308,7 +306,7 @@ class MootoolsEngineHelper extends JsBaseEngineHelper {
 	public function drop($options = array()) {
 		if (empty($options['drag'])) {
 			trigger_error(
-				__d('cake_dev', '%s requires a "drag" option to properly function'), 'MootoolsEngine::drop()', E_USER_WARNING
+				__d('cake_dev', 'MootoolsEngine::drop() requires a "drag" option to properly function'), E_USER_WARNING
 			);
 			return false;
 		}
@@ -361,7 +359,7 @@ class MootoolsEngineHelper extends JsBaseEngineHelper {
  * @see JsBaseEngineHelper::serializeForm()
  */
 	public function serializeForm($options = array()) {
-		$options += array('isForm' => false, 'inline' => false);
+		$options = array_merge(array('isForm' => false, 'inline' => false), $options);
 		$selection = $this->selection;
 		if (!$options['isForm']) {
 			$selection = '$(' . $this->selection . '.form)';
@@ -372,5 +370,4 @@ class MootoolsEngineHelper extends JsBaseEngineHelper {
 		}
 		return $selection . $method;
 	}
-
 }

@@ -37,7 +37,7 @@
           <tr>
             <td width="40%" class="col_3">ログインID</td>
             <td>
-              <?php echo $this->Form->input('username', array('label'=>false, 'type'=>'text')); 
+              <?php echo $this->Form->input('u_login', array('label'=>false, 'type'=>'text')); 
               //echo $this->Form->error('User.u_login', null, array('class' => 'error-message'));
               ?>
             </td>
@@ -45,7 +45,7 @@
           <tr>
             <td width="40%" class="col_3">パスワード</td>
             <td>
-              <?php echo $this->Form->input('password', array('label'=>false, 'type'=>'password')); 
+              <?php echo $this->Form->input('u_passwd', array('label'=>false, 'type'=>'password')); 
               //echo $this->Form->error('User.u_passwd', null, array('class' => 'error-message'));
               ?>
             </td>

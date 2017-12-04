@@ -5,9 +5,7 @@ App::uses('SimplePasswordHasher', 'Controller/Component/Auth');
 
 class UsersController extends AppController {
 
-	public $uses = array();
-	public $name = 'Users';
-	public $components = array('Session', 'Auth');
+	public $components = array('Session');
 	public $helpers = array('Form', 'Html');
 
 	public function beforeFilter() {

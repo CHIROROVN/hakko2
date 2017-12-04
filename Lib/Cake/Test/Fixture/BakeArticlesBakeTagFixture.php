@@ -2,18 +2,19 @@
 /**
  * BakeCommentFixture
  *
- * CakePHP(tm) Tests <https://book.cakephp.org/2.0/en/development/testing.html>
- * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
+ * PHP 5
+ *
+ * CakePHP(tm) Tests <http://book.cakephp.org/view/1196/Testing>
+ * Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
  * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
- * @link          https://book.cakephp.org/2.0/en/development/testing.html CakePHP(tm) Tests
+ * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link          http://book.cakephp.org/view/1196/Testing CakePHP(tm) Tests
  * @package       Cake.Test.Fixture
  * @since         CakePHP(tm) v 2.0
- * @license       https://opensource.org/licenses/mit-license.php MIT License
+ * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 
 /**
@@ -24,6 +25,13 @@
 class BakeArticlesBakeTagFixture extends CakeTestFixture {
 
 /**
+ * name property
+ *
+ * @var string 'ArticlesTag'
+ */
+	public $name = 'BakeArticlesBakeTag';
+
+/**
  * fields property
  *
  * @var array
@@ -31,7 +39,7 @@ class BakeArticlesBakeTagFixture extends CakeTestFixture {
 	public $fields = array(
 		'bake_article_id' => array('type' => 'integer', 'null' => false),
 		'bake_tag_id' => array('type' => 'integer', 'null' => false),
-		'indexes' => array('UNIQUE_TAG' => array('column' => array('bake_article_id', 'bake_tag_id'), 'unique' => 1))
+		'indexes' => array('UNIQUE_TAG' => array('column'=> array('bake_article_id', 'bake_tag_id'), 'unique'=>1))
 	);
 
 /**

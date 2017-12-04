@@ -1,30 +1,31 @@
 <?php
 /**
- * CakePHP(tm) Tests <https://book.cakephp.org/2.0/en/development/testing.html>
- * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
+ * Short description for file.
+ *
+ * PHP 5
+ *
+ * CakePHP(tm) Tests <http://book.cakephp.org/view/1196/Testing>
+ * Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
  * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice
  *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
- * @link          https://book.cakephp.org/2.0/en/development/testing.html CakePHP(tm) Tests
+ * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link          http://book.cakephp.org/view/1196/Testing CakePHP(tm) Tests
  * @package       Cake.TestSuite.Fixture
  * @since         CakePHP(tm) v 1.2.0.4667
- * @license       https://opensource.org/licenses/mit-license.php MIT License
+ * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 
 App::uses('Model', 'Model');
 
 /**
- * A model to extend from to help you during testing.
+ * Short description for class.
  *
  * @package       Cake.TestSuite.Fixture
  */
 class CakeTestModel extends Model {
-
 	public $useDbConfig = 'test';
-
 	public $cacheSources = false;
 
 /**
@@ -32,27 +33,27 @@ class CakeTestModel extends Model {
  * incorrect order when no order has been defined in the finds.
  * Postgres can return the results in any order it considers appropriate if none is specified
  *
- * @param int|string|array $id Set this ID for this model on startup, can also be an array of options, see above.
- * @param string $table Name of database table to use.
- * @param string $ds DataSource connection name.
+ * @param array $queryData
+ * @return array $queryData
  */
-	public function __construct($id = false, $table = null, $ds = null) {
-		parent::__construct($id, $table, $ds);
-		$this->order = array($this->alias . '.' . $this->primaryKey => 'ASC');
-	}
-
-/**
- * Overriding save() to set CakeTestSuiteDispatcher::date() as formatter for created, modified and updated fields
- *
- * @param array $data Data to save
- * @param bool|array $validate Validate or options.
- * @param array $fieldList Whitelist of fields
- * @return mixed
- */
-	public function save($data = null, $validate = true, $fieldList = array()) {
-		$db = $this->getDataSource();
-		$db->columns['datetime']['formatter'] = 'CakeTestSuiteDispatcher::date';
-		return parent::save($data, $validate, $fieldList);
+	public function beforeFind($queryData) {
+		$pk = $this->primaryKey;
+		$aliasedPk = $this->alias . '.' . $this->primaryKey;
+		switch(true) {
+			case !$pk:
+			case !$this->useTable:
+			case !$this->schema('id'):
+			case !empty($queryData['order'][0]):
+			case !empty($queryData['group']):
+			case
+				(is_string($queryData['fields']) && !($queryData['fields'] == $pk || $queryData['fields'] == $aliasedPk)) ||
+				(is_array($queryData['fields']) && !(array_key_exists($pk, $queryData['fields']) || array_key_exists($aliasedPk, $queryData['fields']))):
+			break;
+			default:
+				$queryData['order'] = array($this->alias . '.' . $this->primaryKey => 'ASC');
+			break;
+		}
+		return $queryData;
 	}
 
 }

@@ -4,57 +4,20 @@
  *
  * Mock classes for use in Model and related test cases
  *
- * CakePHP(tm) Tests <https://book.cakephp.org/2.0/en/development/testing.html>
- * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
+ * PHP 5
+ *
+ * CakePHP(tm) Tests <http://book.cakephp.org/view/1196/Testing>
+ * Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
  * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice
  *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
- * @link          https://book.cakephp.org/2.0/en/development/testing.html CakePHP(tm) Tests
+ * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link          http://book.cakephp.org/view/1196/Testing CakePHP(tm) Tests
  * @package       Cake.Test.Case.Model
  * @since         CakePHP(tm) v 1.2.0.6464
- * @license       https://opensource.org/licenses/mit-license.php MIT License
+ * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
-
-App::uses('Model', 'Model');
-
-/**
- * AppModel class
- *
- * @package       Cake.Test.Case.Model
- */
-class AppModel extends Model {
-
-/**
- * findMethods property
- *
- * @var array
- */
-	public $findMethods = array('published' => true);
-
-/**
- * useDbConfig property
- *
- * @var array
- */
-	public $useDbConfig = 'test';
-
-/**
- * _findPublished custom find
- *
- * @return array
- */
-	protected function _findPublished($state, $query, $results = array()) {
-		if ($state === 'before') {
-			$query['conditions']['published'] = 'Y';
-			return $query;
-		}
-		return $results;
-	}
-
-}
 
 /**
  * Test class
@@ -66,14 +29,14 @@ class Test extends CakeTestModel {
 /**
  * useTable property
  *
- * @var bool
+ * @var bool false
  */
 	public $useTable = false;
 
 /**
  * name property
  *
- * @var string
+ * @var string 'Test'
  */
 	public $name = 'Test';
 
@@ -83,14 +46,13 @@ class Test extends CakeTestModel {
  * @var array
  */
 	protected $_schema = array(
-		'id' => array('type' => 'integer', 'null' => '', 'default' => '1', 'length' => '8', 'key' => 'primary'),
-		'name' => array('type' => 'string', 'null' => '', 'default' => '', 'length' => '255'),
-		'email' => array('type' => 'string', 'null' => '1', 'default' => '', 'length' => '155'),
-		'notes' => array('type' => 'text', 'null' => '1', 'default' => 'write some notes here', 'length' => ''),
-		'created' => array('type' => 'date', 'null' => '1', 'default' => '', 'length' => ''),
-		'updated' => array('type' => 'datetime', 'null' => '1', 'default' => '', 'length' => null)
+		'id'=> array('type' => 'integer', 'null' => '', 'default' => '1', 'length' => '8', 'key'=>'primary'),
+		'name'=> array('type' => 'string', 'null' => '', 'default' => '', 'length' => '255'),
+		'email'=> array('type' => 'string', 'null' => '1', 'default' => '', 'length' => '155'),
+		'notes'=> array('type' => 'text', 'null' => '1', 'default' => 'write some notes here', 'length' => ''),
+		'created'=> array('type' => 'date', 'null' => '1', 'default' => '', 'length' => ''),
+		'updated'=> array('type' => 'datetime', 'null' => '1', 'default' => '', 'length' => null)
 	);
-
 }
 
 /**
@@ -103,16 +65,23 @@ class TestAlias extends CakeTestModel {
 /**
  * useTable property
  *
- * @var bool
+ * @var bool false
  */
 	public $useTable = false;
 
 /**
  * name property
  *
- * @var string
+ * @var string 'TestAlias'
  */
 	public $name = 'TestAlias';
+
+/**
+ * alias property
+ *
+ * @var string 'TestAlias'
+ */
+	public $alias = 'TestAlias';
 
 /**
  * schema property
@@ -120,12 +89,12 @@ class TestAlias extends CakeTestModel {
  * @var array
  */
 	protected $_schema = array(
-		'id' => array('type' => 'integer', 'null' => '', 'default' => '1', 'length' => '8', 'key' => 'primary'),
-		'name' => array('type' => 'string', 'null' => '', 'default' => '', 'length' => '255'),
-		'email' => array('type' => 'string', 'null' => '1', 'default' => '', 'length' => '155'),
-		'notes' => array('type' => 'text', 'null' => '1', 'default' => 'write some notes here', 'length' => ''),
-		'created' => array('type' => 'date', 'null' => '1', 'default' => '', 'length' => ''),
-		'updated' => array('type' => 'datetime', 'null' => '1', 'default' => '', 'length' => null)
+		'id'=> array('type' => 'integer', 'null' => '', 'default' => '1', 'length' => '8', 'key'=>'primary'),
+		'name'=> array('type' => 'string', 'null' => '', 'default' => '', 'length' => '255'),
+		'email'=> array('type' => 'string', 'null' => '1', 'default' => '', 'length' => '155'),
+		'notes'=> array('type' => 'text', 'null' => '1', 'default' => 'write some notes here', 'length' => ''),
+		'created'=> array('type' => 'date', 'null' => '1', 'default' => '', 'length' => ''),
+		'updated'=> array('type' => 'datetime', 'null' => '1', 'default' => '', 'length' => null)
 	);
 }
 
@@ -139,14 +108,14 @@ class TestValidate extends CakeTestModel {
 /**
  * useTable property
  *
- * @var bool
+ * @var bool false
  */
 	public $useTable = false;
 
 /**
  * name property
  *
- * @var string
+ * @var string 'TestValidate'
  */
 	public $name = 'TestValidate';
 
@@ -172,7 +141,7 @@ class TestValidate extends CakeTestModel {
  * @return void
  */
 	public function validateNumber($value, $options) {
-		$options += array('min' => 0, 'max' => 100);
+		$options = array_merge(array('min' => 0, 'max' => 100), $options);
 		$valid = ($value['number'] >= $options['min'] && $value['number'] <= $options['max']);
 		return $valid;
 	}
@@ -186,7 +155,6 @@ class TestValidate extends CakeTestModel {
 	public function validateTitle($value) {
 		return (!empty($value) && strpos(strtolower($value['title']), 'title-') === 0);
 	}
-
 }
 
 /**
@@ -199,7 +167,7 @@ class User extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'User'
  */
 	public $name = 'User';
 
@@ -208,15 +176,14 @@ class User extends CakeTestModel {
  *
  * @var array
  */
-	public $validate = array('user' => 'notBlank', 'password' => 'notBlank');
+	public $validate = array('user' => 'notEmpty', 'password' => 'notEmpty');
 
 /**
  * beforeFind() callback used to run ContainableBehaviorTest::testLazyLoad()
  *
  * @return bool
- * @throws Exception
- */
-	public function beforeFind($queryData) {
+*/
+	public function beforeFind ($queryData) {
 		if (!empty($queryData['lazyLoad'])) {
 			if (!isset($this->Article, $this->Comment, $this->ArticleFeatured)) {
 				throw new Exception('Unavailable associations');
@@ -224,7 +191,6 @@ class User extends CakeTestModel {
 		}
 		return true;
 	}
-
 }
 
 /**
@@ -237,7 +203,7 @@ class Article extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Article'
  */
 	public $name = 'Article';
 
@@ -267,16 +233,12 @@ class Article extends CakeTestModel {
  *
  * @var array
  */
-	public $validate = array(
-		'user_id' => 'numeric',
-		'title' => array('required' => false, 'rule' => 'notBlank'),
-		'body' => array('required' => false, 'rule' => 'notBlank'),
-	);
+	public $validate = array('user_id' => 'numeric', 'title' => array('allowEmpty' => false, 'rule' => 'notEmpty'), 'body' => 'notEmpty');
 
 /**
  * beforeSaveReturn property
  *
- * @var bool
+ * @var bool true
  */
 	public $beforeSaveReturn = true;
 
@@ -292,16 +254,15 @@ class Article extends CakeTestModel {
 /**
  * titleDuplicate method
  *
- * @param string $title
+ * @param mixed $title
  * @return void
  */
-	public static function titleDuplicate($title) {
+	static function titleDuplicate ($title) {
 		if ($title === 'My Article Title') {
 			return false;
 		}
 		return true;
 	}
-
 }
 
 /**
@@ -311,7 +272,6 @@ class Article extends CakeTestModel {
  * @package       Cake.Test.Case.Model
  */
 class BeforeDeleteComment extends CakeTestModel {
-
 	public $name = 'BeforeDeleteComment';
 
 	public $useTable = 'comments';
@@ -321,7 +281,6 @@ class BeforeDeleteComment extends CakeTestModel {
 		$db->delete($this, array($this->alias . '.' . $this->primaryKey => array(1, 3)));
 		return true;
 	}
-
 }
 
 /**
@@ -334,17 +293,16 @@ class NumericArticle extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'NumericArticle'
  */
 	public $name = 'NumericArticle';
 
 /**
  * useTable property
  *
- * @var string
+ * @var string 'numeric_articles'
  */
 	public $useTable = 'numeric_articles';
-
 }
 
 /**
@@ -357,14 +315,14 @@ class Article10 extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Article10'
  */
 	public $name = 'Article10';
 
 /**
  * useTable property
  *
- * @var string
+ * @var string 'articles'
  */
 	public $useTable = 'articles';
 
@@ -374,7 +332,6 @@ class Article10 extends CakeTestModel {
  * @var array
  */
 	public $hasMany = array('Comment' => array('dependent' => true, 'exclusive' => true));
-
 }
 
 /**
@@ -387,7 +344,7 @@ class ArticleFeatured extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'ArticleFeatured'
  */
 	public $name = 'ArticleFeatured';
 
@@ -424,8 +381,7 @@ class ArticleFeatured extends CakeTestModel {
  *
  * @var array
  */
-	public $validate = array('user_id' => 'numeric', 'title' => 'notBlank', 'body' => 'notBlank');
-
+	public $validate = array('user_id' => 'numeric', 'title' => 'notEmpty', 'body' => 'notEmpty');
 }
 
 /**
@@ -438,7 +394,7 @@ class Featured extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Featured'
  */
 	public $name = 'Featured';
 
@@ -460,7 +416,7 @@ class Tag extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Tag'
  */
 	public $name = 'Tag';
 }
@@ -475,7 +431,7 @@ class ArticlesTag extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'ArticlesTag'
  */
 	public $name = 'ArticlesTag';
 }
@@ -490,7 +446,7 @@ class ArticleFeaturedsTag extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'ArticleFeaturedsTag'
  */
 	public $name = 'ArticleFeaturedsTag';
 }
@@ -505,7 +461,7 @@ class Comment extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Comment'
  */
 	public $name = 'Comment';
 
@@ -534,23 +490,16 @@ class ModifiedComment extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Comment'
  */
 	public $name = 'Comment';
 
 /**
  * useTable property
  *
- * @var string
+ * @var string 'comments'
  */
 	public $useTable = 'comments';
-
-/**
- * Property used to toggle filtering of results
- *
- * @var bool
- */
-	public $remove = false;
 
 /**
  * belongsTo property
@@ -568,12 +517,8 @@ class ModifiedComment extends CakeTestModel {
 		if (isset($results[0])) {
 			$results[0]['Comment']['callback'] = 'Fire';
 		}
-		if ($this->remove) {
-			return array();
-		}
 		return $results;
 	}
-
 }
 
 /**
@@ -586,14 +531,14 @@ class AgainModifiedComment extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Comment'
  */
 	public $name = 'Comment';
 
 /**
  * useTable property
  *
- * @var string
+ * @var string 'comments'
  */
 	public $useTable = 'comments';
 
@@ -615,7 +560,6 @@ class AgainModifiedComment extends CakeTestModel {
 		}
 		return $results;
 	}
-
 }
 
 /**
@@ -683,6 +627,7 @@ class MergeVarPluginComment extends MergeVarPluginAppModel {
 	public $useTable = 'comments';
 }
 
+
 /**
  * Attachment class
  *
@@ -693,57 +638,9 @@ class Attachment extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Attachment'
  */
 	public $name = 'Attachment';
-
-/**
- * belongsTo property
- *
- * @var array
- */
-	public $belongsTo = array('Comment');
-}
-
-/**
- * ModifiedAttachment class
- *
- * @package       Cake.Test.Case.Model
- */
-class ModifiedAttachment extends CakeTestModel {
-
-/**
- * name property
- *
- * @var string
- */
-	public $name = 'ModifiedAttachment';
-
-/**
- * useTable property
- *
- * @var string
- */
-	public $useTable = 'attachments';
-
-/**
- * afterFind callback
- *
- * @return void
- */
-	public function afterFind($results, $primary = false) {
-		if ($this->useConsistentAfterFind) {
-			if (isset($results[0][$this->alias]['id'])) {
-				$results[0][$this->alias]['callback'] = 'Fired';
-			}
-		} else {
-			if (isset($results['id'])) {
-				$results['callback'] = 'Fired';
-			}
-		}
-		return $results;
-	}
-
 }
 
 /**
@@ -756,7 +653,7 @@ class Category extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Category'
  */
 	public $name = 'Category';
 }
@@ -771,7 +668,7 @@ class CategoryThread extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'CategoryThread'
  */
 	public $name = 'CategoryThread';
 
@@ -793,7 +690,7 @@ class Apple extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Apple'
  */
 	public $name = 'Apple';
 
@@ -802,7 +699,7 @@ class Apple extends CakeTestModel {
  *
  * @var array
  */
-	public $validate = array('name' => 'notBlank');
+	public $validate = array('name' => 'notEmpty');
 
 /**
  * hasOne property
@@ -836,14 +733,14 @@ class Sample extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Sample'
  */
 	public $name = 'Sample';
 
 /**
  * belongsTo property
  *
- * @var string
+ * @var string 'Apple'
  */
 	public $belongsTo = 'Apple';
 }
@@ -858,14 +755,14 @@ class AnotherArticle extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'AnotherArticle'
  */
 	public $name = 'AnotherArticle';
 
 /**
  * hasMany property
  *
- * @var string
+ * @var string 'Home'
  */
 	public $hasMany = 'Home';
 }
@@ -880,14 +777,14 @@ class Advertisement extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Advertisement'
  */
 	public $name = 'Advertisement';
 
 /**
  * hasMany property
  *
- * @var string
+ * @var string 'Home'
  */
 	public $hasMany = 'Home';
 }
@@ -902,7 +799,7 @@ class Home extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Home'
  */
 	public $name = 'Home';
 
@@ -924,7 +821,7 @@ class Post extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Post'
  */
 	public $name = 'Post';
 
@@ -935,10 +832,6 @@ class Post extends CakeTestModel {
  */
 	public $belongsTo = array('Author');
 
-/**
- * @param array $queryData
- * @return bool true
- */
 	public function beforeFind($queryData) {
 		if (isset($queryData['connection'])) {
 			$this->useDbConfig = $queryData['connection'];
@@ -946,16 +839,10 @@ class Post extends CakeTestModel {
 		return true;
 	}
 
-/**
- * @param array $results
- * @param bool $primary
- * @return array results
- */
 	public function afterFind($results, $primary = false) {
 		$this->useDbConfig = 'test';
 		return $results;
 	}
-
 }
 
 /**
@@ -968,7 +855,7 @@ class Author extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Author'
  */
 	public $name = 'Author';
 
@@ -982,14 +869,13 @@ class Author extends CakeTestModel {
 /**
  * afterFind method
  *
- * @param array $results
+ * @param mixed $results
  * @return void
  */
 	public function afterFind($results, $primary = false) {
 		$results[0]['Author']['test'] = 'working';
 		return $results;
 	}
-
 }
 
 /**
@@ -1002,23 +888,22 @@ class ModifiedAuthor extends Author {
 /**
  * name property
  *
- * @var string
+ * @var string 'Author'
  */
 	public $name = 'Author';
 
 /**
  * afterFind method
  *
- * @param array $results
+ * @param mixed $results
  * @return void
  */
 	public function afterFind($results, $primary = false) {
-		foreach ($results as $index => $result) {
+		foreach($results as $index => $result) {
 			$results[$index]['Author']['user'] .= ' (CakePHP)';
 		}
 		return $results;
 	}
-
 }
 
 /**
@@ -1031,7 +916,7 @@ class Project extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Project'
  */
 	public $name = 'Project';
 
@@ -1053,7 +938,7 @@ class Thread extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Thread'
  */
 	public $name = 'Thread';
 
@@ -1082,7 +967,7 @@ class Message extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Message'
  */
 	public $name = 'Message';
 
@@ -1104,7 +989,7 @@ class Bid extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Bid'
  */
 	public $name = 'Bid';
 
@@ -1117,68 +1002,6 @@ class Bid extends CakeTestModel {
 }
 
 /**
- * BiddingMessage class
- *
- * @package       Cake.Test.Case.Model
- */
-class BiddingMessage extends CakeTestModel {
-
-/**
- * name property
- *
- * @var string
- */
-	public $name = 'BiddingMessage';
-
-/**
- * primaryKey property
- *
- * @var string
- */
-	public $primaryKey = 'bidding';
-
-/**
- * belongsTo property
- *
- * @var array
- */
-	public $belongsTo = array(
-		'Bidding' => array(
-			'foreignKey' => false,
-			'conditions' => array('BiddingMessage.bidding = Bidding.bid')
-		)
-	);
-}
-
-/**
- * Bidding class
- *
- * @package       Cake.Test.Case.Model
- */
-class Bidding extends CakeTestModel {
-
-/**
- * name property
- *
- * @var string
- */
-	public $name = 'Bidding';
-
-/**
- * hasOne property
- *
- * @var array
- */
-	public $hasOne = array(
-		'BiddingMessage' => array(
-			'foreignKey' => false,
-			'conditions' => array('BiddingMessage.bidding = Bidding.bid'),
-			'dependent' => true
-		)
-	);
-}
-
-/**
  * NodeAfterFind class
  *
  * @package       Cake.Test.Case.Model
@@ -1188,7 +1011,7 @@ class NodeAfterFind extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'NodeAfterFind'
  */
 	public $name = 'NodeAfterFind';
 
@@ -1197,12 +1020,12 @@ class NodeAfterFind extends CakeTestModel {
  *
  * @var array
  */
-	public $validate = array('name' => 'notBlank');
+	public $validate = array('name' => 'notEmpty');
 
 /**
  * useTable property
  *
- * @var string
+ * @var string 'apples'
  */
 	public $useTable = 'apples';
 
@@ -1231,12 +1054,11 @@ class NodeAfterFind extends CakeTestModel {
  * afterFind method
  *
  * @param mixed $results
- * @return array
+ * @return void
  */
 	public function afterFind($results, $primary = false) {
 		return $results;
 	}
-
 }
 
 /**
@@ -1249,21 +1071,21 @@ class NodeAfterFindSample extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'NodeAfterFindSample'
  */
 	public $name = 'NodeAfterFindSample';
 
 /**
  * useTable property
  *
- * @var string
+ * @var string 'samples'
  */
 	public $useTable = 'samples';
 
 /**
  * belongsTo property
  *
- * @var string
+ * @var string 'NodeAfterFind'
  */
 	public $belongsTo = 'NodeAfterFind';
 }
@@ -1278,7 +1100,7 @@ class NodeNoAfterFind extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'NodeAfterFind'
  */
 	public $name = 'NodeAfterFind';
 
@@ -1287,12 +1109,12 @@ class NodeNoAfterFind extends CakeTestModel {
  *
  * @var array
  */
-	public $validate = array('name' => 'notBlank');
+	public $validate = array('name' => 'notEmpty');
 
 /**
  * useTable property
  *
- * @var string
+ * @var string 'apples'
  */
 	public $useTable = 'apples';
 
@@ -1323,12 +1145,12 @@ class NodeNoAfterFind extends CakeTestModel {
  *
  * @package       Cake.Test.Case.Model
  */
-class Node extends CakeTestModel {
+class Node extends CakeTestModel{
 
 /**
  * name property
  *
- * @var string
+ * @var string 'Node'
  */
 	public $name = 'Node';
 
@@ -1358,7 +1180,7 @@ class Dependency extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Dependency'
  */
 	public $name = 'Dependency';
 }
@@ -1373,14 +1195,14 @@ class ModelA extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'ModelA'
  */
 	public $name = 'ModelA';
 
 /**
  * useTable property
  *
- * @var string
+ * @var string 'apples'
  */
 	public $useTable = 'apples';
 
@@ -1402,14 +1224,14 @@ class ModelB extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'ModelB'
  */
 	public $name = 'ModelB';
 
 /**
  * useTable property
  *
- * @var string
+ * @var string 'messages'
  */
 	public $useTable = 'messages';
 
@@ -1431,14 +1253,14 @@ class ModelC extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'ModelC'
  */
 	public $name = 'ModelC';
 
 /**
  * useTable property
  *
- * @var string
+ * @var string 'bids'
  */
 	public $useTable = 'bids';
 
@@ -1460,14 +1282,14 @@ class ModelD extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'ModelD'
  */
 	public $name = 'ModelD';
 
 /**
  * useTable property
  *
- * @var string
+ * @var string 'threads'
  */
 	public $useTable = 'threads';
 }
@@ -1482,7 +1304,7 @@ class Something extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Something'
  */
 	public $name = 'Something';
 
@@ -1504,7 +1326,7 @@ class SomethingElse extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'SomethingElse'
  */
 	public $name = 'SomethingElse';
 
@@ -1514,23 +1336,6 @@ class SomethingElse extends CakeTestModel {
  * @var array
  */
 	public $hasAndBelongsToMany = array('Something' => array('with' => 'JoinThing'));
-
-/**
- * afterFind callBack
- *
- * @param array $results
- * @param bool $primary
- * @return array
- */
-	public function afterFind($results, $primary = false) {
-		foreach ($results as $key => $result) {
-			if (!empty($result[$this->alias]) && is_array($result[$this->alias])) {
-				$results[$key][$this->alias]['afterFind'] = 'Successfully added by AfterFind';
-			}
-		}
-		return $results;
-	}
-
 }
 
 /**
@@ -1543,7 +1348,7 @@ class JoinThing extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'JoinThing'
  */
 	public $name = 'JoinThing';
 
@@ -1553,23 +1358,6 @@ class JoinThing extends CakeTestModel {
  * @var array
  */
 	public $belongsTo = array('Something', 'SomethingElse');
-
-/**
- * afterFind callBack
- *
- * @param array $results
- * @param bool $primary
- * @return array
- */
-	public function afterFind($results, $primary = false) {
-		foreach ($results as $key => $result) {
-			if (!empty($result[$this->alias]) && is_array($result[$this->alias])) {
-				$results[$key][$this->alias]['afterFind'] = 'Successfully added by AfterFind';
-			}
-		}
-		return $results;
-	}
-
 }
 
 /**
@@ -1582,7 +1370,7 @@ class Portfolio extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Portfolio'
  */
 	public $name = 'Portfolio';
 
@@ -1604,7 +1392,7 @@ class Item extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Item'
  */
 	public $name = 'Item';
 
@@ -1633,7 +1421,7 @@ class ItemsPortfolio extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'ItemsPortfolio'
  */
 	public $name = 'ItemsPortfolio';
 }
@@ -1648,7 +1436,7 @@ class Syfile extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Syfile'
  */
 	public $name = 'Syfile';
 
@@ -1670,7 +1458,7 @@ class Image extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Image'
  */
 	public $name = 'Image';
 }
@@ -1685,7 +1473,7 @@ class DeviceType extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'DeviceType'
  */
 	public $name = 'DeviceType';
 
@@ -1725,7 +1513,7 @@ class DeviceTypeCategory extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'DeviceTypeCategory'
  */
 	public $name = 'DeviceTypeCategory';
 }
@@ -1740,7 +1528,7 @@ class FeatureSet extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'FeatureSet'
  */
 	public $name = 'FeatureSet';
 }
@@ -1755,7 +1543,7 @@ class ExteriorTypeCategory extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'ExteriorTypeCategory'
  */
 	public $name = 'ExteriorTypeCategory';
 
@@ -1777,7 +1565,7 @@ class Document extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Document'
  */
 	public $name = 'Document';
 
@@ -1799,7 +1587,7 @@ class Device extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Device'
  */
 	public $name = 'Device';
 }
@@ -1814,7 +1602,7 @@ class DocumentDirectory extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'DocumentDirectory'
  */
 	public $name = 'DocumentDirectory';
 }
@@ -1829,7 +1617,7 @@ class PrimaryModel extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'PrimaryModel'
  */
 	public $name = 'PrimaryModel';
 }
@@ -1844,7 +1632,7 @@ class SecondaryModel extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'SecondaryModel'
  */
 	public $name = 'SecondaryModel';
 }
@@ -1859,7 +1647,7 @@ class JoinA extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'JoinA'
  */
 	public $name = 'JoinA';
 
@@ -1881,7 +1669,7 @@ class JoinB extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'JoinB'
  */
 	public $name = 'JoinB';
 
@@ -1903,7 +1691,7 @@ class JoinC extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'JoinC'
  */
 	public $name = 'JoinC';
 
@@ -1925,14 +1713,14 @@ class ThePaper extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'ThePaper'
  */
 	public $name = 'ThePaper';
 
 /**
  * useTable property
  *
- * @var string
+ * @var string 'apples'
  */
 	public $useTable = 'apples';
 
@@ -1961,14 +1749,14 @@ class Monkey extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Monkey'
  */
 	public $name = 'Monkey';
 
 /**
  * useTable property
  *
- * @var string
+ * @var string 'devices'
  */
 	public $useTable = 'devices';
 }
@@ -1983,14 +1771,14 @@ class AssociationTest1 extends CakeTestModel {
 /**
  * useTable property
  *
- * @var string
+ * @var string 'join_as'
  */
 	public $useTable = 'join_as';
 
 /**
  * name property
  *
- * @var string
+ * @var string 'AssociationTest1'
  */
 	public $name = 'AssociationTest1';
 
@@ -2014,14 +1802,14 @@ class AssociationTest2 extends CakeTestModel {
 /**
  * useTable property
  *
- * @var string
+ * @var string 'join_bs'
  */
 	public $useTable = 'join_bs';
 
 /**
  * name property
  *
- * @var string
+ * @var string 'AssociationTest2'
  */
 	public $name = 'AssociationTest2';
 
@@ -2043,66 +1831,55 @@ class AssociationTest2 extends CakeTestModel {
 class Callback extends CakeTestModel {
 
 }
-
 /**
  * CallbackPostTestModel class
  *
  * @package       Cake.Test.Case.Model
  */
 class CallbackPostTestModel extends CakeTestModel {
-
 	public $useTable = 'posts';
-
 /**
  * variable to control return of beforeValidate
  *
- * @var bool
+ * @var string
  */
 	public $beforeValidateReturn = true;
-
 /**
  * variable to control return of beforeSave
  *
- * @var bool
+ * @var string
  */
 	public $beforeSaveReturn = true;
-
 /**
  * variable to control return of beforeDelete
  *
- * @var bool
+ * @var string
  */
 	public $beforeDeleteReturn = true;
-
 /**
  * beforeSave callback
  *
- * @return bool
+ * @return void
  */
 	public function beforeSave($options = array()) {
 		return $this->beforeSaveReturn;
 	}
-
 /**
  * beforeValidate callback
  *
- * @param array $options Options passed from Model::save().
- * @return bool True if validate operation should continue, false to abort
- * @see Model::save()
+ * @return void
  */
 	public function beforeValidate($options = array()) {
 		return $this->beforeValidateReturn;
 	}
-
 /**
  * beforeDelete callback
  *
- * @return bool
+ * @return void
  */
 	public function beforeDelete($cascade = true) {
 		return $this->beforeDeleteReturn;
 	}
-
 }
 
 /**
@@ -2115,24 +1892,9 @@ class Uuid extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Uuid'
  */
 	public $name = 'Uuid';
-}
-
-/**
- * UuidNative class
- *
- * @package       Cake.Test.Case.Model
- */
-class UuidNative extends CakeTestModel {
-
-/**
- * name property
- *
- * @var string
- */
-	public $name = 'UuidNative';
 }
 
 /**
@@ -2145,7 +1907,7 @@ class DataTest extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'DataTest'
  */
 	public $name = 'DataTest';
 }
@@ -2160,14 +1922,14 @@ class TheVoid extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'TheVoid'
  */
 	public $name = 'TheVoid';
 
 /**
  * useTable property
  *
- * @var bool
+ * @var bool false
  */
 	public $useTable = false;
 }
@@ -2182,14 +1944,14 @@ class ValidationTest1 extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'ValidationTest'
  */
 	public $name = 'ValidationTest1';
 
 /**
  * useTable property
  *
- * @var bool
+ * @var bool false
  */
 	public $useTable = false;
 
@@ -2206,10 +1968,10 @@ class ValidationTest1 extends CakeTestModel {
  * @var array
  */
 	public $validate = array(
-		'title' => 'notBlank',
+		'title' => 'notEmpty',
 		'published' => 'customValidationMethod',
 		'body' => array(
-			'notBlank',
+			'notEmpty',
 			'/^.{5,}$/s' => 'no matchy',
 			'/^[0-9A-Za-z \\.]{1,}$/s'
 		)
@@ -2230,21 +1992,20 @@ class ValidationTest1 extends CakeTestModel {
  *
  * @return array
  */
-	public function customValidatorWithParams($data, $validator, $or = true, $ignoreOnSame = 'id') {
+	public function customValidatorWithParams($data, $validator, $or = true, $ignore_on_same = 'id') {
 		$this->validatorParams = get_defined_vars();
 		unset($this->validatorParams['this']);
 		return true;
 	}
 
 /**
- * Custom validator with message
+ * Custom validator with messaage
  *
  * @return array
  */
 	public function customValidatorWithMessage($data) {
 		return 'This field will *never* validate! Muhahaha!';
 	}
-
 /**
  * Test validation with many parameters
  *
@@ -2255,7 +2016,6 @@ class ValidationTest1 extends CakeTestModel {
 		unset($this->validatorParams['this']);
 		return true;
 	}
-
 }
 
 /**
@@ -2268,14 +2028,14 @@ class ValidationTest2 extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'ValidationTest2'
  */
 	public $name = 'ValidationTest2';
 
 /**
  * useTable property
  *
- * @var bool
+ * @var bool false
  */
 	public $useTable = false;
 
@@ -2285,10 +2045,10 @@ class ValidationTest2 extends CakeTestModel {
  * @var array
  */
 	public $validate = array(
-		'title' => 'notBlank',
+		'title' => 'notEmpty',
 		'published' => 'customValidationMethod',
 		'body' => array(
-			'notBlank',
+			'notEmpty',
 			'/^.{5,}$/s' => 'no matchy',
 			'/^[0-9A-Za-z \\.]{1,}$/s'
 		)
@@ -2312,7 +2072,6 @@ class ValidationTest2 extends CakeTestModel {
 	public function schema($field = false) {
 		return array();
 	}
-
 }
 
 /**
@@ -2325,7 +2084,7 @@ class Person extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Person'
  */
 	public $name = 'Person';
 
@@ -2335,15 +2094,12 @@ class Person extends CakeTestModel {
  * @var array
  */
 	public $belongsTo = array(
-		'Mother' => array(
-			'className' => 'Person',
-			'foreignKey' => 'mother_id'
-		),
-		'Father' => array(
-			'className' => 'Person',
-			'foreignKey' => 'father_id'
-		)
-	);
+			'Mother' => array(
+				'className' => 'Person',
+				'foreignKey' => 'mother_id'),
+			'Father' => array(
+				'className' => 'Person',
+				'foreignKey' => 'father_id'));
 }
 
 /**
@@ -2356,7 +2112,7 @@ class UnderscoreField extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'UnderscoreField'
  */
 	public $name = 'UnderscoreField';
 }
@@ -2371,7 +2127,7 @@ class Product extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Product'
  */
 	public $name = 'Product';
 }
@@ -2386,14 +2142,14 @@ class Story extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Story'
  */
 	public $name = 'Story';
 
 /**
  * primaryKey property
  *
- * @var string
+ * @var string 'story'
  */
 	public $primaryKey = 'story';
 
@@ -2409,7 +2165,7 @@ class Story extends CakeTestModel {
  *
  * @var array
  */
-	public $validate = array('title' => 'notBlank');
+	public $validate = array('title' => 'notEmpty');
 }
 
 /**
@@ -2422,7 +2178,7 @@ class Cd extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Cd'
  */
 	public $name = 'Cd';
 
@@ -2431,14 +2187,7 @@ class Cd extends CakeTestModel {
  *
  * @var array
  */
-	public $hasOne = array(
-		'OverallFavorite' => array(
-			'foreignKey' => 'model_id',
-			'dependent' => true,
-			'conditions' => array('model_type' => 'Cd')
-		)
-	);
-
+	public $hasOne = array('OverallFavorite' => array('foreignKey' => 'model_id', 'dependent' => true, 'conditions' => array('model_type' => 'Cd')));
 }
 
 /**
@@ -2451,7 +2200,7 @@ class Book extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Book'
  */
 	public $name = 'Book';
 
@@ -2460,14 +2209,7 @@ class Book extends CakeTestModel {
  *
  * @var array
  */
-	public $hasOne = array(
-		'OverallFavorite' => array(
-			'foreignKey' => 'model_id',
-			'dependent' => true,
-			'conditions' => 'OverallFavorite.model_type = \'Book\''
-		)
-	);
-
+	public $hasOne = array('OverallFavorite' => array('foreignKey' => 'model_id', 'dependent' => true, 'conditions' => 'OverallFavorite.model_type = \'Book\''));
 }
 
 /**
@@ -2480,7 +2222,7 @@ class OverallFavorite extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'OverallFavorite'
  */
 	public $name = 'OverallFavorite';
 }
@@ -2495,7 +2237,7 @@ class MyUser extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'MyUser'
  */
 	public $name = 'MyUser';
 
@@ -2517,7 +2259,7 @@ class MyCategory extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'MyCategory'
  */
 	public $name = 'MyCategory';
 
@@ -2539,7 +2281,7 @@ class MyProduct extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'MyProduct'
  */
 	public $name = 'MyProduct';
 
@@ -2561,7 +2303,7 @@ class MyCategoriesMyUser extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'MyCategoriesMyUser'
  */
 	public $name = 'MyCategoriesMyUser';
 }
@@ -2576,10 +2318,11 @@ class MyCategoriesMyProduct extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'MyCategoriesMyProduct'
  */
 	public $name = 'MyCategoriesMyProduct';
 }
+
 
 /**
  * NumberTree class
@@ -2591,7 +2334,7 @@ class NumberTree extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'NumberTree'
  */
 	public $name = 'NumberTree';
 
@@ -2610,15 +2353,15 @@ class NumberTree extends CakeTestModel {
  * @param mixed $currentLevel
  * @param mixed $parent_id
  * @param string $prefix
- * @param bool $hierarchal
+ * @param bool $hierachial
  * @return void
  */
-	public function initialize($levelLimit = 3, $childLimit = 3, $currentLevel = null, $parentId = null, $prefix = '1', $hierarchal = true) {
-		if (!$parentId) {
+	public function initialize($levelLimit = 3, $childLimit = 3, $currentLevel = null, $parent_id = null, $prefix = '1', $hierachial = true) {
+		if (!$parent_id) {
 			$db = ConnectionManager::getDataSource($this->useDbConfig);
 			$db->truncate($this->table);
 			$this->save(array($this->name => array('name' => '1. Root')));
-			$this->initialize($levelLimit, $childLimit, 1, $this->id, '1', $hierarchal);
+			$this->initialize($levelLimit, $childLimit, 1, $this->id, '1', $hierachial);
 			$this->create(array());
 		}
 
@@ -2631,18 +2374,17 @@ class NumberTree extends CakeTestModel {
 			$data = array($this->name => array('name' => $name));
 			$this->create($data);
 
-			if ($hierarchal) {
-				if ($this->name === 'UnconventionalTree') {
-					$data[$this->name]['join'] = $parentId;
+			if ($hierachial) {
+				if ($this->name == 'UnconventionalTree') {
+					$data[$this->name]['join'] = $parent_id;
 				} else {
-					$data[$this->name]['parent_id'] = $parentId;
+					$data[$this->name]['parent_id'] = $parent_id;
 				}
 			}
 			$this->save($data);
-			$this->initialize($levelLimit, $childLimit, $currentLevel + 1, $this->id, $name, $hierarchal);
+			$this->initialize($levelLimit, $childLimit, $currentLevel + 1, $this->id, $name, $hierachial);
 		}
 	}
-
 }
 
 /**
@@ -2655,7 +2397,7 @@ class NumberTreeTwo extends NumberTree {
 /**
  * name property
  *
- * @var string
+ * @var string 'NumberTree'
  */
 	public $name = 'NumberTreeTwo';
 
@@ -2677,7 +2419,7 @@ class FlagTree extends NumberTree {
 /**
  * name property
  *
- * @var string
+ * @var string 'FlagTree'
  */
 	public $name = 'FlagTree';
 }
@@ -2692,18 +2434,16 @@ class UnconventionalTree extends NumberTree {
 /**
  * name property
  *
- * @var string
+ * @var string 'FlagTree'
  */
 	public $name = 'UnconventionalTree';
-
 	public $actsAs = array(
 		'Tree' => array(
 			'parent' => 'join',
-			'left' => 'left',
+			'left'  => 'left',
 			'right' => 'right'
 		)
 	);
-
 }
 
 /**
@@ -2716,7 +2456,7 @@ class UuidTree extends NumberTree {
 /**
  * name property
  *
- * @var string
+ * @var string 'FlagTree'
  */
 	public $name = 'UuidTree';
 }
@@ -2731,7 +2471,7 @@ class Campaign extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Campaign'
  */
 	public $name = 'Campaign';
 
@@ -2740,7 +2480,7 @@ class Campaign extends CakeTestModel {
  *
  * @var array
  */
-	public $hasMany = array('Ad' => array('fields' => array('id', 'campaign_id', 'name')));
+	public $hasMany = array('Ad' => array('fields' => array('id','campaign_id','name')));
 }
 
 /**
@@ -2753,7 +2493,7 @@ class Ad extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Ad'
  */
 	public $name = 'Ad';
 
@@ -2782,7 +2522,7 @@ class AfterTree extends NumberTree {
 /**
  * name property
  *
- * @var string
+ * @var string 'AfterTree'
  */
 	public $name = 'AfterTree';
 
@@ -2793,17 +2533,11 @@ class AfterTree extends NumberTree {
  */
 	public $actsAs = array('Tree');
 
-/**
- * @param bool $created
- * @param array $options
- * @return void
- */
-	public function afterSave($created, $options = array()) {
+	public function afterSave($created) {
 		if ($created && isset($this->data['AfterTree'])) {
 			$this->data['AfterTree']['name'] = 'Six and One Half Changed in AfterTree::afterSave() but not in database';
 		}
 	}
-
 }
 
 /**
@@ -2816,21 +2550,21 @@ class Content extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Content'
  */
 	public $name = 'Content';
 
 /**
  * useTable property
  *
- * @var string
+ * @var string 'Content'
  */
 	public $useTable = 'Content';
 
 /**
  * primaryKey property
  *
- * @var string
+ * @var string 'iContentId'
  */
 	public $primaryKey = 'iContentId';
 
@@ -2852,21 +2586,21 @@ class Account extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Account'
  */
 	public $name = 'Account';
 
 /**
  * useTable property
  *
- * @var string
+ * @var string 'Account'
  */
 	public $useTable = 'Accounts';
 
 /**
  * primaryKey property
  *
- * @var string
+ * @var string 'iAccountId'
  */
 	public $primaryKey = 'iAccountId';
 }
@@ -2881,21 +2615,21 @@ class ContentAccount extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Account'
  */
 	public $name = 'ContentAccount';
 
 /**
  * useTable property
  *
- * @var string
+ * @var string 'Account'
  */
 	public $useTable = 'ContentAccounts';
 
 /**
  * primaryKey property
  *
- * @var string
+ * @var string 'iAccountId'
  */
 	public $primaryKey = 'iContentAccountsId';
 }
@@ -2906,9 +2640,7 @@ class ContentAccount extends CakeTestModel {
  * @package       Cake.Test.Case.Model
  */
 class FilmFile extends CakeTestModel {
-
 	public $name = 'FilmFile';
-
 }
 
 /**
@@ -2917,7 +2649,6 @@ class FilmFile extends CakeTestModel {
  * @package       Cake.Test.Case.Model
  */
 class Basket extends CakeTestModel {
-
 	public $name = 'Basket';
 
 	public $belongsTo = array(
@@ -2929,7 +2660,6 @@ class Basket extends CakeTestModel {
 			'order' => ''
 		)
 	);
-
 }
 
 /**
@@ -2942,7 +2672,7 @@ class TestPluginArticle extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'TestPluginArticle'
  */
 	public $name = 'TestPluginArticle';
 
@@ -2977,7 +2707,7 @@ class TestPluginComment extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'TestPluginComment'
  */
 	public $name = 'TestPluginComment';
 
@@ -2991,10 +2721,7 @@ class TestPluginComment extends CakeTestModel {
 			'className' => 'TestPlugin.TestPluginArticle',
 			'foreignKey' => 'article_id',
 		),
-		'TestPlugin.User',
-		'TestPlugin.Source' => array(
-			'foreignKey' => 'source_id'
-		)
+		'TestPlugin.User'
 	);
 }
 
@@ -3008,7 +2735,7 @@ class Uuidportfolio extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Uuidportfolio'
  */
 	public $name = 'Uuidportfolio';
 
@@ -3030,7 +2757,7 @@ class Uuiditem extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Item'
  */
 	public $name = 'Uuiditem';
 
@@ -3053,7 +2780,7 @@ class UuiditemsUuidportfolio extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'ItemsPortfolio'
  */
 	public $name = 'UuiditemsUuidportfolio';
 }
@@ -3074,84 +2801,6 @@ class UuiditemsUuidportfolioNumericid extends CakeTestModel {
 }
 
 /**
- * Uuidnativeportfolio class
- *
- * @package       Cake.Test.Case.Model
- */
-class Uuidnativeportfolio extends CakeTestModel {
-
-/**
- * name property
- *
- * @var string
- */
-	public $name = 'Uuidnativeportfolio';
-
-/**
- * hasAndBelongsToMany property
- *
- * @var array
- */
-	public $hasAndBelongsToMany = array('Uuidnativeitem');
-}
-
-/**
- * Uuidnativeitem class
- *
- * @package       Cake.Test.Case.Model
- */
-class Uuidnativeitem extends CakeTestModel {
-
-/**
- * name property
- *
- * @var string
- */
-	public $name = 'Uuidnativeitem';
-
-/**
- * hasAndBelongsToMany property
- *
- * @var array
- */
-	public $hasAndBelongsToMany = array(
-		'Uuidnativeportfolio' => array(
-			'with' => 'UuidnativeitemsUuidnativeportfolioNumericid'
-	));
-
-}
-
-/**
- * UuidnativeitemsUuidnativeportfolio class
- *
- * @package       Cake.Test.Case.Model
- */
-class UuidnativeitemsUuidnativeportfolio extends CakeTestModel {
-
-/**
- * name property
- *
- * @var string
- */
-	public $name = 'UuidnativeitemsUuidnativeportfolio';
-}
-
-/**
- * UuidnativeitemsPortfolioNumericid class
- *
- * @package       Cake.Test.Case.Model
- */
-class UuidnativeitemsUuidnativeportfolioNumericid extends CakeTestModel {
-
-/**
- * name property
- *
- * @var string
- */
-	public $name = 'UuidnativeitemsUuidnativeportfolioNumericid';
-}
-
-/**
  * TranslateTestModel class.
  *
  * @package       Cake.Test.Case.Model
@@ -3161,21 +2810,21 @@ class TranslateTestModel extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'TranslateTestModel'
  */
 	public $name = 'TranslateTestModel';
 
 /**
  * useTable property
  *
- * @var string
+ * @var string 'i18n'
  */
 	public $useTable = 'i18n';
 
 /**
  * displayField property
  *
- * @var string
+ * @var string 'field'
  */
 	public $displayField = 'field';
 }
@@ -3186,30 +2835,25 @@ class TranslateTestModel extends CakeTestModel {
  * @package       Cake.Test.Case.Model
  */
 class TranslateWithPrefix extends CakeTestModel {
-
 /**
  * name property
  *
- * @var string
+ * @var string 'TranslateTestModel'
  */
 	public $name = 'TranslateWithPrefix';
-
 /**
  * tablePrefix property
  *
- * @var string
+ * @var string 'i18n'
  */
 	public $tablePrefix = 'i18n_';
-
 /**
  * displayField property
  *
- * @var string
+ * @var string 'field'
  */
 	public $displayField = 'field';
-
 }
-
 /**
  * TranslatedItem class.
  *
@@ -3220,14 +2864,14 @@ class TranslatedItem extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'TranslatedItem'
  */
 	public $name = 'TranslatedItem';
 
 /**
  * cacheQueries property
  *
- * @var bool
+ * @var bool false
  */
 	public $cacheQueries = false;
 
@@ -3241,21 +2885,9 @@ class TranslatedItem extends CakeTestModel {
 /**
  * translateModel property
  *
- * @var string
+ * @var string 'TranslateTestModel'
  */
 	public $translateModel = 'TranslateTestModel';
-
-}
-
-class TranslatedItemLeftJoin extends TranslatedItem {
-
-	public $actsAs = array(
-		'Translate' => array(
-			'content',
-			'title',
-			'joinType' => 'LEFT',
-		)
-	);
 }
 
 /**
@@ -3264,37 +2896,31 @@ class TranslatedItemLeftJoin extends TranslatedItem {
  * @package       Cake.Test.Case.Model
  */
 class TranslatedItem2 extends CakeTestModel {
-
 /**
  * name property
  *
- * @var string
+ * @var string 'TranslatedItem'
  */
 	public $name = 'TranslatedItem';
-
 /**
  * cacheQueries property
  *
- * @var bool
+ * @var bool false
  */
 	public $cacheQueries = false;
-
 /**
  * actsAs property
  *
  * @var array
  */
 	public $actsAs = array('Translate' => array('content', 'title'));
-
 /**
  * translateModel property
  *
- * @var string
+ * @var string 'TranslateTestModel'
  */
 	public $translateModel = 'TranslateWithPrefix';
-
 }
-
 /**
  * TranslatedItemWithTable class.
  *
@@ -3305,21 +2931,21 @@ class TranslatedItemWithTable extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'TranslatedItemWithTable'
  */
 	public $name = 'TranslatedItemWithTable';
 
 /**
  * useTable property
  *
- * @var string
+ * @var string 'translated_items'
  */
 	public $useTable = 'translated_items';
 
 /**
  * cacheQueries property
  *
- * @var bool
+ * @var bool false
  */
 	public $cacheQueries = false;
 
@@ -3333,17 +2959,16 @@ class TranslatedItemWithTable extends CakeTestModel {
 /**
  * translateModel property
  *
- * @var string
+ * @var string 'TranslateTestModel'
  */
 	public $translateModel = 'TranslateTestModel';
 
 /**
  * translateTable property
  *
- * @var string
+ * @var string 'another_i18n'
  */
 	public $translateTable = 'another_i18n';
-
 }
 
 /**
@@ -3356,24 +2981,23 @@ class TranslateArticleModel extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'TranslateArticleModel'
  */
 	public $name = 'TranslateArticleModel';
 
 /**
  * useTable property
  *
- * @var string
+ * @var string 'article_i18n'
  */
 	public $useTable = 'article_i18n';
 
 /**
  * displayField property
  *
- * @var string
+ * @var string 'field'
  */
 	public $displayField = 'field';
-
 }
 
 /**
@@ -3386,14 +3010,14 @@ class TranslatedArticle extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'TranslatedArticle'
  */
 	public $name = 'TranslatedArticle';
 
 /**
  * cacheQueries property
  *
- * @var bool
+ * @var bool false
  */
 	public $cacheQueries = false;
 
@@ -3407,7 +3031,7 @@ class TranslatedArticle extends CakeTestModel {
 /**
  * translateModel property
  *
- * @var string
+ * @var string 'TranslateArticleModel'
  */
 	public $translateModel = 'TranslateArticleModel';
 
@@ -3417,86 +3041,55 @@ class TranslatedArticle extends CakeTestModel {
  * @var array
  */
 	public $belongsTo = array('User');
-
-/**
- * hasMany property
- *
- * @var array
- */
-	public $hasMany = array('TranslatedItem');
-
 }
 
 class CounterCacheUser extends CakeTestModel {
-
 	public $name = 'CounterCacheUser';
-
 	public $alias = 'User';
 
-	public $hasMany = array(
-		'Post' => array(
-			'className' => 'CounterCachePost',
-			'foreignKey' => 'user_id'
-		)
-	);
+	public $hasMany = array('Post' => array(
+		'className' => 'CounterCachePost',
+		'foreignKey' => 'user_id'
+	));
 }
 
 class CounterCachePost extends CakeTestModel {
-
 	public $name = 'CounterCachePost';
-
 	public $alias = 'Post';
 
-	public $belongsTo = array(
-		'User' => array(
-			'className' => 'CounterCacheUser',
-			'foreignKey' => 'user_id',
-			'counterCache' => true
-		)
-	);
+	public $belongsTo = array('User' => array(
+		'className' => 'CounterCacheUser',
+		'foreignKey' => 'user_id',
+		'counterCache' => true
+	));
 }
 
 class CounterCacheUserNonstandardPrimaryKey extends CakeTestModel {
-
 	public $name = 'CounterCacheUserNonstandardPrimaryKey';
-
 	public $alias = 'User';
+    public $primaryKey = 'uid';
 
-	public $primaryKey = 'uid';
-
-	public $hasMany = array(
-		'Post' => array(
-			'className' => 'CounterCachePostNonstandardPrimaryKey',
-			'foreignKey' => 'uid'
-		)
-	);
-
+	public $hasMany = array('Post' => array(
+		'className' => 'CounterCachePostNonstandardPrimaryKey',
+		'foreignKey' => 'uid'
+	));
 }
 
 class CounterCachePostNonstandardPrimaryKey extends CakeTestModel {
-
 	public $name = 'CounterCachePostNonstandardPrimaryKey';
-
 	public $alias = 'Post';
+    public $primaryKey = 'pid';
 
-	public $primaryKey = 'pid';
-
-	public $belongsTo = array(
-		'User' => array(
-			'className' => 'CounterCacheUserNonstandardPrimaryKey',
-			'foreignKey' => 'uid',
-			'counterCache' => true
-		)
-	);
-
+	public $belongsTo = array('User' => array(
+		'className' => 'CounterCacheUserNonstandardPrimaryKey',
+		'foreignKey' => 'uid',
+		'counterCache' => true
+	));
 }
 
 class ArticleB extends CakeTestModel {
-
 	public $name = 'ArticleB';
-
 	public $useTable = 'articles';
-
 	public $hasAndBelongsToMany = array(
 		'TagB' => array(
 			'className' => 'TagB',
@@ -3505,15 +3098,11 @@ class ArticleB extends CakeTestModel {
 			'associationForeignKey' => 'tag_id'
 		)
 	);
-
 }
 
 class TagB extends CakeTestModel {
-
 	public $name = 'TagB';
-
 	public $useTable = 'tags';
-
 	public $hasAndBelongsToMany = array(
 		'ArticleB' => array(
 			'className' => 'ArticleB',
@@ -3522,13 +3111,10 @@ class TagB extends CakeTestModel {
 			'associationForeignKey' => 'article_id'
 		)
 	);
-
 }
 
 class Fruit extends CakeTestModel {
-
 	public $name = 'Fruit';
-
 	public $hasAndBelongsToMany = array(
 		'UuidTag' => array(
 			'className' => 'UuidTag',
@@ -3538,15 +3124,11 @@ class Fruit extends CakeTestModel {
 			'with' => 'FruitsUuidTag'
 		)
 	);
-
 }
 
 class FruitsUuidTag extends CakeTestModel {
-
 	public $name = 'FruitsUuidTag';
-
 	public $primaryKey = false;
-
 	public $belongsTo = array(
 		'UuidTag' => array(
 			'className' => 'UuidTag',
@@ -3557,13 +3139,10 @@ class FruitsUuidTag extends CakeTestModel {
 			'foreignKey' => 'fruit_id',
 		)
 	);
-
 }
 
 class UuidTag extends CakeTestModel {
-
 	public $name = 'UuidTag';
-
 	public $hasAndBelongsToMany = array(
 		'Fruit' => array(
 			'className' => 'Fruit',
@@ -3573,15 +3152,11 @@ class UuidTag extends CakeTestModel {
 			'with' => 'FruitsUuidTag'
 		)
 	);
-
 }
 
 class FruitNoWith extends CakeTestModel {
-
 	public $name = 'Fruit';
-
 	public $useTable = 'fruits';
-
 	public $hasAndBelongsToMany = array(
 		'UuidTag' => array(
 			'className' => 'UuidTagNoWith',
@@ -3590,15 +3165,11 @@ class FruitNoWith extends CakeTestModel {
 			'associationForeignKey' => 'uuid_tag_id',
 		)
 	);
-
 }
 
 class UuidTagNoWith extends CakeTestModel {
-
 	public $name = 'UuidTag';
-
 	public $useTable = 'uuid_tags';
-
 	public $hasAndBelongsToMany = array(
 		'Fruit' => array(
 			'className' => 'FruitNoWith',
@@ -3607,75 +3178,41 @@ class UuidTagNoWith extends CakeTestModel {
 			'associationForeignKey' => 'fruit_id',
 		)
 	);
-
 }
 
 class ProductUpdateAll extends CakeTestModel {
-
 	public $name = 'ProductUpdateAll';
-
 	public $useTable = 'product_update_all';
 
 }
 
 class GroupUpdateAll extends CakeTestModel {
-
 	public $name = 'GroupUpdateAll';
-
 	public $useTable = 'group_update_all';
-
 }
 
 class TransactionTestModel extends CakeTestModel {
-
 	public $name = 'TransactionTestModel';
-
 	public $useTable = 'samples';
 
-	public function afterSave($created, $options = array()) {
+	public function afterSave($created) {
 		$data = array(
 			array('apple_id' => 1, 'name' => 'sample6'),
 		);
 		$this->saveAll($data, array('atomic' => true, 'callbacks' => false));
 	}
-
 }
 
 class TransactionManyTestModel extends CakeTestModel {
-
 	public $name = 'TransactionManyTestModel';
-
 	public $useTable = 'samples';
 
-	public function afterSave($created, $options = array()) {
+	public function afterSave($created) {
 		$data = array(
 			array('apple_id' => 1, 'name' => 'sample6'),
 		);
 		$this->saveMany($data, array('atomic' => true, 'callbacks' => false));
 	}
-
-}
-
-class Site extends CakeTestModel {
-
-	public $name = 'Site';
-
-	public $useTable = 'sites';
-
-	public $hasAndBelongsToMany = array(
-		'Domain' => array('unique' => 'keepExisting'),
-	);
-}
-
-class Domain extends CakeTestModel {
-
-	public $name = 'Domain';
-
-	public $useTable = 'domains';
-
-	public $hasAndBelongsToMany = array(
-		'Site' => array('unique' => 'keepExisting'),
-	);
 }
 
 /**
@@ -3688,14 +3225,14 @@ class TestModel extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'TestModel'
  */
 	public $name = 'TestModel';
 
 /**
  * useTable property
  *
- * @var bool
+ * @var bool false
  */
 	public $useTable = false;
 
@@ -3750,7 +3287,6 @@ class TestModel extends CakeTestModel {
 	public function findAll($conditions = null, $fields = null, $order = null, $recursive = null) {
 		return $conditions;
 	}
-
 }
 
 /**
@@ -3763,14 +3299,14 @@ class TestModel2 extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'TestModel2'
  */
 	public $name = 'TestModel2';
 
 /**
  * useTable property
  *
- * @var bool
+ * @var bool false
  */
 	public $useTable = false;
 }
@@ -3785,14 +3321,14 @@ class TestModel3 extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'TestModel3'
  */
 	public $name = 'TestModel3';
 
 /**
  * useTable property
  *
- * @var bool
+ * @var bool false
  */
 	public $useTable = false;
 }
@@ -3807,21 +3343,21 @@ class TestModel4 extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'TestModel4'
  */
 	public $name = 'TestModel4';
 
 /**
  * table property
  *
- * @var string
+ * @var string 'test_model4'
  */
 	public $table = 'test_model4';
 
 /**
  * useTable property
  *
- * @var bool
+ * @var bool false
  */
 	public $useTable = false;
 
@@ -3878,7 +3414,6 @@ class TestModel4 extends CakeTestModel {
 		}
 		return $this->_schema;
 	}
-
 }
 
 /**
@@ -3891,21 +3426,21 @@ class TestModel4TestModel7 extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'TestModel4TestModel7'
  */
 	public $name = 'TestModel4TestModel7';
 
 /**
  * table property
  *
- * @var string
+ * @var string 'test_model4_test_model7'
  */
 	public $table = 'test_model4_test_model7';
 
 /**
  * useTable property
  *
- * @var bool
+ * @var bool false
  */
 	public $useTable = false;
 
@@ -3923,7 +3458,6 @@ class TestModel4TestModel7 extends CakeTestModel {
 		}
 		return $this->_schema;
 	}
-
 }
 
 /**
@@ -3936,21 +3470,21 @@ class TestModel5 extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'TestModel5'
  */
 	public $name = 'TestModel5';
 
 /**
  * table property
  *
- * @var string
+ * @var string 'test_model5'
  */
 	public $table = 'test_model5';
 
 /**
  * useTable property
  *
- * @var bool
+ * @var bool false
  */
 	public $useTable = false;
 
@@ -3991,7 +3525,6 @@ class TestModel5 extends CakeTestModel {
 		}
 		return $this->_schema;
 	}
-
 }
 
 /**
@@ -4004,21 +3537,21 @@ class TestModel6 extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'TestModel6'
  */
 	public $name = 'TestModel6';
 
 /**
  * table property
  *
- * @var string
+ * @var string 'test_model6'
  */
 	public $table = 'test_model6';
 
 /**
  * useTable property
  *
- * @var bool
+ * @var bool false
  */
 	public $useTable = false;
 
@@ -4027,12 +3560,10 @@ class TestModel6 extends CakeTestModel {
  *
  * @var array
  */
-	public $belongsTo = array(
-		'TestModel5' => array(
-			'className' => 'TestModel5',
-			'foreignKey' => 'test_model5_id'
-		)
-	);
+	public $belongsTo = array('TestModel5' => array(
+		'className' => 'TestModel5',
+		'foreignKey' => 'test_model5_id'
+	));
 
 /**
  * schema method
@@ -4051,7 +3582,6 @@ class TestModel6 extends CakeTestModel {
 		}
 		return $this->_schema;
 	}
-
 }
 
 /**
@@ -4064,21 +3594,21 @@ class TestModel7 extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'TestModel7'
  */
 	public $name = 'TestModel7';
 
 /**
  * table property
  *
- * @var string
+ * @var string 'test_model7'
  */
 	public $table = 'test_model7';
 
 /**
  * useTable property
  *
- * @var bool
+ * @var bool false
  */
 	public $useTable = false;
 
@@ -4098,7 +3628,6 @@ class TestModel7 extends CakeTestModel {
 		}
 		return $this->_schema;
 	}
-
 }
 
 /**
@@ -4111,21 +3640,21 @@ class TestModel8 extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'TestModel8'
  */
 	public $name = 'TestModel8';
 
 /**
  * table property
  *
- * @var string
+ * @var string 'test_model8'
  */
 	public $table = 'test_model8';
 
 /**
  * useTable property
  *
- * @var bool
+ * @var bool false
  */
 	public $useTable = false;
 
@@ -4159,7 +3688,6 @@ class TestModel8 extends CakeTestModel {
 		}
 		return $this->_schema;
 	}
-
 }
 
 /**
@@ -4172,21 +3700,21 @@ class TestModel9 extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'TestModel9'
  */
 	public $name = 'TestModel9';
 
 /**
  * table property
  *
- * @var string
+ * @var string 'test_model9'
  */
 	public $table = 'test_model9';
 
 /**
  * useTable property
  *
- * @var bool
+ * @var bool false
  */
 	public $useTable = false;
 
@@ -4195,13 +3723,11 @@ class TestModel9 extends CakeTestModel {
  *
  * @var array
  */
-	public $belongsTo = array(
-		'TestModel8' => array(
-			'className' => 'TestModel8',
-			'foreignKey' => 'test_model8_id',
-			'conditions' => 'TestModel8.name != \'larry\''
-		)
-	);
+	public $belongsTo = array('TestModel8' => array(
+		'className' => 'TestModel8',
+		'foreignKey' => 'test_model8_id',
+		'conditions' => 'TestModel8.name != \'larry\''
+	));
 
 /**
  * schema method
@@ -4220,7 +3746,6 @@ class TestModel9 extends CakeTestModel {
 		}
 		return $this->_schema;
 	}
-
 }
 
 /**
@@ -4233,21 +3758,21 @@ class Level extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Level'
  */
 	public $name = 'Level';
 
 /**
  * table property
  *
- * @var string
+ * @var string 'level'
  */
 	public $table = 'level';
 
 /**
  * useTable property
  *
- * @var bool
+ * @var bool false
  */
 	public $useTable = false;
 
@@ -4257,7 +3782,7 @@ class Level extends CakeTestModel {
  * @var array
  */
 	public $hasMany = array(
-		'Group' => array(
+		'Group'=> array(
 			'className' => 'Group'
 		),
 		'User2' => array(
@@ -4279,7 +3804,6 @@ class Level extends CakeTestModel {
 		}
 		return $this->_schema;
 	}
-
 }
 
 /**
@@ -4292,21 +3816,21 @@ class Group extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Group'
  */
 	public $name = 'Group';
 
 /**
  * table property
  *
- * @var string
+ * @var string 'group'
  */
 	public $table = 'group';
 
 /**
  * useTable property
  *
- * @var bool
+ * @var bool false
  */
 	public $useTable = false;
 
@@ -4352,21 +3876,21 @@ class User2 extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'User2'
  */
 	public $name = 'User2';
 
 /**
  * table property
  *
- * @var string
+ * @var string 'user'
  */
 	public $table = 'user';
 
 /**
  * useTable property
  *
- * @var bool
+ * @var bool false
  */
 	public $useTable = false;
 
@@ -4411,7 +3935,6 @@ class User2 extends CakeTestModel {
 		}
 		return $this->_schema;
 	}
-
 }
 
 /**
@@ -4424,21 +3947,21 @@ class Category2 extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Category2'
  */
 	public $name = 'Category2';
 
 /**
  * table property
  *
- * @var string
+ * @var string 'category'
  */
 	public $table = 'category';
 
 /**
  * useTable property
  *
- * @var bool
+ * @var bool false
  */
 	public $useTable = false;
 
@@ -4470,9 +3993,9 @@ class Category2 extends CakeTestModel {
 		),
 		'Article2' => array(
 			'className' => 'Article2',
-			'order' => 'Article2.published_date DESC',
+			'order'=>'Article2.published_date DESC',
 			'foreignKey' => 'category_id',
-			'limit' => '3')
+			'limit'=>'3')
 	);
 
 /**
@@ -4494,7 +4017,6 @@ class Category2 extends CakeTestModel {
 		}
 		return $this->_schema;
 	}
-
 }
 
 /**
@@ -4507,21 +4029,21 @@ class Article2 extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Article2'
  */
 	public $name = 'Article2';
 
 /**
  * table property
  *
- * @var string
+ * @var string 'article'
  */
 	public $table = 'articles';
 
 /**
  * useTable property
  *
- * @var bool
+ * @var bool false
  */
 	public $useTable = false;
 
@@ -4566,7 +4088,6 @@ class Article2 extends CakeTestModel {
 		}
 		return $this->_schema;
 	}
-
 }
 
 /**
@@ -4579,21 +4100,21 @@ class CategoryFeatured2 extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'CategoryFeatured2'
  */
 	public $name = 'CategoryFeatured2';
 
 /**
  * table property
  *
- * @var string
+ * @var string 'category_featured'
  */
 	public $table = 'category_featured';
 
 /**
  * useTable property
  *
- * @var bool
+ * @var bool false
  */
 	public $useTable = false;
 
@@ -4614,7 +4135,6 @@ class CategoryFeatured2 extends CakeTestModel {
 		}
 		return $this->_schema;
 	}
-
 }
 
 /**
@@ -4627,21 +4147,21 @@ class Featured2 extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Featured2'
  */
 	public $name = 'Featured2';
 
 /**
  * table property
  *
- * @var string
+ * @var string 'featured2'
  */
 	public $table = 'featured2';
 
 /**
  * useTable property
  *
- * @var bool
+ * @var bool false
  */
 	public $useTable = false;
 
@@ -4672,7 +4192,6 @@ class Featured2 extends CakeTestModel {
 		}
 		return $this->_schema;
 	}
-
 }
 
 /**
@@ -4685,14 +4204,14 @@ class Comment2 extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'Comment2'
  */
 	public $name = 'Comment2';
 
 /**
  * table property
  *
- * @var string
+ * @var string 'comment'
  */
 	public $table = 'comment';
 
@@ -4706,7 +4225,7 @@ class Comment2 extends CakeTestModel {
 /**
  * useTable property
  *
- * @var bool
+ * @var bool false
  */
 	public $useTable = false;
 
@@ -4726,7 +4245,6 @@ class Comment2 extends CakeTestModel {
 		}
 		return $this->_schema;
 	}
-
 }
 
 /**
@@ -4739,21 +4257,21 @@ class ArticleFeatured2 extends CakeTestModel {
 /**
  * name property
  *
- * @var string
+ * @var string 'ArticleFeatured2'
  */
 	public $name = 'ArticleFeatured2';
 
 /**
  * table property
  *
- * @var string
+ * @var string 'article_featured'
  */
 	public $table = 'article_featured';
 
 /**
  * useTable property
  *
- * @var bool
+ * @var bool false
  */
 	public $useTable = false;
 
@@ -4782,7 +4300,7 @@ class ArticleFeatured2 extends CakeTestModel {
  * @var array
  */
 	public $hasMany = array(
-		'Comment2' => array('className' => 'Comment2', 'dependent' => true)
+		'Comment2' => array('className'=>'Comment2', 'dependent' => true)
 	);
 
 /**
@@ -4806,7 +4324,6 @@ class ArticleFeatured2 extends CakeTestModel {
 		}
 		return $this->_schema;
 	}
-
 }
 
 /**
@@ -4819,14 +4336,14 @@ class MysqlTestModel extends Model {
 /**
  * name property
  *
- * @var string
+ * @var string 'MysqlTestModel'
  */
 	public $name = 'MysqlTestModel';
 
 /**
  * useTable property
  *
- * @var bool
+ * @var bool false
  */
 	public $useTable = false;
 
@@ -4863,41 +4380,37 @@ class MysqlTestModel extends Model {
  */
 	public function schema($field = false) {
 		return array(
-			'id' => array('type' => 'integer', 'null' => '', 'default' => '', 'length' => '8'),
-			'client_id' => array('type' => 'integer', 'null' => '', 'default' => '0', 'length' => '11'),
-			'name' => array('type' => 'string', 'null' => '', 'default' => '', 'length' => '255'),
-			'login' => array('type' => 'string', 'null' => '', 'default' => '', 'length' => '255'),
-			'passwd' => array('type' => 'string', 'null' => '1', 'default' => '', 'length' => '255'),
-			'addr_1' => array('type' => 'string', 'null' => '1', 'default' => '', 'length' => '255'),
-			'addr_2' => array('type' => 'string', 'null' => '1', 'default' => '', 'length' => '25'),
-			'zip_code' => array('type' => 'string', 'null' => '1', 'default' => '', 'length' => '155'),
-			'city' => array('type' => 'string', 'null' => '1', 'default' => '', 'length' => '155'),
-			'country' => array('type' => 'string', 'null' => '1', 'default' => '', 'length' => '155'),
-			'phone' => array('type' => 'string', 'null' => '1', 'default' => '', 'length' => '155'),
-			'fax' => array('type' => 'string', 'null' => '1', 'default' => '', 'length' => '155'),
-			'url' => array('type' => 'string', 'null' => '1', 'default' => '', 'length' => '255'),
-			'email' => array('type' => 'string', 'null' => '1', 'default' => '', 'length' => '155'),
-			'comments' => array('type' => 'text', 'null' => '1', 'default' => '', 'length' => ''),
-			'last_login' => array('type' => 'datetime', 'null' => '1', 'default' => '', 'length' => ''),
-			'created' => array('type' => 'date', 'null' => '1', 'default' => '', 'length' => ''),
-			'updated' => array('type' => 'datetime', 'null' => '1', 'default' => '', 'length' => null)
+			'id'		=> array('type' => 'integer', 'null' => '', 'default' => '', 'length' => '8'),
+			'client_id'	=> array('type' => 'integer', 'null' => '', 'default' => '0', 'length' => '11'),
+			'name'		=> array('type' => 'string', 'null' => '', 'default' => '', 'length' => '255'),
+			'login'		=> array('type' => 'string', 'null' => '', 'default' => '', 'length' => '255'),
+			'passwd'	=> array('type' => 'string', 'null' => '1', 'default' => '', 'length' => '255'),
+			'addr_1'	=> array('type' => 'string', 'null' => '1', 'default' => '', 'length' => '255'),
+			'addr_2'	=> array('type' => 'string', 'null' => '1', 'default' => '', 'length' => '25'),
+			'zip_code'	=> array('type' => 'string', 'null' => '1', 'default' => '', 'length' => '155'),
+			'city'		=> array('type' => 'string', 'null' => '1', 'default' => '', 'length' => '155'),
+			'country'	=> array('type' => 'string', 'null' => '1', 'default' => '', 'length' => '155'),
+			'phone'		=> array('type' => 'string', 'null' => '1', 'default' => '', 'length' => '155'),
+			'fax'		=> array('type' => 'string', 'null' => '1', 'default' => '', 'length' => '155'),
+			'url'		=> array('type' => 'string', 'null' => '1', 'default' => '', 'length' => '255'),
+			'email'		=> array('type' => 'string', 'null' => '1', 'default' => '', 'length' => '155'),
+			'comments'	=> array('type' => 'text', 'null' => '1', 'default' => '', 'length' => ''),
+			'last_login'=> array('type' => 'datetime', 'null' => '1', 'default' => '', 'length' => ''),
+			'created'	=> array('type' => 'date', 'null' => '1', 'default' => '', 'length' => ''),
+			'updated'	=> array('type' => 'datetime', 'null' => '1', 'default' => '', 'length' => null)
 		);
 	}
-
 }
 
 /**
  * Test model for datasource prefixes
+ *
  */
 class PrefixTestModel extends CakeTestModel {
 }
-
 class PrefixTestUseTableModel extends CakeTestModel {
-
-	public $name = 'PrefixTest';
-
-	public $useTable = 'prefix_tests';
-
+       public $name = 'PrefixTest';
+       public $useTable = 'prefix_tests';
 }
 
 /**
@@ -4910,7 +4423,7 @@ class ScaffoldMock extends CakeTestModel {
 /**
  * useTable property
  *
- * @var string
+ * @var string 'posts'
  */
 	public $useTable = 'articles';
 
@@ -4937,7 +4450,6 @@ class ScaffoldMock extends CakeTestModel {
 			'foreignKey' => 'article_id',
 		)
 	);
-
 /**
  * hasAndBelongsToMany property
  *
@@ -4951,7 +4463,6 @@ class ScaffoldMock extends CakeTestModel {
 			'joinTable' => 'join_things'
 		)
 	);
-
 }
 
 /**
@@ -4964,7 +4475,7 @@ class ScaffoldUser extends CakeTestModel {
 /**
  * useTable property
  *
- * @var string
+ * @var string 'posts'
  */
 	public $useTable = 'users';
 
@@ -4991,7 +4502,7 @@ class ScaffoldComment extends CakeTestModel {
 /**
  * useTable property
  *
- * @var string
+ * @var string 'posts'
  */
 	public $useTable = 'comments';
 
@@ -5014,221 +4525,10 @@ class ScaffoldComment extends CakeTestModel {
  * @package       Cake.Test.Case.Controller
  */
 class ScaffoldTag extends CakeTestModel {
-
 /**
  * useTable property
  *
- * @var string
+ * @var string 'posts'
  */
 	public $useTable = 'tags';
-
-}
-
-/**
- * Player class
- *
- * @package       Cake.Test.Case.Model
- */
-class Player extends CakeTestModel {
-
-	public $hasAndBelongsToMany = array(
-		'Guild' => array(
-			'with' => 'GuildsPlayer',
-			'unique' => true,
-		),
-	);
-
-}
-
-/**
- * Guild class
- *
- * @package       Cake.Test.Case.Model
- */
-class Guild extends CakeTestModel {
-
-	public $hasAndBelongsToMany = array(
-		'Player' => array(
-			'with' => 'GuildsPlayer',
-			'unique' => true,
-		),
-	);
-
-}
-
-/**
- * GuildsPlayer class
- *
- * @package       Cake.Test.Case.Model
- */
-class GuildsPlayer extends CakeTestModel {
-
-	public $useDbConfig = 'test2';
-
-	public $belongsTo = array(
-		'Player',
-		'Guild',
-		);
-}
-
-/**
- * Armor class
- *
- * @package       Cake.Test.Case.Model
- */
-class Armor extends CakeTestModel {
-
-	public $useDbConfig = 'test2';
-
-	public $hasAndBelongsToMany = array(
-		'Player' => array('with' => 'ArmorsPlayer'),
-		);
-}
-
-/**
- * ArmorsPlayer class
- *
- * @package       Cake.Test.Case.Model
- */
-class ArmorsPlayer extends CakeTestModel {
-
-	public $useDbConfig = 'test_database_three';
-
-}
-
-/**
- * CustomArticle class
- *
- * @package       Cake.Test.Case.Model
- */
-class CustomArticle extends AppModel {
-
-/**
- * useTable property
- *
- * @var string
- */
-	public $useTable = 'articles';
-
-/**
- * findMethods property
- *
- * @var array
- */
-	public $findMethods = array('unPublished' => true);
-
-/**
- * belongsTo property
- *
- * @var array
- */
-	public $belongsTo = array('User');
-
-/**
- * _findUnPublished custom find
- *
- * @return array
- */
-	protected function _findUnPublished($state, $query, $results = array()) {
-		if ($state === 'before') {
-			$query['conditions']['published'] = 'N';
-			return $query;
-		}
-		return $results;
-	}
-
-/**
- * Alters title data
- *
- * @param array $options Options passed from Model::save().
- * @return bool True if validate operation should continue, false to abort
- * @see Model::save()
- */
-	public function beforeValidate($options = array()) {
-		$this->data[$this->alias]['title'] = 'foo';
-		if ($this->findMethods['unPublished'] === true) {
-			$this->findMethods['unPublished'] = false;
-		} else {
-			$this->findMethods['unPublished'] = 'true again';
-		}
-	}
-
-}
-
-/**
- * Example class
- *
- * @package       Cake.Test.Case.Model
- */
-class Example extends AppModel {
-
-/**
- * useTable property
- *
- * @var string
- */
-	public $useTable = false;
-
-/**
- * schema property
- *
- * @var array
- */
-	protected $_schema = array(
-		'filefield' => array(
-			'type' => 'string',
-			'length' => 254,
-			'default' => null,
-			'null' => true,
-			'comment' => null
-		),
-	);
-
-}
-
-/**
- * UserHasOneArticle class
- *
- * @package       Cake.Test.Case.Model
- */
-class UserHasOneArticle extends AppModel {
-
-/**
- * useTable property
- *
- * @var string
- */
-	public $useTable = 'users';
-
-/**
- * hasOne property
- *
- * @var array
- */
-	public $hasOne = array('Article');
-
-}
-
-
-/**
- * ArticlesTagBelongsToArticle class
- *
- * @package       Cake.Test.Case.Model
- */
-class ArticlesTagBelongsToArticle extends CakeTestModel {
-
-/**
- * useTable property
- *
- * @var string
- */
-	public $useTable = 'articles_tags';
-
-/**
- * belongsTo property
- *
- * @var array
- */
-	public $belongsTo = array('Article');
-
 }

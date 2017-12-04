@@ -2,18 +2,19 @@
 /**
  * CakeRequest Test case file.
  *
- * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
+ * PHP 5
+ *
+ * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+ * Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
  * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
- * @link          https://cakephp.org CakePHP(tm) Project
+ * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link          http://cakephp.org CakePHP(tm) Project
  * @package       Cake.Test.Case.Routing.Route
  * @since         CakePHP(tm) v 2.0
- * @license       https://opensource.org/licenses/mit-license.php MIT License
+ * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 
 App::uses('RedirectRoute', 'Routing/Route');
@@ -25,8 +26,7 @@ App::uses('Router', 'Routing');
  *
  * @package       Cake.Test.Case.Routing.Route
  */
-class RedirectRouteTest extends CakeTestCase {
-
+class RedirectRouteTestCase extends  CakeTestCase {
 /**
  * setUp method
  *
@@ -47,76 +47,52 @@ class RedirectRouteTest extends CakeTestCase {
 		$route = new RedirectRoute('/home', array('controller' => 'posts'));
 		$route->stop = false;
 		$route->response = $this->getMock('CakeResponse', array('_sendHeader'));
-		$route->parse('/home');
-		$header = $route->response->header();
-		$this->assertEquals(Router::url('/posts', true), $header['Location']);
+		$result = $route->parse('/home');
+		$this->assertEquals($route->response->header(), array('Location' => Router::url('/posts', true)));
 
 		$route = new RedirectRoute('/home', array('controller' => 'posts', 'action' => 'index'));
 		$route->stop = false;
 		$route->response = $this->getMock('CakeResponse', array('_sendHeader'));
-		$route->parse('/home');
-		$header = $route->response->header();
-		$this->assertEquals(Router::url('/posts', true), $header['Location']);
-		$this->assertEquals(301, $route->response->statusCode());
+		$result = $route->parse('/home');
+		$this->assertEquals($route->response->header(), array('Location' => Router::url('/posts', true)));
+		$this->assertEquals($route->response->statusCode(), 301);
 
 		$route = new RedirectRoute('/google', 'http://google.com');
 		$route->stop = false;
 		$route->response = $this->getMock('CakeResponse', array('_sendHeader'));
-		$route->parse('/google');
-		$header = $route->response->header();
-		$this->assertEquals('http://google.com', $header['Location']);
+		$result = $route->parse('/google');
+		$this->assertEquals($route->response->header(), array('Location' => 'http://google.com'));
 
 		$route = new RedirectRoute('/posts/*', array('controller' => 'posts', 'action' => 'view'), array('status' => 302));
 		$route->stop = false;
 		$route->response = $this->getMock('CakeResponse', array('_sendHeader'));
-		$route->parse('/posts/2');
-		$header = $route->response->header();
-		$this->assertEquals(Router::url('/posts/view', true), $header['Location']);
-		$this->assertEquals(302, $route->response->statusCode());
+		$result = $route->parse('/posts/2');
+		$this->assertEquals($route->response->header(), array('Location' => Router::url('/posts/view', true)));
+		$this->assertEquals($route->response->statusCode(), 302);
 
 		$route = new RedirectRoute('/posts/*', array('controller' => 'posts', 'action' => 'view'), array('persist' => true));
 		$route->stop = false;
 		$route->response = $this->getMock('CakeResponse', array('_sendHeader'));
-		$route->parse('/posts/2');
-		$header = $route->response->header();
-		$this->assertEquals(Router::url('/posts/view/2', true), $header['Location']);
+		$result = $route->parse('/posts/2');
+		$this->assertEquals($route->response->header(), array('Location' => Router::url('/posts/view/2', true)));
 
 		$route = new RedirectRoute('/posts/*', '/test', array('persist' => true));
 		$route->stop = false;
 		$route->response = $this->getMock('CakeResponse', array('_sendHeader'));
-		$route->parse('/posts/2');
-		$header = $route->response->header();
-		$this->assertEquals(Router::url('/test', true), $header['Location']);
+		$result = $route->parse('/posts/2');
+		$this->assertEquals($route->response->header(), array('Location' => Router::url('/test', true)));
 
 		$route = new RedirectRoute('/my_controllers/:action/*', array('controller' => 'tags', 'action' => 'add'), array('persist' => true));
 		$route->stop = false;
 		$route->response = $this->getMock('CakeResponse', array('_sendHeader'));
-		$route->parse('/my_controllers/do_something/passme/named:param');
-		$header = $route->response->header();
-		$this->assertEquals(Router::url('/tags/add/passme/named:param', true), $header['Location']);
+		$result = $route->parse('/my_controllers/do_something/passme/named:param');
+		$this->assertEquals($route->response->header(), array('Location' => Router::url('/tags/add/passme/named:param', true)));
 
 		$route = new RedirectRoute('/my_controllers/:action/*', array('controller' => 'tags', 'action' => 'add'));
 		$route->stop = false;
 		$route->response = $this->getMock('CakeResponse', array('_sendHeader'));
-		$route->parse('/my_controllers/do_something/passme/named:param');
-		$header = $route->response->header();
-		$this->assertEquals(Router::url('/tags/add', true), $header['Location']);
-
-		$route = new RedirectRoute('/:lang/my_controllers', array('controller' => 'tags', 'action' => 'add'), array('lang' => '(nl|en)', 'persist' => array('lang')));
-		$route->stop = false;
-		$route->response = $this->getMock('CakeResponse', array('_sendHeader'));
-		$route->parse('/nl/my_controllers/');
-		$header = $route->response->header();
-		$this->assertEquals(Router::url('/tags/add/lang:nl', true), $header['Location']);
-
-		Router::$routes = array(); // reset default routes
-		Router::connect('/:lang/preferred_controllers', array('controller' => 'tags', 'action' => 'add'), array('lang' => '(nl|en)', 'persist' => array('lang')));
-		$route = new RedirectRoute('/:lang/my_controllers', array('controller' => 'tags', 'action' => 'add'), array('lang' => '(nl|en)', 'persist' => array('lang')));
-		$route->stop = false;
-		$route->response = $this->getMock('CakeResponse', array('_sendHeader'));
-		$route->parse('/nl/my_controllers/');
-		$header = $route->response->header();
-		$this->assertEquals(Router::url('/nl/preferred_controllers', true), $header['Location']);
+		$result = $route->parse('/my_controllers/do_something/passme/named:param');
+		$this->assertEquals($route->response->header(), array('Location' => Router::url('/tags/add', true)));
 	}
 
 }

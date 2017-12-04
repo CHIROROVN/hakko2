@@ -18,6 +18,7 @@ class InfosController extends AppController {
 	public function index() {
 		$this->Paginator->settings = array(
 	        'conditions' => array('last_kind <>' => DELETE),
+	        'order' => 'info_date desc',
 	        'limit' => LIMIT_PAGE,
 	    );
 

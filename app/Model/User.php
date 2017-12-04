@@ -7,13 +7,13 @@ App::uses('AppModel', 'Model');
 class User extends AppModel {
      
    public $name = 'User';
-   public $useTable = 'users';
+   public $useTable = 'm_user';
    public $primaryKey = 'u_id';
 
     function __construct() {
         parent::__construct();
         $this->validate = array(
-            'username' => array(
+            'u_login' => array(
                 'notBlank' => array(
                     'rule' => array('notBlank'),
                     'message' => __('Please enter login id'),
@@ -23,7 +23,7 @@ class User extends AppModel {
                     //'on' => 'create', // Limit validation to 'create' or 'update' operations
                 ),
             ),
-            'password' => array(
+            'u_passwd' => array(
                 'notBlank' => array(
                     'rule' => array('notBlank'),
                     'message' => __('Please enter password'),
@@ -38,10 +38,9 @@ class User extends AppModel {
     
      
 
-    public function beforeSave($options = array()) {
-        if (isset($this->data[$this->alias]['passwd'])) {
-            $passwordHasher = new SimplePasswordHasher();
-            $this->data['User']['passwd'] = $passwordHasher->hash($this->data['User']['passwd']);
+    public function beforeSave($options = Array()) {
+        if (isset($this->data[$this->alias]['password'])) {
+            $this->data[$this->alias]['password'] = AuthComponent::password($this->data[$this->alias]['password']);
         }
         return true;
     }

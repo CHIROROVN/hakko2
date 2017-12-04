@@ -2,39 +2,31 @@
 /**
  * Prototype Engine Helper for JsHelper
  *
- * Provides Prototype specific JavaScript for JsHelper. Requires at least
+ * Provides Prototype specific Javascript for JsHelper. Requires at least
  * Prototype 1.6
  *
- * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
+ * PHP 5
+ *
+ * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+ * Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
  * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
- * @link          https://cakephp.org CakePHP(tm) Project
+ * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link          http://cakephp.org CakePHP(tm) Project
  * @package       Cake.View.Helper
  * @since         CakePHP(tm) v 1.3
- * @license       https://opensource.org/licenses/mit-license.php MIT License
+ * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 
 App::uses('JsBaseEngineHelper', 'View/Helper');
 
-/**
- * Prototype Engine Helper for JsHelper
- *
- * Provides Prototype specific JavaScript for JsHelper. Requires at least
- * Prototype 1.6
- *
- * @package       Cake.View.Helper
- */
 class PrototypeEngineHelper extends JsBaseEngineHelper {
-
 /**
  * Is the current selection a multiple selection? or is it just a single element.
  *
- * @var bool
+ * @var boolean
  */
 	protected $_multiple = false;
 
@@ -114,12 +106,12 @@ class PrototypeEngineHelper extends JsBaseEngineHelper {
  * Create javascript selector for a CSS rule
  *
  * @param string $selector The selector that is targeted
- * @return self
+ * @return PrototypeEngineHelper instance of $this. Allows chained methods.
  */
 	public function get($selector) {
 		$this->_multiple = false;
-		if ($selector === 'window' || $selector === 'document') {
-			$this->selection = "$(" . $selector . ")";
+		if ($selector == 'window' || $selector == 'document') {
+			$this->selection = "$(" . $selector .")";
 			return $this;
 		}
 		if (preg_match('/^#[^\s.]+$/', $selector)) {
@@ -140,13 +132,13 @@ class PrototypeEngineHelper extends JsBaseEngineHelper {
  * - `stop` - Whether you want the event to stopped. (defaults true)
  *
  * @param string $type Type of event to bind to the current 946 id
- * @param string $callback The JavaScript function you wish to trigger or the function literal
+ * @param string $callback The Javascript function you wish to trigger or the function literal
  * @param array $options Options for the event.
  * @return string completed event handler
  */
 	public function event($type, $callback, $options = array()) {
 		$defaults = array('wrap' => true, 'stop' => true);
-		$options += $defaults;
+		$options = array_merge($defaults, $options);
 
 		$function = 'function (event) {%s}';
 		if ($options['wrap'] && $options['stop']) {
@@ -194,9 +186,9 @@ class PrototypeEngineHelper extends JsBaseEngineHelper {
 		$effect = '';
 		$optionString = null;
 		if (isset($options['speed'])) {
-			if ($options['speed'] === 'fast') {
+			if ($options['speed'] == 'fast') {
 				$options['duration'] = 0.5;
-			} elseif ($options['speed'] === 'slow') {
+			} elseif ($options['speed'] == 'slow') {
 				$options['duration'] = 2;
 			} else {
 				$options['duration'] = 1;
@@ -210,17 +202,17 @@ class PrototypeEngineHelper extends JsBaseEngineHelper {
 			case 'hide':
 			case 'show':
 				$effect = $this->selection . '.' . $name . '();';
-				break;
+			break;
 			case 'slideIn':
 			case 'slideOut':
-				$name = ($name === 'slideIn') ? 'slideDown' : 'slideUp';
+				$name = ($name == 'slideIn') ? 'slideDown' : 'slideUp';
 				$effect = 'Effect.' . $name . '(' . $this->selection . $optionString . ');';
-				break;
+			break;
 			case 'fadeIn':
 			case 'fadeOut':
-				$name = ($name === 'fadeIn') ? 'appear' : 'fade';
-				$effect = $this->selection . '.' . $name . '(' . substr($optionString, 2) . ');';
-				break;
+				$name = ($name == 'fadeIn') ? 'appear' : 'fade';
+				$effect = $this->selection . '.' . $name .'(' . substr($optionString, 2) . ');';
+			break;
 		}
 		return $effect;
 	}
@@ -228,16 +220,16 @@ class PrototypeEngineHelper extends JsBaseEngineHelper {
 /**
  * Create an Ajax or Ajax.Updater call.
  *
- * @param string|array $url URL.
- * @param array $options Options list.
+ * @param mixed $url
+ * @param array $options
  * @return string The completed ajax call.
  */
 	public function request($url, $options = array()) {
-		$url = html_entity_decode($this->url($url), ENT_COMPAT, Configure::read('App.encoding'));
-		$url = '"' . $url . '"';
+		$url = '"'. $this->url($url) . '"';
 		$options = $this->_mapOptions('request', $options);
 		$type = '.Request';
-		if (isset($options['type']) && strtolower($options['type']) === 'json') {
+		$data = null;
+		if (isset($options['type']) && strtolower($options['type']) == 'json') {
 			unset($options['type']);
 		}
 		if (isset($options['update'])) {
@@ -263,7 +255,7 @@ class PrototypeEngineHelper extends JsBaseEngineHelper {
  *
  * #### Note: Requires scriptaculous to be loaded.
  *
- * The scriptaculous implementation of sortables does not support the 'start'
+ * The scriptaculous implementation of sortables does not suppot the 'start'
  * and 'distance' options.
  *
  * @param array $options Array of options for the sortable.
@@ -354,7 +346,7 @@ class PrototypeEngineHelper extends JsBaseEngineHelper {
  * @see JsBaseEngineHelper::serializeForm()
  */
 	public function serializeForm($options = array()) {
-		$options += array('isForm' => false, 'inline' => false);
+		$options = array_merge(array('isForm' => false, 'inline' => false), $options);
 		$selection = $this->selection;
 		if (!$options['isForm']) {
 			$selection = '$(' . $this->selection . '.form)';
@@ -365,5 +357,4 @@ class PrototypeEngineHelper extends JsBaseEngineHelper {
 		}
 		return $selection . $method;
 	}
-
 }

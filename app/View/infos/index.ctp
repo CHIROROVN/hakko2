@@ -16,11 +16,11 @@
       <td><table width="100%" border="1" cellspacing="0" cellpadding="5">
         <tbody>
           <tr class="col_3">
-            <td width="1%" align="center">削除</td>
+            <td width="5%" align="center">削除</td>
             <td width="6%" align="center">表示</td>
             <td align="center">タイトル</td>
             <td width="12%" align="center">日付</td>
-            <td width="1%" align="center">詳細・変更</td>
+            <td width="8%" align="center">詳細・変更</td>
           </tr>
 
         <?php foreach ($infos as $info): ?>

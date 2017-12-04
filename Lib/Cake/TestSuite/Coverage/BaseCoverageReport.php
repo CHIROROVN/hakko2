@@ -5,28 +5,17 @@
  *
  * PHP5
  *
- * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
+ * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+ * Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
  * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
- * @link          https://cakephp.org CakePHP(tm) Project
+ * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link          http://cakephp.org CakePHP(tm) Project
  * @package       Cake.TestSuite.Coverage
  * @since         CakePHP(tm) v 2.0
- * @license       https://opensource.org/licenses/mit-license.php MIT License
- */
-
-App::uses('Inflector', 'Utility');
-App::uses('CakePlugin', 'Core');
-
-/**
- * Abstract class for common CoverageReport methods.
- * Provides several template methods for custom output.
- *
- * @package       Cake.TestSuite.Coverage
+ * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 abstract class BaseCoverageReport {
 
@@ -52,7 +41,7 @@ abstract class BaseCoverageReport {
 	public $pluginTest = false;
 
 /**
- * Array of test case file names. Used to do basename() matching with
+ * Array of test case file names.  Used to do basename() matching with
  * files that have coverage to decide which results to show on page load.
  *
  * @var array
@@ -64,10 +53,11 @@ abstract class BaseCoverageReport {
  *
  * @param array $coverage Array of coverage data from PHPUnit_Test_Result
  * @param CakeBaseReporter $reporter A reporter to use for the coverage report.
+ * @return void
  */
 	public function __construct($coverage, CakeBaseReporter $reporter) {
 		$this->_rawCoverage = $coverage;
-		$this->_setParams($reporter);
+		$this->setParams($reporter);
 	}
 
 /**
@@ -76,7 +66,7 @@ abstract class BaseCoverageReport {
  * @param CakeBaseReporter $reporter Reporter to suck params out of.
  * @return void
  */
-	protected function _setParams(CakeBaseReporter $reporter) {
+	protected function setParams(CakeBaseReporter $reporter) {
 		if ($reporter->params['app']) {
 			$this->appTest = true;
 		}
@@ -98,14 +88,14 @@ abstract class BaseCoverageReport {
 /**
  * Gets the base path that the files we are interested in live in.
  *
- * @return string Path
+ * @return void
  */
 	public function getPathFilter() {
 		$path = ROOT . DS;
 		if ($this->appTest) {
 			$path .= APP_DIR . DS;
 		} elseif ($this->pluginTest) {
-			$path = CakePlugin::path($this->pluginTest);
+			$path = App::pluginPath($this->pluginTest);
 		} else {
 			$path = CAKE;
 		}
@@ -113,7 +103,7 @@ abstract class BaseCoverageReport {
 	}
 
 /**
- * Filters the coverage data by path. Files not in the provided path will be removed.
+ * Filters the coverage data by path.  Files not in the provided path will be removed.
  *
  * @param string $path Path to filter files by.
  * @return array Array of coverage data for files that match the given path.
@@ -137,9 +127,9 @@ abstract class BaseCoverageReport {
  * 3.5 uses -1 for uncovered, and -2 for dead.
  * 3.6 uses array() for uncovered and null for dead.
  *
- * @param array $fileLines The lines in the file.
- * @param array $coverageData The raw coverage data.
- * @return array Array of covered, total lines.
+ * @param array $fileLines
+ * @param array $coverageData
+ * @return array. Array of covered, total lines.
  */
 	protected function _calculateCoveredLines($fileLines, $coverageData) {
 		$covered = $total = 0;
@@ -155,7 +145,7 @@ abstract class BaseCoverageReport {
 			if (is_array($coverageData[$lineno]) && !empty($coverageData[$lineno])) {
 				$covered++;
 				$total++;
-			} elseif ($coverageData[$lineno] === -1 || $coverageData[$lineno] === array()) {
+			} else if ($coverageData[$lineno] === -1 || $coverageData[$lineno] === array()) {
 				$total++;
 			}
 		}

@@ -4,18 +4,19 @@
  *
  * Test Case for view generation shell task
  *
- * CakePHP : Rapid Development Framework (https://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
+ * PHP 5
+ *
+ * CakePHP : Rapid Development Framework (http://cakephp.org)
+ * Copyright 2005-2011, Cake Software Foundation, Inc.
  *
  * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
- * @link          https://cakephp.org CakePHP Project
+ * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc.
+ * @link          http://cakephp.org CakePHP Project
  * @package       Cake.Test.Case.Console.Command.Task
  * @since         CakePHP v 1.2.0.7726
- * @license       https://opensource.org/licenses/mit-license.php MIT License
+ * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 
 App::uses('ShellDispatcher', 'Console');
@@ -29,14 +30,21 @@ App::uses('ProjectTask', 'Console/Command/Task');
 App::uses('DbConfigTask', 'Console/Command/Task');
 App::uses('Model', 'Model');
 App::uses('Controller', 'Controller');
-App::uses('AppController', 'Controller');
 
 /**
  * Test View Task Comment Model
  *
  * @package       Cake.Test.Case.Console.Command.Task
+ * @package       Cake.Test.Case.Console.Command.Task
  */
 class ViewTaskComment extends Model {
+
+/**
+ * Model name
+ *
+ * @var string
+ */
+	public $name = 'ViewTaskComment';
 
 /**
  * Table name
@@ -62,8 +70,16 @@ class ViewTaskComment extends Model {
  * Test View Task Article Model
  *
  * @package       Cake.Test.Case.Console.Command.Task
+ * @package       Cake.Test.Case.Console.Command.Task
  */
 class ViewTaskArticle extends Model {
+
+/**
+ * Model name
+ *
+ * @var string
+ */
+	public $name = 'ViewTaskArticle';
 
 /**
  * Table name
@@ -77,8 +93,16 @@ class ViewTaskArticle extends Model {
  * Test View Task Comments Controller
  *
  * @package       Cake.Test.Case.Console.Command.Task
+ * @package       Cake.Test.Case.Console.Command.Task
  */
 class ViewTaskCommentsController extends Controller {
+
+/**
+ * Controller name
+ *
+ * @var string
+ */
+	public $name = 'ViewTaskComments';
 
 /**
  * Testing public controller action
@@ -95,15 +119,22 @@ class ViewTaskCommentsController extends Controller {
  */
 	public function add() {
 	}
-
 }
 
 /**
  * Test View Task Articles Controller
  *
  * @package       Cake.Test.Case.Console.Command.Task
+ * @package       Cake.Test.Case.Console.Command.Task
  */
 class ViewTaskArticlesController extends Controller {
+
+/**
+ * Controller name
+ *
+ * @var string
+ */
+	public $name = 'ViewTaskArticles';
 
 /**
  * Test public controller action
@@ -160,7 +191,6 @@ class ViewTaskArticlesController extends Controller {
  */
 	public function admin_delete() {
 	}
-
 }
 
 /**
@@ -200,7 +230,7 @@ class ViewTaskTest extends CakeTestCase {
 
 		$this->Task->path = TMP;
 		$this->Task->Template->params['theme'] = 'default';
-		$this->Task->Template->templatePaths = array('default' => CAKE . 'Console' . DS . 'Templates' . DS . 'default' . DS);
+		$this->Task->Template->templatePaths = array('default' => CAKE . 'Console' . DS . 'Templates' . DS . 'default' .DS);
 	}
 
 /**
@@ -323,11 +353,10 @@ class ViewTaskTest extends CakeTestCase {
 	public function testBakeIndex() {
 		$this->Task->controllerName = 'ViewTaskComments';
 
-		$expected = file_get_contents(CAKE . 'Test' . DS . 'bake_compare' . DS . 'View' . DS . 'index.ctp');
 		$this->Task->expects($this->at(0))->method('createFile')
 			->with(
 				TMP . 'ViewTaskComments' . DS . 'index.ctp',
-				$expected
+				$this->stringContains("\$viewTaskComment['Article']['title']")
 			);
 		$this->Task->bake('index', true);
 	}
@@ -355,8 +384,8 @@ class ViewTaskTest extends CakeTestCase {
 		$this->Task->name = 'View';
 
 		//fake plugin path
-		CakePlugin::load('TestTest', array('path' => APP . 'Plugin' . DS . 'TestTest' . DS));
-		$path = APP . 'Plugin' . DS . 'TestTest' . DS . 'View' . DS . 'ViewTaskComments' . DS . 'view.ctp';
+		CakePlugin::load('TestTest', array('path' =>  APP . 'Plugin' . DS . 'TestTest' . DS));
+		$path =  APP . 'Plugin' . DS . 'TestTest' . DS . 'View' . DS . 'ViewTaskComments' . DS  . 'view.ctp';
 
 		$result = $this->Task->getContent('index');
 		$this->assertNotContains('List Test Test.view Task Articles', $result);
@@ -578,6 +607,7 @@ class ViewTaskTest extends CakeTestCase {
 		$this->Task->expects($this->any())->method('in')
 			->will($this->onConsecutiveCalls('y', 'y', 'n'));
 
+
 		$this->Task->expects($this->at(3))->method('createFile')
 			->with(
 				TMP . 'ViewTaskComments' . DS . 'index.ctp',
@@ -681,20 +711,20 @@ class ViewTaskTest extends CakeTestCase {
 		$this->assertFalse($result);
 
 		$result = $this->Task->getTemplate('add');
-		$this->assertEquals('form', $result);
+		$this->assertEquals($result, 'form');
 
 		Configure::write('Routing.prefixes', array('admin'));
 
 		$result = $this->Task->getTemplate('admin_add');
-		$this->assertEquals('form', $result);
+		$this->assertEquals($result, 'form');
 
 		$this->Task->Template->templatePaths = array(
-			'test' => CAKE . 'Test' . DS . 'test_app' . DS . 'Console' . DS . 'Templates' . DS . 'test' . DS
+			'test' => CAKE . 'Test' . DS .  'test_app' . DS . 'Console' . DS . 'Templates' . DS . 'test' .DS
 		);
 		$this->Task->Template->params['theme'] = 'test';
 
 		$result = $this->Task->getTemplate('admin_edit');
-		$this->assertEquals('admin_edit', $result);
+		$this->assertEquals($result, 'admin_edit');
 	}
 
 }

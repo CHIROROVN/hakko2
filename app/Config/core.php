@@ -226,20 +226,27 @@ Configure::write('Config.language', 'jpn');
  * To use database sessions, run the app/Config/Schema/sessions.php schema using
  * the cake shell command: cake schema create Sessions
  */
+define('LOG_ERROR', 2);
+
 	Configure::write('Session', array(
 		'defaults' => 'php',
 		'timeout' => 86400
 	));
 
 /**
+ * The level of CakePHP security.
+ */
+	Configure::write('Security.level', 'medium');
+
+/**
  * A random string used in security hashing methods.
  */
-	Configure::write('Security.salt', 'DYhG93b0qyJfIxfs2guVoUubWwvniR2G0FgaC9mi9');
+	Configure::write('Security.salt', 'DYhG93b0qyJfIxfsauthsalt2guVoUubWwvniR2G0FgaC9mi');
 
 /**
  * A random numeric string (digits only) used to encrypt/decrypt strings.
  */
-	Configure::write('Security.cipherSeed', '768593096574535424967496836459');
+	Configure::write('Security.cipherSeed', '768593099999999996749683645');
 
 /**
  * Apply timestamps with the last modified time to static assets (js, css, images).
@@ -363,35 +370,35 @@ Configure::write('Config.language', 'jpn');
  *       and their settings.
  */
 $engine = 'File';
+if (extension_loaded('apc') && function_exists('apc_dec') && (php_sapi_name() !== 'cli' || ini_get('apc.enable_cli'))) {
+	$engine = 'Apc';
+}
 
 // In development mode, caches should expire quickly.
 $duration = '+999 days';
-if (Configure::read('debug') > 0) {
+if (Configure::read('debug') >= 1) {
 	$duration = '+10 seconds';
 }
 
-// Prefix each application on the same server with a different string, to avoid Memcache and APC conflicts.
-$prefix = 'myapp_';
-
 /**
- * Configure the cache used for general framework caching. Path information,
+ * Configure the cache used for general framework caching.  Path information,
  * object listings, and translation cache files are stored with this configuration.
  */
 Cache::config('_cake_core_', array(
 	'engine' => $engine,
-	'prefix' => $prefix . 'cake_core_',
+	'prefix' => 'cake_core_',
 	'path' => CACHE . 'persistent' . DS,
 	'serialize' => ($engine === 'File'),
 	'duration' => $duration
 ));
 
 /**
- * Configure the cache for model and datasource caches. This cache configuration
+ * Configure the cache for model and datasource caches.  This cache configuration
  * is used to store schema descriptions, and table listings in connections.
  */
 Cache::config('_cake_model_', array(
 	'engine' => $engine,
-	'prefix' => $prefix . 'cake_model_',
+	'prefix' => 'cake_model_',
 	'path' => CACHE . 'models' . DS,
 	'serialize' => ($engine === 'File'),
 	'duration' => $duration

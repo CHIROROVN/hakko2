@@ -31,7 +31,6 @@ use Cake\Network\Exception\NotFoundException;
  * @link		https://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
-	// Pass settings in $components array
         public $components = array(
             'Flash',
             'Session',
@@ -39,28 +38,26 @@ class AppController extends Controller {
                 'loginAction' => array(
                     'controller' => 'users',
                     'action' => 'login',
-                    'plugin' => 'cts-adm'
+                //    'plugin' => ''
                 ),
                 'loginRedirect' => array('controller' => 'menus', 'action' => 'index'),
                 'logoutRedirect' => array('controller' => 'users', 'action' => 'logout'),
                 'authenticate' => array(
                     'Form' => array(
-                        'scope' => array('last_kind <>' => DELETE),
-                        'passwordHasher' => 'Blowfish',                        
+                        'scope' => array('last_kind <>' => 9),
+                        'userModel' => 'User',                    
                         'fields' => array(
-                              'username' => 'password',
-                              'password' => 'password'
-                            ),
-                        'userModel' => 'User',
-                        'userFields' => null,
+                              'username' => 'u_login',
+                              'password' => 'u_passwd'
+                            )
+                        
                     )
-                )
+            )
             )
         );
 
 	public function beforeFilter() {
       //  $this->Auth->scope = array('last_kind' => 0);
-		Security::setHash('sha1');
 		$this->Auth->allow(array('login', 'error404', 'error500'));
         if($this->request->here == '/cts-adm' || $this->request->here == '/cts-adm/') $this->redirect(array('controller' => 'menus', 'action' => 'index'));
 	}

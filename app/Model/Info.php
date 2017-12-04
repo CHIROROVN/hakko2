@@ -106,7 +106,7 @@ class Info extends AppModel {
     }
 
     //get list info for backend 
-   public function getAllInfos(){
+   public function getAllInfos1(){
         return $this->Paginator->paginates('all', array(
                 //'fields' => array('ifo_id','info_title', 'info_date', 'info_type', 'info1_url'),                
                 'conditions' => array('last_kind <>' => DELETE),

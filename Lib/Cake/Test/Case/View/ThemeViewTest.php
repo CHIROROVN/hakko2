@@ -2,35 +2,36 @@
 /**
  * ThemeViewTest file
  *
- * CakePHP(tm) Tests <https://book.cakephp.org/2.0/en/development/testing.html>
- * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
+ * PHP 5
+ *
+ * CakePHP(tm) Tests <http://book.cakephp.org/view/1196/Testing>
+ * Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
  * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice
  *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
- * @link          https://book.cakephp.org/2.0/en/development/testing.html CakePHP(tm) Tests
+ * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link          http://book.cakephp.org/view/1196/Testing CakePHP(tm) Tests
  * @package       Cake.Test.Case.View
  * @since         CakePHP(tm) v 1.2.0.4206
- * @license       https://opensource.org/licenses/mit-license.php MIT License
+ * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
-
 App::uses('View', 'View');
 App::uses('ThemeView', 'View');
 App::uses('Controller', 'Controller');
 
+
 /**
- * ThemePosts2Controller class
+ * ThemePostsController class
  *
  * @package       Cake.Test.Case.View
  */
-class ThemePosts2Controller extends Controller {
+class ThemePostsController extends Controller {
 
 /**
  * name property
  *
- * @var string
+ * @var string 'ThemePosts'
  */
 	public $name = 'ThemePosts';
 
@@ -42,26 +43,24 @@ class ThemePosts2Controller extends Controller {
  * @return void
  */
 	public function index() {
-		$this->set(array(
-			'testData' => 'Some test data',
-			'test2' => 'more data',
-			'test3' => 'even more data',
-		));
+		$this->set('testData', 'Some test data');
+		$test2 = 'more data';
+		$test3 = 'even more data';
+		$this->set(compact('test2', 'test3'));
 	}
-
 }
 
 /**
- * TestTheme2View class
+ * TestThemeView class
  *
  * @package       Cake.Test.Case.View
  */
-class TestTheme2View extends ThemeView {
+class TestThemeView extends ThemeView {
 
 /**
  * renderElement method
  *
- * @param string $name
+ * @param mixed $name
  * @param array $params
  * @return void
  */
@@ -72,7 +71,7 @@ class TestTheme2View extends ThemeView {
 /**
  * getViewFileName method
  *
- * @param string $name
+ * @param mixed $name
  * @return void
  */
 	public function getViewFileName($name = null) {
@@ -82,7 +81,7 @@ class TestTheme2View extends ThemeView {
 /**
  * getLayoutFileName method
  *
- * @param string $name
+ * @param mixed $name
  * @return void
  */
 	public function getLayoutFileName($name = null) {
@@ -107,16 +106,16 @@ class ThemeViewTest extends CakeTestCase {
 		parent::setUp();
 		$request = new CakeRequest('posts/index');
 		$this->Controller = new Controller($request);
-		$this->PostsController = new ThemePosts2Controller($request);
+		$this->PostsController = new ThemePostsController($request);
 		$this->PostsController->viewPath = 'posts';
 		$this->PostsController->index();
 		$this->ThemeView = new ThemeView($this->PostsController);
 		App::build(array(
-			'Plugin' => array(CAKE . 'Test' . DS . 'test_app' . DS . 'Plugin' . DS),
-			'View' => array(CAKE . 'Test' . DS . 'test_app' . DS . 'View' . DS)
+			'plugins' => array(CAKE . 'Test' . DS . 'test_app' . DS . 'Plugin' . DS),
+			'View' => array(CAKE . 'Test' . DS . 'test_app' . DS . 'View'. DS)
 		));
 		App::objects('plugins', null, false);
-		CakePlugin::load(array('TestPlugin'));
+		CakePlugin::loadAll();
 	}
 
 /**
@@ -144,16 +143,16 @@ class ThemeViewTest extends CakeTestCase {
 		$this->Controller->action = 'index';
 		$this->Controller->theme = 'TestTheme';
 
-		$ThemeView = new TestTheme2View($this->Controller);
-		$expected = CAKE . 'Test' . DS . 'test_app' . DS . 'View' . DS . 'Themed' . DS . 'TestTheme' . DS . 'Plugin' . DS . 'TestPlugin' . DS . 'Tests' . DS . 'index.ctp';
+		$ThemeView = new TestThemeView($this->Controller);
+		$expected = CAKE . 'Test' . DS . 'test_app' . DS . 'View' . DS . 'Themed' . DS . 'TestTheme' . DS . 'Plugin' . DS . 'TestPlugin' . DS . 'Tests' . DS .'index.ctp';
 		$result = $ThemeView->getViewFileName('index');
 		$this->assertEquals($expected, $result);
 
-		$expected = CAKE . 'Test' . DS . 'test_app' . DS . 'View' . DS . 'Themed' . DS . 'TestTheme' . DS . 'Plugin' . DS . 'TestPlugin' . DS . 'Layouts' . DS . 'plugin_default.ctp';
+		$expected = CAKE . 'Test' . DS . 'test_app' . DS . 'View' . DS . 'Themed' . DS . 'TestTheme' . DS . 'Plugin' . DS . 'TestPlugin' . DS . 'Layouts' . DS .'plugin_default.ctp';
 		$result = $ThemeView->getLayoutFileName('plugin_default');
 		$this->assertEquals($expected, $result);
 
-		$expected = CAKE . 'Test' . DS . 'test_app' . DS . 'View' . DS . 'Themed' . DS . 'TestTheme' . DS . 'Layouts' . DS . 'default.ctp';
+		$expected = CAKE . 'Test' . DS . 'test_app' . DS . 'View' . DS . 'Themed' . DS . 'TestTheme' . DS . 'Layouts' . DS .'default.ctp';
 		$result = $ThemeView->getLayoutFileName('default');
 		$this->assertEquals($expected, $result);
 	}
@@ -170,17 +169,17 @@ class ThemeViewTest extends CakeTestCase {
 		$this->Controller->action = 'display';
 		$this->Controller->params['pass'] = array('home');
 
-		$ThemeView = new TestTheme2View($this->Controller);
+		$ThemeView = new TestThemeView($this->Controller);
 		$ThemeView->theme = 'TestTheme';
-		$expected = CAKE . 'Test' . DS . 'test_app' . DS . 'View' . DS . 'Pages' . DS . 'home.ctp';
+		$expected = CAKE . 'Test' . DS . 'test_app' . DS . 'View' . DS .'Pages' . DS .'home.ctp';
 		$result = $ThemeView->getViewFileName('home');
 		$this->assertEquals($expected, $result);
 
-		$expected = CAKE . 'Test' . DS . 'test_app' . DS . 'View' . DS . 'Themed' . DS . 'TestTheme' . DS . 'Posts' . DS . 'index.ctp';
+		$expected = CAKE . 'Test' . DS . 'test_app' . DS . 'View' . DS . 'Themed' . DS . 'TestTheme' . DS . 'Posts' . DS .'index.ctp';
 		$result = $ThemeView->getViewFileName('/Posts/index');
 		$this->assertEquals($expected, $result);
 
-		$expected = CAKE . 'Test' . DS . 'test_app' . DS . 'View' . DS . 'Themed' . DS . 'TestTheme' . DS . 'Layouts' . DS . 'default.ctp';
+		$expected = CAKE . 'Test' . DS . 'test_app' . DS . 'View' . DS . 'Themed' . DS . 'TestTheme' . DS . 'Layouts' . DS .'default.ctp';
 		$result = $ThemeView->getLayoutFileName();
 		$this->assertEquals($expected, $result);
 
@@ -198,6 +197,7 @@ class ThemeViewTest extends CakeTestCase {
 /**
  * testMissingView method
  *
+ * @expectedException MissingViewException
  * @return void
  */
 	public function testMissingView() {
@@ -209,19 +209,18 @@ class ThemeViewTest extends CakeTestCase {
 
 		$this->Controller->params['pass'] = array('home');
 
-		$View = new TestTheme2View($this->Controller);
-
-		try {
-			$View->getViewFileName('does_not_exist');
-			$this->fail('No exception');
-		} catch (MissingViewException $e) {
-			$this->assertContains('Pages' . DS . 'does_not_exist.ctp', $e->getMessage());
-		}
+		$View = new TestThemeView($this->Controller);
+		ob_start();
+		$result = $View->getViewFileName('does_not_exist');
+		$expected = str_replace(array("\t", "\r\n", "\n"), "", ob_get_clean());
+		$this->assertRegExp("/PagesController::/", $expected);
+		$this->assertRegExp("/views(\/|\\\)themed(\/|\\\)my_theme(\/|\\\)pages(\/|\\\)does_not_exist.ctp/", $expected);
 	}
 
 /**
  * testMissingLayout method
  *
+ * @expectedException MissingLayoutException
  * @return void
  */
 	public function testMissingLayout() {
@@ -231,14 +230,12 @@ class ThemeViewTest extends CakeTestCase {
 		$this->Controller->layout = 'whatever';
 		$this->Controller->theme = 'my_theme';
 
-		$View = new TestTheme2View($this->Controller);
-
-		try {
-			$View->getLayoutFileName();
-			$this->fail('No exception');
-		} catch (MissingLayoutException $e) {
-			$this->assertContains('Layouts' . DS . 'whatever.ctp', $e->getMessage());
-		}
+		$View = new TestThemeView($this->Controller);
+		ob_start();
+		$result = $View->getLayoutFileName();
+		$expected = str_replace(array("\t", "\r\n", "\n"), "", ob_get_clean());
+		$this->assertRegExp("/Missing Layout/", $expected);
+		$this->assertRegExp("/views(\/|\\\)themed(\/|\\\)my_theme(\/|\\\)layouts(\/|\\\)whatever.ctp/", $expected);
 	}
 
 /**

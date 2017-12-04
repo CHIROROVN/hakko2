@@ -2,17 +2,18 @@
 /**
  * Template Task can generate templated output Used in other Tasks
  *
- * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
+ * PHP 5
+ *
+ * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+ * Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
  * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
- * @link          https://cakephp.org CakePHP(tm) Project
+ * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link          http://cakephp.org CakePHP(tm) Project
  * @since         CakePHP(tm) v 1.3
- * @license       https://opensource.org/licenses/mit-license.php MIT License
+ * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 
 App::uses('AppShell', 'Console/Command');
@@ -42,7 +43,7 @@ class TemplateTask extends AppShell {
 	public $templatePaths = array();
 
 /**
- * Initialize callback. Setup paths for the template task.
+ * Initialize callback.  Setup paths for the template task.
  *
  * @return void
  */
@@ -54,18 +55,11 @@ class TemplateTask extends AppShell {
  * Find the paths to all the installed shell themes in the app.
  *
  * Bake themes are directories not named `skel` inside a `Console/Templates` path.
- * They are listed in this order: app -> plugin -> default
  *
  * @return array Array of bake themes that are installed.
  */
 	protected function _findThemes() {
 		$paths = App::path('Console');
-
-		$plugins = App::objects('plugin');
-		foreach ($plugins as $plugin) {
-			$paths[] = $this->_pluginPath($plugin) . 'Console' . DS;
-		}
-
 		$core = current(App::core('Console'));
 		$separator = DS === '/' ? '/' : '\\\\';
 		$core = preg_replace('#shells' . $separator . '$#', '', $core);
@@ -75,8 +69,13 @@ class TemplateTask extends AppShell {
 		$contents = $Folder->read();
 		$themeFolders = $contents[0];
 
+		$plugins = App::objects('plugin');
+		foreach ($plugins as $plugin) {
+			$paths[] = $this->_pluginPath($plugin) . 'Console' . DS;
+		}
 		$paths[] = $core;
 
+		// TEMPORARY TODO remove when all paths are DS terminated
 		foreach ($paths as $i => $path) {
 			$paths[$i] = rtrim($path, DS) . DS;
 		}
@@ -106,7 +105,7 @@ class TemplateTask extends AppShell {
  * Set variable values to the template scope
  *
  * @param string|array $one A string or an array of data.
- * @param string|array $two Value in case $one is a string (which then works as the key).
+ * @param mixed $two Value in case $one is a string (which then works as the key).
  *   Unused if $one is an associative array, otherwise serves as the values to $one's keys.
  * @return void
  */
@@ -121,7 +120,7 @@ class TemplateTask extends AppShell {
 			$data = array($one => $two);
 		}
 
-		if (!$data) {
+		if ($data == null) {
 			return false;
 		}
 		$this->templateVars = $data + $this->templateVars;
@@ -148,7 +147,7 @@ class TemplateTask extends AppShell {
 			extract($this->templateVars);
 			ob_start();
 			ob_implicit_flush(0);
-			include $templateFile;
+			include($templateFile);
 			$content = ob_get_clean();
 			return $content;
 		}
@@ -164,7 +163,7 @@ class TemplateTask extends AppShell {
  * @return string returns the path to the selected theme.
  */
 	public function getThemePath() {
-		if (count($this->templatePaths) === 1) {
+		if (count($this->templatePaths) == 1) {
 			$paths = array_values($this->templatePaths);
 			return $paths[0];
 		}
@@ -213,5 +212,4 @@ class TemplateTask extends AppShell {
 		$this->err(__d('cake_console', 'Could not find template for %s', $filename));
 		return false;
 	}
-
 }

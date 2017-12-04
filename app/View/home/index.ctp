@@ -48,10 +48,10 @@
   <div class="btn"><a href="business/">事業内容を見る</a></div>
   <h2><span class="jpn">新着情報</span><span class="en">What's new?</span></h2>
   <ul class="wnList">
-    <?php if(count($arrInfo) >0) { foreach ($arrInfo as $info): ?>
-    <li> <?php if($info['Info']['info_type'] ==3){?>
-         <a href="<?php echo $this->Html->url(array("controller" => "news", "action" => "view","id"=>$info['Info']['info_id']));?>">
-         <?php }else{?> <a href="<?php echo ($info['Info']['info_type'] ==1)?$info['Info']['info1_url']:$info['Info']['info2_file']?>" target="_blank"><?php }?><span> <?php echo date("Y年m月d日",strtotime($info['Info']['info_date']))?> </span><?php echo $info['Info']['info_title']; ?></a></li>
+    <?php if(count($arrInfo) >0) { foreach ($arrInfo as $info): ?>    
+    <li> <?php if($info['info']['info_type'] ==3){?>
+         <a href="<?php echo $this->Html->url(array("controller" => "news", "action" => "view","id"=>$info['info']['info_id']));?>">
+         <?php }else{?> <a href="<?php echo ($info['info']['info_type'] ==1)?$info['info']['info1_url']:$info['info']['info2_file']?>" target="_blank"><?php }?><span> <?php echo date("Y年m月d日",strtotime($info['info']['info_date']))?> </span><?php echo $info['info']['info_title']; ?></a></li>
     <?php endforeach; } ?>   
 
   </ul>

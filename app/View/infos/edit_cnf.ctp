@@ -117,7 +117,7 @@
             <tr>
               <td width="10%" rowspan="2" class="col_3">タイマー</td>
               <td width="15%" class="col_3">開始日時：</td>
-              <td><?php echo $this->Hakko->date_jp($this->request->data['Info']['info_end']); ?><br></td>
+              <td><?php echo $this->Hakko->date_jp($this->request->data['Info']['info_start']); ?><br></td>
             </tr>
             <tr>
               <td width="15%" class="col_3">終了日時：</td>

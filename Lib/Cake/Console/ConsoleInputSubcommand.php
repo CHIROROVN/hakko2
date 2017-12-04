@@ -2,17 +2,18 @@
 /**
  * ConsoleInputSubcommand file
  *
- * CakePHP(tm) : Rapid Development Framework (https://cakephp.org)
- * Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
+ * PHP 5
+ *
+ * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+ * Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
  * Licensed under The MIT License
- * For full copyright and license information, please see the LICENSE.txt
  * Redistributions of files must retain the above copyright notice.
  *
- * @copyright     Copyright (c) Cake Software Foundation, Inc. (https://cakefoundation.org)
- * @link          https://cakephp.org CakePHP(tm) Project
+ * @copyright     Copyright 2005-2011, Cake Software Foundation, Inc. (http://cakefoundation.org)
+ * @link          http://cakephp.org CakePHP(tm) Project
  * @since         CakePHP(tm) v 2.0
- * @license       https://opensource.org/licenses/mit-license.php MIT License
+ * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 
 /**
@@ -48,9 +49,9 @@ class ConsoleInputSubcommand {
 /**
  * Make a new Subcommand
  *
- * @param string|array $name The long name of the subcommand, or an array with all the properties.
+ * @param mixed $name The long name of the subcommand, or an array with all the properties.
  * @param string $help The help text for this option
- * @param ConsoleOptionParser|array $parser A parser for this subcommand. Either a ConsoleOptionParser, or an array that can be
+ * @param mixed $parser A parser for this subcommand. Either a ConsoleOptionParser, or an array that can be
  *   used with ConsoleOptionParser::buildFromArray()
  */
 	public function __construct($name, $help = '', $parser = null) {
@@ -81,7 +82,7 @@ class ConsoleInputSubcommand {
 /**
  * Generate the help for this this subcommand.
  *
- * @param int $width The width to make the name of the subcommand.
+ * @param integer $width The width to make the name of the subcommand.
  * @return string
  */
 	public function help($width = 0) {
@@ -116,5 +117,4 @@ class ConsoleInputSubcommand {
 		$command->addAttribute('help', $this->_help);
 		return $parent;
 	}
-
 }

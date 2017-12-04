@@ -1,13 +1,17 @@
 <?php
-if (!isset($channel)):
-	$channel = array();
-endif;
-if (!isset($channel['title'])):
-	$channel['title'] = $this->fetch('title');
-endif;
+echo $rss->header();
 
-echo $this->Rss->document(
-	$this->Rss->channel(
-		array(), $channel, $this->fetch('content')
+if (!isset($channel)) {
+	$channel = array();
+}
+if (!isset($channel['title'])) {
+	$channel['title'] = $title_for_layout;
+}
+
+echo $rss->document(
+	$rss->channel(
+		array(), $channel, $content_for_layout
 	)
 );
+
+?>
